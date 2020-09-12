@@ -17,23 +17,21 @@
 ## Learning.
   1. Supervised Learning: Learning with labeled examples - Training Set
   
-  Most commom problem type in ML
-  1) Image Labeling
-  2) Email Spam Filter
-  3) Prediciting Exam Score
+     Most commom problem type in ML
+     1) Image Labeling
+     2) Email Spam Filter
+     3) Prediciting Exam Score
   
-  Types of Supervised Learning
-  1) 0~100까지의 점수    **Regression**
-  2) Pass/Non-pass      **Binary Classification**
-  3) A, B, C, D, E grade**Multi-Label Classification**
+     Types of Supervised Learning
+     1) 0~100까지의 점수    **Regression**
+     2) Pass/Non-pass      **Binary Classification**
+     3) A, B, C, D, E grade**Multi-Label Classification**
   
   
-  2. Unsupervised Learning: un-labeles data
+  2.Unsupervised Learning: un-labeles data
   
-  Google news grouping
+     Google news grouping
   
-  Word clustering
-  
-dd
+     Word clustering
   
   
