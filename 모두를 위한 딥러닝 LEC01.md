@@ -6,7 +6,7 @@
      Spam filter : many rules
      
      Automatic driving : too many rules → 고려할 사항이 너무 많음.
-<hr/>
+
   2. **Machine Learning.** //Bold: 주요 개념
   
      “Field of study that gives computers the ability to learn without being explicitly programmed.” Arthur Samuel(1959)
