@@ -8,6 +8,7 @@
      Automatic driving : too many rules → 고려할 사항이 너무 많음.
 
 
+
   2. **Machine Learning.** //Bold: 주요 개념
   
      “Field of study that gives computers the ability to learn without being explicitly programmed.” Arthur Samuel(1959)
@@ -26,6 +27,7 @@
      1) 0~100까지의 점수     **Regression**
      2) Pass/Non-pass       **Binary Classification**
      3) A, B, C, D, E grade **Multi-Label Classification**
+  
   
   
   2. Unsupervised Learning: un-labeles data
