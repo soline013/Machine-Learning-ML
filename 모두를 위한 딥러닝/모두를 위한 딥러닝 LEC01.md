@@ -1,35 +1,37 @@
 # 모두를 위한 딥러닝 LEC01
 
 ## About ML.
-  1. Limitations of Explicit Programming.
+1. Limitations of Explicit Programming.
 
-     Spam filter : many rules
+   Spam filter : many rules
      
-     Automatic driving : too many rules → 고려할 사항이 너무 많음.
+   Automatic driving : too many rules → 고려할 사항이 너무 많음.
 
-  2. **Machine Learning.** //Bold: 주요 개념
+2. **Machine Learning.** //Bold: 주요 개념
   
-     “Field of study that gives computers the ability to learn without being explicitly programmed.” Arthur Samuel(1959)
+   “Field of study that gives computers the ability to learn without being explicitly programmed.” Arthur Samuel(1959)
 
   *머신러닝은 일종의 소프트웨어로, 프로그램 자체가 학습하여 배우는 명령을 갖는 소프트웨어이다.* //분명하지 않은 경우 재정리
 
 ## Learning.
-  1. Supervised Learning: Learning with labeled examples - Training Set
+1. Supervised Learning: Learning with labeled examples - Training Set
   
-     Most commom problem type in ML
-     1) Image Labeling
-     2) Email Spam Filter
-     3) Prediciting Exam Score
+   ![image](https://user-images.githubusercontent.com/66259854/93174607-3b7e9680-f769-11ea-98cc-1d1dfc8f984a.png)
   
-     Types of Supervised Learning
-     1) 0~100까지의 점수     **Regression**
-     2) Pass/Non-pass       **Binary Classification**
-     3) A, B, C, D, E grade **Multi-Label Classification**
+   Most commom problem type in ML
+   1) Image Labeling
+   2) Email Spam Filter
+   3) Prediciting Exam Score
   
-  2. Unsupervised Learning: un-labeles data
+   Types of Supervised Learning
+   1) 0~100까지의 점수     **Regression**
+   2) Pass/Non-pass       **Binary Classification**
+   3) A, B, C, D, E grade **Multi-Label Classification**
   
-     Google news grouping
+2. Unsupervised Learning: un-labeles data
   
-     Word clustering
+   Google news grouping
+  
+   Word clustering
   
   
