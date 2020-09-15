@@ -11,7 +11,7 @@
   
    “Field of study that gives computers the ability to learn without being explicitly programmed.” Arthur Samuel(1959)
 
-  *머신러닝은 일종의 소프트웨어로, 프로그램 자체가 학습하여 배우는 명령을 갖는 소프트웨어이다.* //분명하지 않은 경우 재정리
+*머신러닝은 일종의 소프트웨어로, 프로그램 자체가 학습하여 배우는 명령을 갖는 소프트웨어이다.* //분명하지 않은 경우 재정리
 
 ## Learning.
 1. Supervised Learning: Learning with labeled examples - Training Set
