@@ -8,6 +8,8 @@ print(sess.run(hello)) #.run()
 b'Hello, Tensorflow!'
 '''
 
+
+
 node1 = tf.constant(3.0, tf.float32)
 node2 = tf.constant(4.0)
 node3 = tf.add(node1, node2)  #.add()
@@ -19,6 +21,8 @@ print("sess.run(node3): ", sess.run(node3))
 sess.run(node1, node2):  [3.0, 4.0]
 sess.run(node3):  7.0
 '''
+
+
 
 a_node = tf.placeholder(tf.float32) #.placeholeder()와 feed_dict={a:a_data}
 b_node = tf.placeholder(tf.float32)
