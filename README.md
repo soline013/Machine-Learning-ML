@@ -8,6 +8,8 @@ https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_M
 
 모든 내용은 최신 상태가 아닐 수 있고, 다른 부분이 존재할 수 있습니다.
 
+#Python, #Tensorflow
+
 * * *
 
 MEMO → 함수 등 기타 내용을 정리한 문서.
