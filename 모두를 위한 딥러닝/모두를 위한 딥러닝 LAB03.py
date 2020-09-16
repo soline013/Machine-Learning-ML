@@ -42,6 +42,7 @@ hypothesis = x * W
 
 cost = tf.reduce_sum(tf.square(hypothesis -y)) #.reduce_sum()
 
+# Minimize: Gradient Descent using derivative: W -= learning_rate * derivative
 learning_rate = 0.1
 gradient = tf.reduce_mean((W * x - y) * x)
 descent = W - learning_rate * gradient
@@ -103,6 +104,9 @@ gradient = tf.reduce_mean((W * x - y) * x) * 2
 cost = tf.reduce_mean(tf.square(hypothesis -y))
 
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.01)
+# Get gradients
+# Optional: modify gradient if necessary
+# gvs = [(tf.clip_by_value(grad, -1., 1.), var) for grad, var in gvs]
 gvs = optimizer.compute_gradients(cost, [W]) #.compute_gradients()
 apply_gradients = optimizer.apply_gradients(gvs) #.apply_gradients()
 
