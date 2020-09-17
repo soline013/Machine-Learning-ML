@@ -14,6 +14,7 @@
 1. ![image](https://user-images.githubusercontent.com/66259854/93193739-34b04d80-f782-11ea-9c31-405767b78761.png)
 2. ![image](https://user-images.githubusercontent.com/66259854/93193747-3712a780-f782-11ea-83a1-b41e332b97a7.png)
    1) [n, ~3~] → [~3~, m] → [n, m]
+   2) 행: Instance.
 
 ## Wx & XW.
 ![image](https://user-images.githubusercontent.com/66259854/93193756-3a0d9800-f782-11ea-8942-c6477288d9be.png)
