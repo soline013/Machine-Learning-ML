@@ -103,17 +103,17 @@ for step in range(2001):
     _, cost_val, acc_val = sess.run([optimizer, cost, accuracy], feed_dict={x: x_data, y: y_data})
     if step % 200 == 0:
       #print("Step:", step, "Cost:", cost_val, "Acc:", acc_val)
-      print("Step: {:5} Cost: {:.3f} Acc: {:.2%}".format(step, cost_val, acc_val))
+      print("Step: {:5}\tCost: {:.3f}\tAcc: {:.2%}".format(step, cost_val, acc_val))
 '''
-Step:     0 Cost: 6.420 Acc: 37.50%
-Step:   200 Cost: 0.543 Acc: 62.50%
-Step:   400 Cost: 0.451 Acc: 75.00%
-Step:   600 Cost: 0.375 Acc: 87.50%
-Step:   800 Cost: 0.302 Acc: 87.50%
-Step:  1000 Cost: 0.242 Acc: 100.00%
-Step:  1200 Cost: 0.219 Acc: 100.00%
-Step:  1400 Cost: 0.200 Acc: 100.00%
-Step:  1600 Cost: 0.183 Acc: 100.00%
-Step:  1800 Cost: 0.170 Acc: 100.00%
-Step:  2000 Cost: 0.158 Acc: 100.00%
+Step:     0     Cost: 6.420     Acc: 37.50%
+Step:   200     Cost: 0.543     Acc: 62.50%
+Step:   400     Cost: 0.451     Acc: 75.00%
+Step:   600     Cost: 0.375     Acc: 87.50%
+Step:   800     Cost: 0.302     Acc: 87.50%
+Step:  1000     Cost: 0.242     Acc: 100.00%
+Step:  1200     Cost: 0.219     Acc: 100.00%
+Step:  1400     Cost: 0.200     Acc: 100.00%
+Step:  1600     Cost: 0.183     Acc: 100.00%
+Step:  1800     Cost: 0.170     Acc: 100.00%
+Step:  2000     Cost: 0.158     Acc: 100.00%
 '''
