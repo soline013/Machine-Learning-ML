@@ -43,3 +43,12 @@
 -α∆L(w_1,w_2) //자세한 미분은 다루지 않음
 
 ![image](https://user-images.githubusercontent.com/66259854/93463837-4c730780-f923-11ea-8644-ba14a3694e31.png)
+
+
+
+# 모두를 위한 딥러닝 LAB06.md
+## Softmax_cross_entropy_with_logits.
+![image](https://user-images.githubusercontent.com/66259854/93467284-81358d80-f928-11ea-904a-8827f3bfac3d.png)
+
+1. LAB06 초반 코드에서의 cost.
+2. .softmax_cross_entropy_with_logits()을 사용한 cost.
