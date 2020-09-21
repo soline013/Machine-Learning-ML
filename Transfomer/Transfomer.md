@@ -1,5 +1,6 @@
 # Transfomer
 "Attention is all you need"(Vaswani et al. 2017)
+
 https://arxiv.org/abs/1706.03762
 
 NLP에서 사용되는 모델로, RNN에서 벗어나 Attention만을 사용하는 신경망을 고안하여 Self-Attention을 사용하는 모델이다.
