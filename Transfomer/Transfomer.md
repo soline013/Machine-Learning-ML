@@ -1,6 +1,6 @@
 From Personal Notion
 
-https://www.notion.so/asollie/Machine-Learning-f4a1ecdfd6d94ce1899b007b47663b30
+https://www.notion.so/asollie/Transfomer-37e21b1c572f4b6487a2c6665e38044e
 
 # Transfomer
 "Attention is all you need"(Vaswani et al. 2017)
