@@ -74,3 +74,13 @@ Let’s not have too big numbers in the weight.
 
 ## *MNIST* Dataset.
 ![image](https://user-images.githubusercontent.com/66259854/93868598-9e41d600-fd05-11ea-8bfc-54a56e55d789.png)
+
+
+
+## 모두를 위한 딥러닝 LAB07.md
+Training **Epoch** & **Batch.**
+  1. **One Epoch** : One forward pass and one backward pass of all the training examples
+  2. **Batch Size** : The number of training examples in one forward/backward pass. The higher the Batch Size, the more memory space you'll need.
+  3. **Number of Iterations** : number of passes, each pass using [Batch Size] number of examples. To be clear, one pass = one forward pass + one backward pass (we do not count the forward pass and backward pass as two different passes).
+  
+Example : If you have 1000 training examples, and your Batch Size is 500, then it will take 2 Iterations to complete 1 Epoch.
