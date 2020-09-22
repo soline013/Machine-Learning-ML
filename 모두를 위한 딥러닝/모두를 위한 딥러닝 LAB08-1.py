@@ -99,7 +99,7 @@ array([[ 5.],
        [11.]], dtype=float32)
 '''
 
-(matrix1*matrix2).eval()
+(matrix1 * matrix2).eval()
 '''
 array([[1., 2.],
        [6., 8.]], dtype=float32)
