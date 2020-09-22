@@ -9,7 +9,7 @@ import pprint
 tf.set_random_seed(777)
 
 pp = pprint.PrettyPrinter(indent=4) #.PrettyPrinter()
-#sess = tf.InteractiveSession() 이용하지 않음.
+sess = tf.InteractiveSession()
 
 
 
