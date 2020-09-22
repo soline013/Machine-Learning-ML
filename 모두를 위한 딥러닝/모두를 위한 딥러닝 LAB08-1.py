@@ -30,8 +30,6 @@ array([0, 1, 2, 3, 4, 5, 6])
 [0 1] [3 4 5 6]
 '''
 
-
-
 t = np.array([[1., 2., 3.], [4., 5., 6.], [7., 8., 9.], [10., 11., 12.]])
 pp.pprint(t) #.pprint()
 print(t.ndim) # rank
@@ -43,4 +41,66 @@ array([[ 1.,  2.,  3.],
        [10., 11., 12.]])
 2
 (4, 3)
+'''
+
+
+
+#Shape, Rank, Axis.
+t = tf.constant([1,2,3,4])
+tf.shape(t).eval() #.shape(), .eval()
+'''
+array([4], dtype=int32)
+'''
+
+t = tf.constant([[1,2],
+                 [3,4]])
+tf.shape(t).eval()
+'''
+array([2, 2], dtype=int32)
+'''
+
+t = tf.constant([[[[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]],[[13, 14, 15, 16], [17, 18, 19, 20], [21, 22, 23, 24]]]])
+tf.shape(t).eval()
+'''
+array([1, 2, 3, 4], dtype=int32)
+'''
+
+ #Axis=0
+    [ #Axis=1
+        [ #Axis=2
+            [1,2,3,4], 
+            [5,6,7,8],
+            [9,10,11,12] #Axis=3 or -1
+        ],
+        [
+            [13,14,15,16],
+            [17,18,19,20], 
+            [21,22,23,24]
+        ]
+    ]
+]
+'''
+[[[[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]],
+  [[13, 14, 15, 16], [17, 18, 19, 20], [21, 22, 23, 24]]]]
+'''
+
+
+
+#Matmul & Multiply
+matrix1 = tf.constant([[1.,2], [3.,4.]])
+matrix2 = tf.constant([[1.],[2.]])
+print("Metrix 1 shape", matrix1.shape)
+print("Metrix 2 shape", matrix2.shape)
+tf.matmul(matrix1, matrix2).eval()
+'''
+Metrix 1 shape (2, 2)
+Metrix 2 shape (2, 1)
+array([[ 5.],
+       [11.]], dtype=float32)
+'''
+
+(matrix1*matrix2).eval()
+'''
+array([[1., 2.],
+       [6., 8.]], dtype=float32)
 '''
