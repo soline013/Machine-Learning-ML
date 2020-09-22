@@ -45,7 +45,7 @@
 ## *Regularization.* //일반화, 정규화
 Let’s not have too big numbers in the weight.
 
-1. $Loss=\frac{1}{N}\sum_jD(S(WX_i+b), L_i)+\lambda\sumW^2 (λ=Regularization Strength)$
+1. $Loss=\frac{1}{N}\sum_j D(S(WX_i+b), L_i)+\lambda\sum W^2 (λ=Regularization Strength)$
    1) λ = 0	      No Regularization
 	 2) λ = 1	      High Regularization 
 	 3) λ = 0.001	  Little Regularization
