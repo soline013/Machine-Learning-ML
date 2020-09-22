@@ -65,7 +65,7 @@ tf.shape(t).eval()
 array([1, 2, 3, 4], dtype=int32)
 '''
 
- #Axis=0
+[ #Axis=0
     [ #Axis=1
         [ #Axis=2
             [1,2,3,4], 
