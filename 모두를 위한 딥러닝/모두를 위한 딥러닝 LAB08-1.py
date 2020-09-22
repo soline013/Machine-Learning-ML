@@ -86,7 +86,7 @@ array([1, 2, 3, 4], dtype=int32)
 
 
 
-#Matmul & Multiply
+#Matmul & Multiply.
 matrix1 = tf.constant([[1.,2], [3.,4.]])
 matrix2 = tf.constant([[1.],[2.]])
 print("Metrix 1 shape", matrix1.shape)
