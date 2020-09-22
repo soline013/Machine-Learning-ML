@@ -1,44 +1,69 @@
-#Shape, Rank, Axis.
-t = tf.constant([1,2,3,4])
-tf.shape(t).eval() #.shape(), .eval()
+#Broadcasting.
+matrix1 = tf.constant([[3., 3.]])
+matrix2 = tf.constant([[2.],[2.]])
+(matrix1+matrix2).eval()
 '''
-array([4], dtype=int32)
-'''
-
-
-
-t = tf.constant([[1,2],
-                 [3,4]])
-tf.shape(t).eval()
-'''
-array([2, 2], dtype=int32)
+array([[5., 5.],
+       [5., 5.]], dtype=float32)
 '''
 
-
-
-t = tf.constant([[[[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]],[[13, 14, 15, 16], [17, 18, 19, 20], [21, 22, 23, 24]]]])
-tf.shape(t).eval()
+matrix1 = tf.constant([[3., 3.]])
+matrix2 = tf.constant([[2., 2.]])
+(matrix1+matrix2).eval()
 '''
-array([1, 2, 3, 4], dtype=int32)
+array([[5., 5.]], dtype=float32)
+'''
+
+tf.reduce_mean([1, 2], axis=0).eval()
+'''
+1
 '''
 
 
 
- #Axis=0
-    [ #Axis=1
-        [ #Axis=2
-            [1,2,3,4], 
-            [5,6,7,8],
-            [9,10,11,12] #Axis=3 or -1
-        ],
-        [
-            [13,14,15,16],
-            [17,18,19,20], 
-            [21,22,23,24]
-        ]
-    ]
-]
+x = [[1., 2.],
+     [3., 4.]]
+
+#Reduce_mean.
+tf.reduce_mean(x).eval()
 '''
-[[[[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]],
-  [[13, 14, 15, 16], [17, 18, 19, 20], [21, 22, 23, 24]]]]
+2.5
+'''
+
+tf.reduce_mean(x, axis=0).eval()
+'''
+array([2., 3.], dtype=float32)
+'''
+
+tf.reduce_mean(x, axis=1).eval()
+'''
+array([1.5, 3.5], dtype=float32)
+'''
+
+tf.reduce_mean(x, axis=-1).eval()
+'''
+array([1.5, 3.5], dtype=float32)
+'''
+
+
+
+#Reduce_sum.
+tf.reduce_sum(x).eval()
+'''
+10.0
+'''
+
+tf.reduce_sum(x, axis=0).eval()
+'''
+array([4., 6.], dtype=float32)
+'''
+
+tf.reduce_sum(x, axis=-1).eval()
+'''
+array([3., 7.], dtype=float32)
+'''
+
+tf.reduce_mean(tf.reduce_sum(x, axis=-1)).eval()
+'''
+5.0
 '''
