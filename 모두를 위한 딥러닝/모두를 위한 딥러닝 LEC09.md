@@ -23,4 +23,4 @@
 ## *Backpropagation(Chain Rule).* //역전파(합성함수의 미분)
 ![image](https://user-images.githubusercontent.com/66259854/94162662-e9084d00-fec1-11ea-8a90-f6f173627931.png)
 
-$\frac{\delta f}{\delta w}=5, \frac{\delta f}{\delta x}=-2$
+$\frac{∂f}{∂w}=5, \frac{∂f}{∂x}=-2$
