@@ -14,17 +14,17 @@ matrix2 = tf.constant([[2., 2.]])
 array([[5., 5.]], dtype=float32)
 '''
 
+
+
+#Reduce_mean.
 tf.reduce_mean([1, 2], axis=0).eval()
 '''
 1
 '''
 
-
-
 x = [[1., 2.],
      [3., 4.]]
 
-#Reduce_mean.
 tf.reduce_mean(x).eval()
 '''
 2.5
