@@ -65,7 +65,7 @@ W1 = tf.Variable(tf.random_normal([2, 2]), name='weight1')
 b1 = tf.Variable(tf.random_normal([2]), name='bias1')
 layer1 = tf.sigmoid(tf.matmul(X, W1) + b1)
 
-#2rd.
+#2nd.
 W2 = tf.Variable(tf.random_normal([2, 1]), name='weight2')
 b2 = tf.Variable(tf.random_normal([1]), name='bias2')
 hypothesis = tf.sigmoid(tf.matmul(layer1, W2) + b2) #layer1 사용.
