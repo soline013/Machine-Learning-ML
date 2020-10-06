@@ -61,3 +61,12 @@ Code: L1 = tf.nn.dorpout(_L1, dorpout_rate)
 
 ### *Recurrent Network(RNN).*
 ![image](https://user-images.githubusercontent.com/66259854/95180328-cb5db080-07fc-11eb-8ed3-f5ed84c7b2cc.png)
+
+
+
+# 모두를 위한 딥러닝 LAB10.md
+## *Optimizer.*
+![image](https://user-images.githubusercontent.com/66259854/95182097-242e4880-07ff-11eb-85a9-2d040d747f15.png)
+
+## *ADAM.* //A Method for Stochastic Optimaization (Kingma et al. 2015)
+![image](https://user-images.githubusercontent.com/66259854/95182105-2690a280-07ff-11eb-90ae-246a91ce52b2.png)
