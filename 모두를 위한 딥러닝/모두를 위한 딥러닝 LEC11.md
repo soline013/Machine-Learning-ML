@@ -55,7 +55,7 @@ Pooling 중 한 방법으로 일정 크기에서 가장 큰 값을 선택한다.
 ## Sentence Classification. //Yoon Kim, 2014
 ![image](https://user-images.githubusercontent.com/66259854/96874792-7b941000-14b1-11eb-8ded-090c513700fa.png)
 
-## DeepMind's AlphaGo.
+## *DeepMind's AlphaGo.*
 ![image](https://user-images.githubusercontent.com/66259854/96874800-7df66a00-14b1-11eb-8b1c-a0b61640d155.png)
 
 Policy Network:
