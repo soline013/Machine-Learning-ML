@@ -9,12 +9,12 @@ Soongsil University Software, Korea.
 
 잘못된 내용이 있다면 바로잡아주시기 바랍니다.
 
+모든 내용은 최신 상태가 아닐 수 있고, 다른 부분이 존재할 수 있습니다.
+
 ## 모두를 위한 딥러닝.
 유튜브 강의: 모두를 위한 딥러닝의 내용을 정리한 것.
 
 https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm
-
-모든 내용은 최신 상태가 아닐 수 있고, 다른 부분이 존재할 수 있습니다.
 
 * * *
 
@@ -33,16 +33,12 @@ Stanford University CS231n, Spring 2017.
 
 https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv
 
-모든 내용은 최신 상태가 아닐 수 있고, 다른 부분이 존재할 수 있습니다.
-
 * * *
 
 .md → LEC의 내용을 차시별로 정리한 문서.
 
 ## Transfomer.
 Transfomer의 내용을 정리한 것.
-
-모든 내용은 최신 상태가 아닐 수 있고, 다른 부분이 존재할 수 있습니다.
 
 * * *
 
