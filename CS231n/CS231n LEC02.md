@@ -67,7 +67,7 @@ NN을 사용하여 분류한 오른쪽 그림.
   2. Test/Training 이미지에서 서로 같은 자리의 픽셀을 빼고 절대값을 취한다.
   3. 모든 픽셀을 더한다.
 
-## *L1 Distance로 NN을 구현한 Python 코드.*
+## L1 Distance로 NN을 구현한 Python 코드.
 ![image](https://user-images.githubusercontent.com/66259854/98202536-9072a800-1f75-11eb-930a-b2a6af97883f.png)
 
 N개의 Training Set이 있을 때, 걸리는 시간?
