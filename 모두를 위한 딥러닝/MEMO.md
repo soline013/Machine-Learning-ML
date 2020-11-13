@@ -1,7 +1,3 @@
-유튜브 강의: 모두를 위한 딥러닝의 내용을 정리한 것.
-
-https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm
-
 # MEMO
 
 .constant()				//상수
