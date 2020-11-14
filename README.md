@@ -26,7 +26,7 @@ ML.ipynb → Colab로 작성한 LAB의 실습 내용 파일.
 
 *.py → LAB의 내용을 차시별로 정리한 파일.
 
-... / 모두를 위한 딥러닝 PDF / *.pdf → 소모임 SSUML 스터디 내용을 정리한 문서.
+모두를 위한 딥러닝 PDF / *.pdf → 소모임 SSUML 스터디 내용을 정리한 문서.
 
 # CS231n.
 Stanford University CS231n, Spring 2017.
@@ -41,7 +41,7 @@ https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8
     
     *.ipynb → Assignment1의 Jupyter Notebook 파일.
     
-    ... / Classifiers / *.py → Assignment1의 Python 파일.
+    Classifiers / *.py → Assignment1의 Python 파일.
 
 # Transfomer.
 Transfomer의 내용을 정리한 폴더.
