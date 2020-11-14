@@ -47,7 +47,7 @@ class LinearClassifier(object):
       # y_batch; after sampling X_batch should have shape (dim, batch_size)   #
       # and y_batch should have shape (batch_size,)                           #
       #                                                                       #
-      # Hint: Use ***np.random.choice*** to generate indices. Sampling with         #
+      # Hint: Use ***np.random.choice*** to generate indices. Sampling with   #
       # replacement is faster than sampling without replacement.              #
       #########################################################################
       sample = np.random.choice(num_train, size = batch_size)
