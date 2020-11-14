@@ -105,8 +105,6 @@ def svm_loss_vectorized(W, X, y, reg):
   dW = np.dot(X.T, dL)
   for i in xrange(num_train):
     dW[:, y[i]] -= np.sum(dL[i, :]) * X[i, :]
-  #dW = dW / num_train -> CP
-  #dW += 2 * reg * W -> CP
   dW = dW/num_train + 2*reg*W
   #############################################################################
   #                             END OF YOUR CODE                              #
