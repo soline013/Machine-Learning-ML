@@ -39,9 +39,9 @@ https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8
 
     Assignment1
     
-    *.ipynb → Assignment1의 Jupyter Notebook 파일.
+        *.ipynb → Assignment1의 Jupyter Notebook 파일.
     
-    Classifiers / *.py → Assignment1의 Python 파일.
+        Classifiers / *.py → Assignment1의 Python 파일.
 
 # Transfomer.
 Transfomer의 내용을 정리한 폴더.
