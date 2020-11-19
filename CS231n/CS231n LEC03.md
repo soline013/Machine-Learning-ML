@@ -169,12 +169,14 @@ $-log(\frac{1}{c})=log(c)$ (Using Debugging)
 
 ## Optimization(최적화).
   1. 임의 탐색(Random Search)
+  
      ![image](https://user-images.githubusercontent.com/66259854/99666501-6c9f7e00-2aae-11eb-9893-d9114639c2b7.png)
      ![image](https://user-images.githubusercontent.com/66259854/99666507-6e694180-2aae-11eb-9fa8-3b299c114971.png)
 
      임의의 W를 매우 많이 모으고 Loss를 계산하는 것.
 
   2. Follow the Slope.
+  
      ![image](https://user-images.githubusercontent.com/66259854/99666514-70cb9b80-2aae-11eb-8ede-1ce5d9175e7a.png)
      
      Numerical Gradient.
