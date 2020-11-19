@@ -1,6 +1,6 @@
 # CS231n LEC01.
 ## Stanford University, Spring 2017.
-Introduction to Convolutional Neural Networks for Visual Recognition
+Introduction to Convolutional Neural Networks for Visual Recognition.
 ## Intro.
   1. CISCO에서 2015~2017년 사이에 조사한 내용에 따르면, 인터넷 트래픽의 80%는 비디오 데이터이다.
   2. 이런 시각 데이터를 잘 활용하는 알고리즘이 중요하지만, 시각 데이터는 해석하기 까다로워 Dark Matter라고 부르곤 한다.
