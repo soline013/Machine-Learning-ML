@@ -1,9 +1,11 @@
 # 모두를 위한 딥러닝 LEC09.
 ## XOR Problem Using Neural Net(NN).
 1. Multiple Logisitic Regression Units.
+
    ![image](https://user-images.githubusercontent.com/66259854/94162514-c24a1680-fec1-11ea-9c0f-c5771e154286.png)
 
 2. 계산 과정.
+
    ![image](https://user-images.githubusercontent.com/66259854/94162525-c5450700-fec1-11ea-83e7-7ea5455d7860.png)
 
    1) $x_1, x_2$를 대입하여 Sigmoid Function으로 $y_1, y_2$를 얻는다.
