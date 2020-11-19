@@ -30,7 +30,7 @@ $L = \frac{1}{N} \sum_i L_i(f(x_i, W), y_i)$
 ![image](https://user-images.githubusercontent.com/66259854/99666384-4bd72880-2aae-11eb-86f8-63637aa336b9.png)
 
   1. True카테고리를 제외한 나머지 카테고리의 Y합을 구한다.
-  2. True카테고리 스코어($S_Y_i$)와 Not True카테고리 스코어($S_j$)를 비교하여,   
+  2. True카테고리 스코어($S_{Y_i}$)와 Not True카테고리 스코어($S_j$)를 비교하여,   
      True > Not True이고, 차이가 Safety Margin 이상이라면 Loss는 0이다. (여기서 Margin=1)
      
   3. Not True 카테고리의 모든 값의 합이 한 이미지의 Loss이다.
@@ -49,13 +49,35 @@ Case Space Notation 대신 Zero One Notation을 사용.
 ![image](https://user-images.githubusercontent.com/66259854/99666404-542f6380-2aae-11eb-84e9-7d1e5830456f.png)
 
 ### Question.
-    Q: “$S, S_{Y_i}$는 무엇을 의미하는가?"   
-    $S_1, S_2, ..., S_n$: 카테고리 별 예측된 스코어 값.   
-    $S_{Y_i}$: i번째 True카테고리 스코어, $Y_i$는 True카테고리.
+Q: “$S, S_{Y_i}$는 무엇을 의미하는가?"   
+$S_1, S_2, ..., S_n$: 카테고리 별 예측된 스코어 값.   
+$S_{Y_i}$: i번째 True카테고리 스코어, $Y_i$는 True카테고리.
     
-    Q: “Safety Margin은 어떻게 정하는가?”   
-    Loss Function의 스코어가 아닌, 여러 스코어의 상대적 차이에 관심이 있다.   
-    행렬 W에 의해 상쇄되는 값이므로 크게 상관이 없다.
+Q: “Safety Margin은 어떻게 정하는가?”   
+Loss Function의 스코어가 아닌, 여러 스코어의 상대적 차이에 관심이 있다.   
+행렬 W에 의해 상쇄되는 값이므로 크게 상관이 없다.
+
+Q: “Car 스코어를 조금 바꾼다면 Loss는 바뀌는가?”   
+True인 Car 스코어가 여전히 높아서 바뀌지 않고 0일 것이다.
+
+Q: "SVM Loss의 최대와 최소는?"   
+최소는 0이고, 최대는 무한대이다.
+
+Q: “모든 스코어가 0에 가깝고, 값이 비슷하다면 Loss는 어떻게 되는가?”   
+Class Number(C) – 1   
+순회 횟수가 C – 1이기 때문이다.   
+(+Using Debugging, 처음 학습에서 Loss = C -1이 아니라면 Bug가 있다고 생각할 수 있다. 처음 학습에서 행렬 W는 임의의 작은 수로 초기화, 스코어 또한 임의의 일정한 값을 갖기 때문.)
+
+Q: “True Class도 더하면 어떻게 되는가?”   
+Loss + 1   
+Loss가 최소인 0이 되도록 하는 것 때문에 관습적으로 True Class는 넣지 않는다.
+
+Q: “Loss에서 전체 합이 아닌 평균을 쓰면 어떻게 되는가?”   
+상관없다. 클래스의 수는 정해져 있고, 스코어 값은 신경 쓸 요소가 아니다.
+
+Q: “Loss Function을 제곱으로 바꾼다면?” $L=\sum_{j≠y_i}max(0, S_j-S_{Y_i}+1)^2$   
+결과가 달라진다. 비선형적 방식으로 Loss 계산이 달라진다.   
+작은 것은 작아지고, 큰 것은 더 커진다.
 
 ![image](https://user-images.githubusercontent.com/66259854/99666415-572a5400-2aae-11eb-92ad-5e7a19c75cd5.png)
 ![image](https://user-images.githubusercontent.com/66259854/99666427-5a254480-2aae-11eb-90a3-bf7329504de1.png)
