@@ -22,15 +22,41 @@ Loss Functions and Optimization.
 
 ![image](https://user-images.githubusercontent.com/66259854/99666381-48dc3800-2aae-11eb-94a1-f27ff815cd35.png)
 
-X=Input, Y=Label, Target (In CIFAR10, 1~10 or 0~9)
+X=Input, Y=Label, Target (In CIFAR10, 1-10 or 0-9)
 
-$L = 1/N \sum_i L_i(f(x_i, W), y_i)$
+$L = \frac{1}{N} \sum_i L_i(f(x_i, W), y_i)$
 
+## Multi-class SVM Loss.
 ![image](https://user-images.githubusercontent.com/66259854/99666384-4bd72880-2aae-11eb-86f8-63637aa336b9.png)
+
+  1. True카테고리를 제외한 나머지 카테고리의 Y합을 구한다.
+  2. True카테고리 스코어($S_Y_i$)와 Not True카테고리 스코어($S_j$)를 비교하여,   
+     True > Not True이고, 차이가 Safety Margin 이상이라면 Loss는 0이다. (여기서 Margin=1)
+     
+  3. Not True 카테고리의 모든 값의 합이 한 이미지의 Loss이다.
+  4. 전체 Training Set에서 Loss의 평균을 구한다.
+
+Max(0, value) 형식으로 Loss Function을 만들고, 이를 Hinge(경첩)이라 부름.
+
+X축은 True카테고리 스코어, Y축은 Loss.
+
+Case Space Notation 대신 Zero One Notation을 사용.
+
+### Example.
 ![image](https://user-images.githubusercontent.com/66259854/99666387-4e398280-2aae-11eb-8e51-386d964b561a.png)
 ![image](https://user-images.githubusercontent.com/66259854/99666390-50034600-2aae-11eb-97cb-09e20ff38273.png)
 ![image](https://user-images.githubusercontent.com/66259854/99666398-51cd0980-2aae-11eb-9219-c9091c5d3453.png)
 ![image](https://user-images.githubusercontent.com/66259854/99666404-542f6380-2aae-11eb-84e9-7d1e5830456f.png)
+
+### Question.
+    Q: “$S, S_{Y_i}$는 무엇을 의미하는가?"   
+    $S_1, S_2, ..., S_n$: 카테고리 별 예측된 스코어 값.   
+    $S_{Y_i}$: i번째 True카테고리 스코어, $Y_i$는 True카테고리.
+    
+    Q: “Safety Margin은 어떻게 정하는가?”   
+    Loss Function의 스코어가 아닌, 여러 스코어의 상대적 차이에 관심이 있다.   
+    행렬 W에 의해 상쇄되는 값이므로 크게 상관이 없다.
+
 ![image](https://user-images.githubusercontent.com/66259854/99666415-572a5400-2aae-11eb-92ad-5e7a19c75cd5.png)
 ![image](https://user-images.githubusercontent.com/66259854/99666427-5a254480-2aae-11eb-90a3-bf7329504de1.png)
 ![image](https://user-images.githubusercontent.com/66259854/99666431-5bef0800-2aae-11eb-9fdc-e746d52cf021.png)
