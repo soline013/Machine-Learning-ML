@@ -1,4 +1,4 @@
-From Personal Notion
+From Notion
 
 https://www.notion.so/asollie/Transfomer-37e21b1c572f4b6487a2c6665e38044e
 
