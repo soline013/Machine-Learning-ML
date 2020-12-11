@@ -91,6 +91,7 @@ tanh는 입력 값을 -1 ~ 1 사이로 만든다.
      Zero-centered로, "Sigmoid outputs are not zero-centered." 문제가 해결된다.
   
   2. 단점.
+     
      그러나 "Saturation neurons kill the gradients."는 여전하다.
      
 * * *
