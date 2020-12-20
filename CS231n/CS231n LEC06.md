@@ -97,15 +97,73 @@ tanh는 입력 값을 -1 ~ 1 사이로 만든다.
 * * *
 
 ### ReLU.
+![image](https://user-images.githubusercontent.com/66259854/102707779-35a4ce00-42e1-11eb-97f1-ffe2b565c432.png)
+
+입력이 음수면 Element-wise 연산으로 값이 0이다.
+
+  1. 장점.
+     1. Sigmoid, tanh와 다르게 양의 수에서 Saturation(포화)가 없다.
+     2. max 연산으로 속도가 빠르다.
+  2. 단점.
+     1. Zero-centered가 아니다.
+     2. 음의 수에서 Saturation이 발생한다.
+     
+        ![image](https://user-images.githubusercontent.com/66259854/102707784-42c1bd00-42e1-11eb-87f0-9fe8d124e773.png)
+     
+        ReLU는 Gradient의 절반을 죽이는데, 이를 Dead ReLU라고 한다.
+     
+        ![image](https://user-images.githubusercontent.com/66259854/102707788-481f0780-42e1-11eb-940b-cbbbf6d83e3b.png)
+     
+        Data Cloud = Training Data.
+     
+        ReLU에서 평면의 절반만 Activate 된다.
+     
+        실제 네트워크의 10~20%는 Dead ReLU로 나온다.
+     
+        ReLU의 초기화에서 Positive Biases 값을 추가한다.   
+        (그래도 대부분 Zero-bias로 초기화.)
+        
+        Data Cloud와 ReLU가 멀리 있는 경우에도 Dead ReLU가 발생하는데 2가지 이유가 있다.
+        
+        1. Wrong Initialize.
+        
+           가중치가 초평면을 이루는데, 초평면 자체가 멀리서 생길 수 있다.
+           
+        2. High High Learning Rate.
+           
+           가중치가 커져 데이터의 Manifold를 벗어남.
 
 * * *
 
 ### Leaky ReLU. PReLU.
+![image](https://user-images.githubusercontent.com/66259854/102707798-638a1280-42e1-11eb-9d3f-4236b3d6d02c.png)
+
+음수 구간에 기울기를 줘서, Saturation을 방지한다.
+
+PReLU는 기울기를 $\alpha$로 두고 Back Prop로 Parameter를 찾아간다.
 
 * * *
 
 ### ELU.
+![image](https://user-images.githubusercontent.com/66259854/102707802-697ff380-42e1-11eb-9f12-77991ae1e1b8.png)
+
+Zero-mean에 보다 가까운 출력값이 나온다.
+
+음수 구간에서 Saturation이 발생하지만 Noise에 강하다.
+
+ReLU(Saturation)와 Leaky ReLU(Zero-mean)의 중간 정도..?
 
 * * *
 
 ### Maxout.
+![image](https://user-images.githubusercontent.com/66259854/102707804-6edd3e00-42e1-11eb-92b7-6bcfc7a36b15.png)
+
+입력 형식이 정해져 있지 않다.
+
+$w^T_1x + b_1, w^T_2x + b_2$처럼 받고 두 개 중 최댓값을 취한다.
+
+뉴런 당 Parameter가 배가 되는 단점이 있다.
+
+![image](https://user-images.githubusercontent.com/66259854/102707807-7270c500-42e1-11eb-9879-af35c5fbcd01.png)
+
+## Data Preprocessing.
