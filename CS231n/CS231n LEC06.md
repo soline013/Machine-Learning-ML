@@ -164,6 +164,8 @@ $w^T_1x + b_1, w^T_2x + b_2$처럼 받고 두 개 중 최댓값을 취한다.
 
 뉴런 당 Parameter가 배가 되는 단점이 있다.
 
+* * *
+
 ![image](https://user-images.githubusercontent.com/66259854/102707807-7270c500-42e1-11eb-9879-af35c5fbcd01.png)
 
 ## Data Preprocessing.
