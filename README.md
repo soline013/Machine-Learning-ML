@@ -12,7 +12,7 @@
 # 모두를 위한 딥러닝.
 유튜브 강의: 모두를 위한 딥러닝의 내용을 정리한 폴더.
 
-[![Generic badge](https://shields.io/badge/Youtube-DeepLearningZeroToAll-blue.svg)](https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm)
+[![Generic badge](https://shields.io/badge/Youtube-모두를_위한_딥러닝-blue.svg)](https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm)
 
 * * *
 
@@ -27,7 +27,7 @@
 # CS231n.
 Stanford University CS231n, Spring 2017.
 
-[![Generic badge](https://shields.io/badge/Web-CS231n-blue.svg)](https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
+[![Generic badge](https://shields.io/badge/Web-Stanford_University_CS231n,_Spring_2017-blue.svg)](https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
 
 * * *
 | File | Detail |
