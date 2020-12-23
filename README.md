@@ -3,8 +3,6 @@
 
 * * *
 
-Soongsil University Software, Korea.
-
 머신러닝 / 딥러닝 소모임 SSUML.
 
 잘못된 내용이 있다면 바로잡아주시기 바랍니다.
@@ -30,7 +28,6 @@ Soongsil University Software, Korea.
 Stanford University CS231n, Spring 2017.
 
 [![Generic badge](https://shields.io/badge/Web-CS231n-blue.svg)](https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
-
 
 * * *
 | File | Detail |
