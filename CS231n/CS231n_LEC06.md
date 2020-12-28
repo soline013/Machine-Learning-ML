@@ -1,25 +1,17 @@
 # CS231n LEC06.
+## Stanford University CS231n, Spring 2017.
+**Training Neural Networks.**
 
-생성일: 2020년 10월 18일 오후 2:04
-제목: Training Neural Networks
+## Recall from last time.
+![image](https://user-images.githubusercontent.com/66259854/101941803-d8978100-3c2b-11eb-96f4-522edaeea7bb.png)
+![image](https://user-images.githubusercontent.com/66259854/101941902-febd2100-3c2b-11eb-9e28-100d96e79375.png)
+![image](https://user-images.githubusercontent.com/66259854/101941922-07adf280-3c2c-11eb-92ec-b6e8a6a8a308.png)
+![image](https://user-images.githubusercontent.com/66259854/101941938-0f6d9700-3c2c-11eb-819a-8cfb19329cc4.png)
+![image](https://user-images.githubusercontent.com/66259854/101941963-1694a500-3c2c-11eb-8286-ce83187ca0f0.png)
+![image](https://user-images.githubusercontent.com/66259854/101941980-1eece000-3c2c-11eb-8b57-9d950388823f.png)
+![image](https://user-images.githubusercontent.com/66259854/101941998-257b5780-3c2c-11eb-8d5c-a748fc4d480a.png)
 
-### Recall from last time.
-
-![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled.png)
-
-![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%201.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%201.png)
-
-![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%202.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%202.png)
-
-![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%203.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%203.png)
-
-![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%204.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%204.png)
-
-![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%205.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%205.png)
-
-![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%206.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%206.png)
-
-### Overview.
+## Overview.
 
 1. One Time Setup.
 
@@ -33,118 +25,123 @@
 
     (Model Ensembles.)
 
-### One Time Setup.
+## One Time Setup.
 
-- Activation Functions.
+## Activation Functions.
 
-    ![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%207.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%207.png)
+![image](https://user-images.githubusercontent.com/66259854/101942876-940ce500-3c2d-11eb-8ce7-dec71272c606.png)
 
-    ![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%208.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%208.png)
+![image](https://user-images.githubusercontent.com/66259854/101942892-996a2f80-3c2d-11eb-9b68-6dd79b9d206d.png)
 
-    입력된 데이터와 가중치를 곱하고 활성함수, 비선형 연산을 거친다.
+입력된 데이터와 가중치를 곱하고 활성함수, 비선형 연산을 거친다.
 
-    다양한 Activation Function이 있다.
+다양한 Activation Function이 있다.
 
-    - Sigmoid.
+### Sigmoid.
 
-        ![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%209.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%209.png)
+![image](https://user-images.githubusercontent.com/66259854/101943184-041b6b00-3c2e-11eb-91d7-da036de77c7a.png)
 
-        입력 값을 0 ~ 1 사이의 값으로 만든다.
+입력 값을 0 ~ 1 사이의 값으로 만든다.
 
-        입력이 크면 1에 가깝고, 입력이 작으면 0에 가깝다.
+입력이 크면 1에 가깝고, 입력이 작으면 0에 가깝다.
 
-        0 근처의 Rigime은 선형과 비슷하다.
+0 근처의 Rigime은 선형과 비슷하다.
 
-        Sigmoid에는 세 가지 문제점이 있다.
+Sigmoid에는 세 가지 문제점이 있다.
 
-        1. Saturation neurons kill the gradients.
+1. Saturation neurons kill the gradients.
+   
+   ![image](https://user-images.githubusercontent.com/66259854/101943197-0978b580-3c2e-11eb-89b0-492cf7a45d6a.png)
+   
+   Back Prop에서 Gradient는 $\frac{dL}{dx} = \frac{dL}{d \sigma}  \ \frac{d \sigma}{dx}$이다.
+   
+   1. x의 값이 -10이라면, Gradient는 0이 계속 전달된다.
+   2. x의 값이 0이라면, Gradient는 의미 있는 값이 계속 전달된다.
+   3. x의 값이 10이라면, Gradient는 1이 계속 전달된다.
+   
+   즉, Sigmoid 함수의 수평 부분에서 Gradient는 의미 없는 값이다.
 
-            ![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2010.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2010.png)
+2. Sigmoid outputs are not zero-centered.
+   
+   ![image](https://user-images.githubusercontent.com/66259854/101943211-0ed60000-3c2e-11eb-8e3a-29db09ba8195.png)
+   
+   x가 항상 양수일 때, x는 어떤 가중치랑 곱해지고 활성함수를 통과한다.
+   
+   W에 대한 Gradient 값은 전부 양수거나 음수이다.
+   
+   $$\frac{dL}{df} \times \frac{df}{dw} = \frac{dL}{df} \times x$$
+   
+   따라서 Parameter를 업데이트 하여도 W는 다 같이 증가하거나 감소하여 지그재그 모양이 된다.
+   
+   Gradient 업데이트를 여러 번 수행해야 한다.
 
-            Back Prop에서 Gradient는 $\frac{dL}{dx} = \frac{dL}{d \sigma}  \ \frac{d \sigma}{dx}$이다.
+3. exp() is a bit compute expensive.
+   
+   그렇게 큰 문제는 아니다.
+   
+   오히려 내적의 계산 비용이 더 크다.
 
-            1. x의 값이 -10이라면, Gradient는 0이 계속 전달된다.
-            2. x의 값이 0이라면, Gradient는 의미 있는 값이 계속 전달된다.
-            3. x의 값이 10이라면, Gradient는 1이 계속 전달된다.
+---
 
-            즉, Sigmoid 함수의 수평 부분에서 Gradient는 의미 없는 값이다.
+### tanh.
 
-        2. Sigmoid outputs are not zero-centered.
+![image](https://user-images.githubusercontent.com/66259854/101944151-9a9c5c00-3c2f-11eb-9bc6-730d34d66d22.png)   
 
-            ![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2011.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2011.png)
+tanh는 입력 값을 -1 ~ 1 사이로 만든다.
 
-            x가 항상 양수일 때, x는 어떤 가중치랑 곱해지고 활성함수를 통과한다.
+1. 장점.
+   
+   Zero-centered로, "Sigmoid outputs are not zero-centered." 문제가 해결된다.
+   
+2. 단점.
+   
+   그러나 "Saturation neurons kill the gradients."는 여전하다.
 
-            W에 대한 Gradient 값은 전부 양수거나 음수이다.
+---
 
-            $$\frac{dL}{df} \times \frac{df}{dw} = \frac{dL}{df} \times x$$
+### ReLU.
 
-            따라서 Parameter를 업데이트 하여도 W는 다 같이 증가하거나 감소하여 지그재그 모양이 된다.
+![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2013.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2013.png)
 
-            Gradient 업데이트를 여러 번 수행해야 한다.
+입력이 음수면 Element-wise 연산으로 값이 0이다.
 
-        3. exp() is a bit compute expensive.
+1. 장점.
+   1. Sigmoid, tanh와 다르게 양의 수에서 Saturation(포화)가 없다.
+   2. max 연산으로 속도가 빠르다.
 
-            그렇게 큰 문제는 아니다.
+2. 단점.
+   1. Zero-centered가 아니다.
+   2. 음의 수에서 Saturation이 발생한다.
+      
+      ![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2014.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2014.png)
+      
+      ReLU는 Gradient의 절반을 죽이는데, 이를 Dead ReLU라고 한다.
+      
+      ![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2015.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2015.png)
+      
+      Data Cloud = Training Data.
+      
+      ReLU에서 평면의 절반만 Activate 된다.
+      
+      실제 네트워크의 10~20%는 Dead ReLU로 나온다.
+      
+      ReLU의 초기화에서 Positive Biases 값을 추가한다. (그래도 대부분 Zero-bias로 초기화.)
+      
+      Data Cloud와 ReLU가 멀리 있는 경우에도 Dead ReLU가 발생하는데 2가지 이유가 있다. 
+      
+      1. Wrong Initialize.
+         
+         가중치가 초평면을 이루는데, 초평면 자체가 멀리서 생길 수 있다.
 
-            오히려 내적의 계산 비용이 더 크다.
+      2. High High Learning Rate.
+         
+         가중치가 커져 데이터의 Manifold를 벗어남.
 
-    - tanh.
+### Leaky ReLU. PReLU.
 
-        ![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2012.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2012.png)
+![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2016.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2016.png)
 
-        tanh는 입력 값을 -1 ~ 1 사이로 만든다.
-
-        1. 장점.
-
-            Zero-centered로, "Sigmoid outputs are not zero-centered." 문제가 해결된다.
-
-        2. 단점.
-
-            그러나 "Saturation neurons kill the gradients."는 여전하다.
-
-    - ReLU.
-
-        ![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2013.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2013.png)
-
-        입력이 음수면 Element-wise 연산으로 값이 0이다.
-
-        1. 장점.
-            1. Sigmoid, tanh와 다르게 양의 수에서 Saturation(포화)가 없다.
-            2. max 연산으로 속도가 빠르다.
-        2. 단점.
-            1. Zero-centered가 아니다.
-            2. 음의 수에서 Saturation이 발생한다.
-
-                ![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2014.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2014.png)
-
-                ReLU는 Gradient의 절반을 죽이는데, 이를 Dead ReLU라고 한다.
-
-                ![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2015.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2015.png)
-
-                Data Cloud = Training Data.
-
-                ReLU에서 평면의 절반만 Activate 된다.
-
-                실제 네트워크의 10~20%는 Dead ReLU로 나온다.
-
-                ReLU의 초기화에서 Positive Biases 값을 추가한다. (그래도 대부분 Zero-bias로 초기화.)
-
-                Data Cloud와 ReLU가 멀리 있는 경우에도 Dead ReLU가 발생하는데 2가지 이유가 있다. 
-
-                1. Wrong Initialize.
-
-                    가중치가 초평면을 이루는데, 초평면 자체가 멀리서 생길 수 있다.
-
-                2. High High Learning Rate.
-
-                    가중치가 커져 데이터의 Manifold를 벗어남.
-
-    - Leaky ReLU. PReLU.
-
-        ![CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2016.png](CS231n%20LEC06%203fb2279d00804036b36489fa2286428a/Untitled%2016.png)
-
-        음수 구간에 기울기를 줘서, Saturation을 방지한다.
+음수 구간에 기울기를 줘서, Saturation을 방지한다.
 
         PReLU는 기울기을 $\alpha$로 두고 Back Prop로 Parameter를 찾아간다.
 
