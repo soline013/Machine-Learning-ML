@@ -49,45 +49,37 @@ Case Space Notation 대신 Zero One Notation을 사용.
 ![image](https://user-images.githubusercontent.com/66259854/99666404-542f6380-2aae-11eb-84e9-7d1e5830456f.png)
 
 ### Question.
-```
+
 Q: “$S, S_{Y_i}$는 무엇을 의미하는가?"   
 $S_1, S_2, ..., S_n$: 카테고리 별 예측된 스코어 값.   
 $S_{Y_i}$: i번째 True카테고리 스코어, $Y_i$는 True카테고리.
-```
-```
+
 Q: “Safety Margin은 어떻게 정하는가?”   
 Loss Function의 스코어가 아닌, 여러 스코어의 상대적 차이에 관심이 있다.   
 행렬 W에 의해 상쇄되는 값이므로 크게 상관이 없다.
-```
-```
+
 Q: “Car 스코어를 조금 바꾼다면 Loss는 바뀌는가?”   
 True인 Car 스코어가 여전히 높아서 바뀌지 않고 0일 것이다.
-```
-```
+
 Q: "SVM Loss의 최대와 최소는?"   
 최소는 0이고, 최대는 무한대이다.
-```
-```
+
 Q: “모든 스코어가 0에 가깝고, 값이 비슷하다면 Loss는 어떻게 되는가?”   
 Class Number(C) – 1   
 순회 횟수가 C – 1이기 때문이다.   
 (+Using Debugging, 처음 학습에서 Loss = C -1이 아니라면 Bug가 있다고 생각할 수 있다.   
 처음 학습에서 행렬 W는 임의의 작은 수로 초기화, 스코어 또한 임의의 일정한 값을 갖기 때문.)
-```
-```
+
 Q: “True Class도 더하면 어떻게 되는가?”   
 Loss + 1   
 Loss가 최소인 0이 되도록 하는 것 때문에 관습적으로 True Class는 넣지 않는다.
-```
-```
+
 Q: “Loss에서 전체 합이 아닌 평균을 쓰면 어떻게 되는가?”   
 상관없다. 클래스의 수는 정해져 있고, 스코어 값은 신경 쓸 요소가 아니다.
-```
-```
+
 Q: “Loss Function을 제곱으로 바꾼다면?” $L=\sum_{j≠y_i}max(0, S_j-S_{Y_i}+1)^2$   
 결과가 달라진다. 비선형적 방식으로 Loss 계산이 달라진다.   
 작은 것은 작아지고, 큰 것은 더 커진다.
-```
 
 ## Multi-class SVM Loss Code.
 ![image](https://user-images.githubusercontent.com/66259854/99666415-572a5400-2aae-11eb-92ad-5e7a19c75cd5.png)
@@ -101,11 +93,10 @@ Vectorized 하므로 전체를 순회할 필요가 없다.
 그리고 많은 W 중 Loss = 0인 W를 선택해선 안 된다. → Overfitting.
 
 ### Question.
-```
 Q: “Loss = 0인 W는 하나만 있을까?”   
 W는 변하기 때문에 다른 W도 존재한다.   
 W와 2W가 있다면, 여전히 Loss = 0이다.
-```
+
 
 ## Regularization.
 ![image](https://user-images.githubusercontent.com/66259854/99666427-5a254480-2aae-11eb-90a3-bf7329504de1.png)
@@ -121,11 +112,9 @@ Regularization: Regularization Term(Penalty)을 추가하여 보다 단순한 W�
 $\lambda$: Hyper Parameter, Regularization Strength로 Trade-off 설정.
 
 ### Question.
-```
 Q: “$Wx+\lambda R$이 어떻게 곡선을 직선으로 바꾸는가?”   
 쉽게 말하면, 저차 다항식을 선호하도록 만든다.   
 더 복잡해지지 않도록 하는 것 / Soft Penalty를 추가하는 것 → 여전히 복잡해질 수 있다.
-```
 
 ## L2 Regularization.
 ![image](https://user-images.githubusercontent.com/66259854/99666442-5e516200-2aae-11eb-9be9-5e63487ec406.png)
@@ -158,15 +147,12 @@ Log는 단조 증가 함수로 Log의 값을 최대로 하는 게 더 편하므�
 또한, Loss Function으로써 나쁜 정도를 측정하므로 (-)를 붙인다.
 
 ### Question.
-```
 Q: “Softmax Loss의 최대와 최소는?”   
 최소는 0이고, 최대는 무한대이다.   
 유한 정밀도가 존재하므로 이론적인 수치에 도달할 수는 없다.
-```
-```
+
 Q: “S의 값이 모두 0에 가까운 작은 수라면 Loss는 어떻게 되는가?”   
 $-log(\frac{1}{c})=log(c)$ (Using Debugging)
-```
 
 ## SVM Loss VS Softmax Loss.
 ![image](https://user-images.githubusercontent.com/66259854/99666481-67daca00-2aae-11eb-8d4c-68f2fa4b185d.png)
