@@ -1,6 +1,6 @@
 # CS231n LEC02.
 ## Stanford University, Spring 2017.
-Image Classification.
+**Image Classification.**
 
 ## Assignment.
 K-Nearest Neighbor.
@@ -110,10 +110,10 @@ Image 문제에서 K-NN은 좋은 방법이 아니다.
 ## *추가 예정.*
 
 ## 링크.
-https://www.youtube.com/watch?v=OoUX-nOEjG0&feature=emb_title
+[Lecture 2 | Image Classification |](https://www.youtube.com/watch?v=OoUX-nOEjG0&feature=emb_title)
 
-http://cs231n.stanford.edu/2017/
+[CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/2017/)
 
-http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture2.pdf
+[CS231n 2017 Lecture2 PDF](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture2.pdf)
 
-https://github.com/soline013/CS231N_17_KOR_SUB/blob/master/kor/Lecture%202%20%20%20Image%20Classification.ko.srt
+[soline013/CS231N_17_KOR_SUB](https://github.com/soline013/CS231N_17_KOR_SUB/blob/master/kor/Lecture%202%20%20%20Image%20Classification.ko.srt)
