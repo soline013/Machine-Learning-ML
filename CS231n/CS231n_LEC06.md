@@ -197,9 +197,13 @@ Sigmoid에는 Zero-mean이 필요하지만, Preprocessing을 해도 처음 Layer
    
    Normalization으로 모든 차원이 동일한 범위에 있도록 한다.
 
+----
+
 ![image](https://user-images.githubusercontent.com/66259854/103263560-8dcb8680-49eb-11eb-8fa8-b2f00cbf4a50.png)
 
 PCA, Whitening 같은 과정도 존재.
+
+---
 
 ![image](https://user-images.githubusercontent.com/66259854/103263567-91f7a400-49eb-11eb-9e58-20a40d12730a.png)
 
@@ -217,9 +221,15 @@ Q: "Parameter를 모두 0으로 만들면 어떻게 될까?"
    
    ![image](https://user-images.githubusercontent.com/66259854/103263680-e7cc4c00-49eb-11eb-9a83-927d514509dd.png)
    
+   초기 W를 표준정규분포(Standard Gaussian)에서 샘플링한다.
+   
    작은 값을 위해 0.01을 나눠 표준편차를 0.01로 만든다.
    
+   깊은 네트워크에선 문제가 생긴다.
+   
    ![image](https://user-images.githubusercontent.com/66259854/103263688-f0bd1d80-49eb-11eb-8f94-afd4bec4a551.png)
+   
+   10 Layers, 500 Neurons each layer, tanh, Small random number Weight.
    
    ![image](https://user-images.githubusercontent.com/66259854/103263694-f581d180-49eb-11eb-92f9-7f545052d975.png)
    
@@ -239,6 +249,8 @@ Q: "Parameter를 모두 0으로 만들면 어떻게 될까?"
 2. 가중치를 더 큰 값으로 초기화.
    
    ![image](https://user-images.githubusercontent.com/66259854/103263708-fb77b280-49eb-11eb-8eed-dab79886bc43.png)
+   
+   값이 너무 커져 Overshooting이 발생한다.
    
    출력이 -1 또는 1이 나오고, Saturation 되어 Gradient는 0이 된다.
 
@@ -260,6 +272,8 @@ Q: "Parameter를 모두 0으로 만들면 어떻게 될까?"
    ReLU에서는 효과가 적은데, 출력의 절반을 죽이기 때문.
    
    ![image](https://user-images.githubusercontent.com/66259854/103263778-3548b900-49ec-11eb-8b47-b49e051dff70.png)
+   
+   Note Additional / 2를 하여 ReLU에서의 결과를 해결.
 
 ![image](https://user-images.githubusercontent.com/66259854/103263795-3974d680-49ec-11eb-8840-367eb461ba11.png)
 
@@ -271,6 +285,8 @@ Batch Normalization은 Gradient Vanishing을 해결하기 위해 만들어졌다
 
 Weight Initializtion 보다도 Input의 평균과 분산을 구하여 정규분포로 만드는 것.
 
+---
+
 ![image](https://user-images.githubusercontent.com/66259854/103263838-54474b00-49ec-11eb-8a73-cfe4b7ed3821.png)
 
 Input을 Batch 단위로 나누어 처리한다.
@@ -279,11 +295,15 @@ Batch당 N개의 학습 데이터가 있고, D차원이다.
 
 각 차원별로 평균과 분산을 구하고, 하나의 Batch에서 Normalize 한다.
 
+---
+
 ![image](https://user-images.githubusercontent.com/66259854/103263858-59a49580-49ec-11eb-9342-49e3cf5692a0.png)
 
 BN은 Activation Function 전에, FC나 Conv 이후에 넣는다.
 
 이때, Conv에서는 차원마다 진행하지 않고 같은 채널에 있는 요소로 진행한다.
+
+---
 
 ![image](https://user-images.githubusercontent.com/66259854/103263865-5e694980-49ec-11eb-84d7-388dbcd697c9.png)
 
@@ -292,6 +312,8 @@ Normalization 연산으로 Saturation이 전혀 없는 것보다는, Saturation�
 따라서 BN에 Scaling 연산을 추가한다.
 
 $\gamma$는 표준편차로 Scaling 효과를, $\beta$는 평균으로 Shift 효과를 주어 Normalization 이전 상태로 만들 수 있다. ($\gamma$, $\beta$는 학습 가능한 Parameter.)
+
+---
 
 ![image](https://user-images.githubusercontent.com/66259854/103263873-63c69400-49ec-11eb-88af-3e05159d5370.png)
 
@@ -318,7 +340,7 @@ Image에서는 Zero-mean만 주로 사용.
 ![image](https://user-images.githubusercontent.com/66259854/103263939-8e185180-49ec-11eb-8878-a416d61d6154.png)   
 ![image](https://user-images.githubusercontent.com/66259854/103263945-91abd880-49ec-11eb-83e7-a9099b4d4b19.png)
 
-### Hyperparameter Optimization.
+## Hyperparameter Optimization.
 
 ![image](https://user-images.githubusercontent.com/66259854/103266620-53fe7e00-49f3-11eb-9017-66927c1a633d.png)
 
@@ -326,6 +348,8 @@ Cross-validation은 Training Set으로 학습하고 Validation Set으로 평가�
 
 1. Coarse(First)는 넓은 범위에서 값을 골라, 적은 Epoch로도 잘 작동하는지 확인.
 2. Fine(Second)는 보다 좁은 범위에서 학습을 지켜보면서 Parameter의 최적값을 찾는다.
+
+---
 
 1. Run Coarse Search.
    
@@ -397,10 +421,10 @@ Weight Updates / Weight Magnitudes의 비율을 봤을 때 0.001 정도가 좋�
 
 ## 링크.
 
-[https://www.youtube.com/watch?v=wEoyxE0GP2M&t=2821s](https://www.youtube.com/watch?v=wEoyxE0GP2M&t=2821s)
+[Lecture 6 | Training Neural Networks |](https://www.youtube.com/watch?v=wEoyxE0GP2M&t=2821s)
 
 [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/2017/)
 
-[](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture6.pdf)
+[CS231n 2017 Lecture6 PDF](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture6.pdf)
 
 [soline013/CS231N_17_KOR_SUB](https://github.com/soline013/CS231N_17_KOR_SUB/blob/master/kor/Lecture%206%20%20%20Training%20Neural%20Networks%20I.ko.srt)
