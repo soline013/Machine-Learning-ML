@@ -1,6 +1,6 @@
 # CS231n LEC03.
 ## Stanford University, Spring 2017.
-Loss Functions and Optimization.
+**Loss Functions and Optimization.**
 
 ## Recall from Last Time.
 ![image](https://user-images.githubusercontent.com/66259854/99666333-395cef00-2aae-11eb-8b48-74a5cbae10cd.png)
@@ -248,10 +248,10 @@ Visual Words라는 용어를 정의해야 했음.
   4. 어떤 이미지에서 Visual Words의 발생 빈도로 이미지를 인코딩한다.
 
 ## 링크.
-https://www.youtube.com/watch?v=h7iBpEHGVNc&feature=emb_title
+[Lecture 3 | Loss Functions and Optimization |]https://www.youtube.com/watch?v=h7iBpEHGVNc&feature=emb_title
 
-http://cs231n.stanford.edu/2017/
+[CS231n: Convolutional Neural Networks for Visual Recognition]http://cs231n.stanford.edu/2017/
 
-http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture3.pdf
+[CS231n 2017 Lecture3 PDF]http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture3.pdf
 
-https://github.com/soline013/CS231N_17_KOR_SUB/blob/master/kor/Lecture%203%20%20%20Loss%20Functions%20and%20Optimization.ko.srt
+[soline013/CS231N_17_KOR_SUB]https://github.com/soline013/CS231N_17_KOR_SUB/blob/master/kor/Lecture%203%20%20%20Loss%20Functions%20and%20Optimization.ko.srt
