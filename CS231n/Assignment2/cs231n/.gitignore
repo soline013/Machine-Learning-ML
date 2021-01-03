@@ -1,3 +1,5 @@
 build/*
 im2col_cython.c
 im2col_cython.so
+im2col_cython.cpython-36m-x86_64-linux-gnu.so
+*.pyc
