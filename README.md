@@ -34,7 +34,9 @@ Stanford University CS231n, Spring 2017.
 |--|--|
 | \*.md | LEC의 내용을 차시별로 정리한 파일. |
 | Assignment1 / \*.ipynb | Assignment1의 Jupyter Notebook 파일. |
-| Assignment1 / Classifiers / \*.py | Assignment1의 Python 파일. |
+| Assignment1 / ... / \*.py | Assignment1의 Python 파일. |
+| Assignment2 / \*.ipynb | Assignment2의 Jupyter Notebook 파일. |
+| Assignment2 / ... / \*.py | Assignment2의 Python 파일. |
 
 # Transfomer.
 Transfomer의 내용을 정리한 폴더.
