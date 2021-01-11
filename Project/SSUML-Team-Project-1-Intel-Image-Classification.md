@@ -2,7 +2,7 @@
 **Intel Image Classification - Image Scene Classification of Multiclass.**
 
 ## Project Guidance.
-https://www.notion.so/1-CNN-image-classification-4829d58a80d14272b36fba5c7a87dc0a
+[프로젝트 1 - CNN image classification](https://www.notion.so/1-CNN-image-classification-4829d58a80d14272b36fba5c7a87dc0a)
 
 ## Project Goal.
   1. Test Accuracy 높이기.
@@ -18,18 +18,22 @@ https://www.notion.so/1-CNN-image-classification-4829d58a80d14272b36fba5c7a87dc0
      Model, Layer, Learning Rate, Optimizer, Batch Size, etc.
 
 ## Notebook 선정.
-https://www.kaggle.com/fadilparves/intel-image-multiclass-pytorch-95-acc
+[Intel Image MultiClass Pytorch 95% acc](https://www.kaggle.com/fadilparves/intel-image-multiclass-pytorch-95-acc)
 
 Pytorch를 사용한 Notebook.
 
 Torchvision을 Import하여 ResNet34 모델을 사용했다.
 
 ## Models.
-https://www.notion.so/asollie/CS231n-LEC09-f8edf22ab0704e25b6c7bc64bd3300b2
+### :heavy_check_mark:
+추후에 Github CS231n LEC09로 변경 예정.
 
-https://pytorch.org/docs/stable/torchvision/index.html
+[CS231n LEC09.](https://www.notion.so/asollie/CS231n-LEC09-f8edf22ab0704e25b6c7bc64bd3300b2)
 
-https://blog.naver.com/another0430/222069431000
+[torchvision - PyTorch 1.7.0 documentation](https://pytorch.org/docs/stable/torchvision/index.html)
+
+[Medical Deep Learning : 네이버 블로그](https://blog.naver.com/another0430/222069431000)
+
 
 ResNet의 요구 사항에 맞게 Transform하는 부분을 살려 ResNet 모델을 선정.
 
@@ -82,11 +86,14 @@ ResNet34, ResNet152, Wide ResNet-101-2, ResNeXt-101-32x8d를 불러오면서 실
    ![image](https://user-images.githubusercontent.com/66259854/104050461-00c5d000-522a-11eb-8750-56f75db4fa79.png)
 
 ## Optimizer.
-https://www.notion.so/asollie/CS231n-LEC07-444af169209a42398e91de92b1d4d2b2
+### :heavy_check_mark:
+추후에 Github CS231n LEC07로 변경 예정.
 
-https://pytorch.org/docs/stable/optim.html
+[CS231n LEC07.](https://www.notion.so/CS231n-LEC07-444af169209a42398e91de92b1d4d2b2)
 
-https://wiserloner.tistory.com/1032
+[torch.optim - PyTorch 1.7.0 documentation](https://pytorch.org/docs/stable/optim.html)
+
+[딥러닝 학습 optimizer 종류 정리](https://wiserloner.tistory.com/1032)
 
 ```Python
 optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
@@ -101,11 +108,11 @@ optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
 다시 한 번 Optimizer를 바꾸어가면서 실험한 내용 추가 예정.
 
 ## Learning Rate.
-https://towardsdatascience.com/learning-rate-schedules-and-adaptive-learning-rate-methods-for-deep-learning-2c8f433990d1
+[Learning Rate Schedules and Adaptive Learning Rate Methods for Deep Learning](https://towardsdatascience.com/learning-rate-schedules-and-adaptive-learning-rate-methods-for-deep-learning-2c8f433990d1)
 
-https://www.deeplearningwizard.com/deep_learning/boosting_models_pytorch/lr_scheduling/
+[Learning Rate Scheduling - Deep Learning Wizard](https://www.deeplearningwizard.com/deep_learning/boosting_models_pytorch/lr_scheduling/)
 
-https://m.blog.naver.com/PostView.nhn?blogId=nostresss12&logNo=221544987534&proxyReferer=https:%2F%2Fwww.google.co.kr%2F
+[[딥러닝][Keras] LearningRateScheduler로 학습률 제어하기](https://m.blog.naver.com/PostView.nhn?blogId=nostresss12&logNo=221544987534&proxyReferer=https:%2F%2Fwww.google.co.kr%2F)
 
 ```Python
 optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
@@ -121,4 +128,4 @@ Learning Rate Scheduler 북마크에서 SGD가 계속해서 나온다.
 SGD를 계속해서 사용하는 이유가 SGD의 Mini-batch와 연관이 있을까?
 
 ## Project Notebook.
-https://www.kaggle.com/asollie/intel-image-multiclass-pytorch-94-test-acc
+[Intel Image MultiClass Pytorch 94% Test Acc](https://www.kaggle.com/asollie/intel-image-multiclass-pytorch-94-test-acc)
