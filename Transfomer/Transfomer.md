@@ -110,7 +110,8 @@ Encoder에는 2개의 Sub-layer가 있고, Decoder에는 3개의 Sub-layer가 �
 
 $$\bar{x} = \frac{a}{\sigma}(x - \mu) + b$$
 
-$$LayerNorm(x_i)=\gamma \ \frac{x_{i, k} - \mu_i}{\sqrt{\sigma_i^2} + \epsilon} + \beta \\ (\gamma=1,\ \beta=0)$$
+$$LayerNorm(x_i)=\gamma \ \frac{x_{i, k} - \mu_i}{\sqrt{\sigma_i^2} + \epsilon} + \beta&&
+&&(\gamma=1,\ \beta=0)$$
 
 이후 $LayerNorm(x + Sublayer(x))$ 이 식처럼 Layer Normalization을 적용한다.
 
