@@ -24,7 +24,7 @@ Harvard NLP에 있는 Colab 링크로 가면 Google Drive와 연결된다.
 
 ## What Is the Transfomer?
 
-[Transfomer](https://www.notion.so/Transfomer-37e21b1c572f4b6487a2c6665e38044e)
+[Transfomer](https://www.notion.so/asollie/Transfomer-d692df0aa2c64b9c9c24f6a1dcbfb0e3)
 
 Transfomer에 대한 정리는 링크 참조.
 
