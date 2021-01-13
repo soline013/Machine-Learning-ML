@@ -16,7 +16,7 @@ Self-attention을 통해 같은 문장 내 모든 단어 쌍 사이의 의미, �
 
 Inputs: Encoder / Outputs: Decoder로 나눌 수 있다.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2b4b209a-2fd6-49f6-96c9-a78a4a9e2090/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2b4b209a-2fd6-49f6-96c9-a78a4a9e2090/Untitled.png)
+![image](https://user-images.githubusercontent.com/66259854/104466229-56b6c100-55f8-11eb-9662-1acfd8adf05c.png)
 
 - Input(Output) Embedding
 - Positional Encoding
@@ -30,7 +30,7 @@ Inputs: Encoder / Outputs: Decoder로 나눌 수 있다.
 
 ---
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/640875ad-e336-4247-8d6f-0e466f08d68b/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/640875ad-e336-4247-8d6f-0e466f08d68b/Untitled.png)
+![image](https://user-images.githubusercontent.com/66259854/104466270-61715600-55f8-11eb-8a2a-ad56d09a66a0.png)
 
 논문에서는 Encoder와 Decoder를 6개씩 쌓아 Encoding 부분과 Decoding 부분을 만들었다.
 
@@ -58,7 +58,7 @@ Word Embedding은 6개 중 가장 밑에 있는 Encoder에서만 일어난다.
 
 ### Positional Encoding
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/47535217-bf02-46fb-9803-efffd9e22883/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/47535217-bf02-46fb-9803-efffd9e22883/Untitled.png)
+![image](https://user-images.githubusercontent.com/66259854/104466284-67673700-55f8-11eb-8399-a97d4b1da32f.png)
 
 RNN은 단어를 순차적으로 입력받기 때문에, 단어의 위치에 따라 위치 정보를 가질 수 있다.
 
@@ -68,8 +68,7 @@ RNN은 단어를 순차적으로 입력받기 때문에, 단어의 위치에 따
 
 ---
 
-$$PE_{(pos,2i)}=sin(pos/10000^{2i/d_{model}})
-\\PE_{(pos,2i+1)}=cos(pos/10000^{2i/d_{model}})$$
+$$PE_{(pos,2i)}=sin(pos/10000^{2i/d_{model}})\\PE_{(pos,2i+1)}=cos(pos/10000^{2i/d_{model}})$$
 
 $2i$ = 짝수 / $2i+1$ = 홀수
 
@@ -79,7 +78,7 @@ index = Embedding Vector 내 Dimension Index. ~~Embedding Dimension.~~
 
 ### Multi Head Self Attention
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bbd912d4-adb4-43b7-b3c1-d90a910718c9/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bbd912d4-adb4-43b7-b3c1-d90a910718c9/Untitled.png)
+![image](https://user-images.githubusercontent.com/66259854/104466694-db094400-55f8-11eb-98a6-55e0a2eb4ca3.png)
 
 Multi Head Self Attention은 Query, Key, Value head로 나뉘고, 각각 다른 Linear Projection, Scaled Dot-Product를 진행한다. (Split을 진행하기 때문에 각각 다른 Scaled Dot-Product를 진행한다.)
 
@@ -87,7 +86,7 @@ Multi Head Self Attention은 Query, Key, Value head로 나뉘고, 각각 다른 
 
 ### Scaled Dot Product Attention
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/70b54459-d596-405a-8877-e204e4e36898/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/70b54459-d596-405a-8877-e204e4e36898/Untitled.png)
+![image](https://user-images.githubusercontent.com/66259854/104466713-df356180-55f8-11eb-9e5c-5cd6faac972c.png)
 
 Learnable Parameter가 없다.
 
@@ -95,9 +94,9 @@ Learnable Parameter가 없다.
 
 Encoder에서 Padding을 사용하지 않도록 Padding Mask를 추가해야 한다.
 
-- Sub-layer & Residual Connection, Layer Normalization
+### Sub-layer & Residual Connection, Layer Normalization
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7a0a4a16-bd5e-410f-924a-6f788642ce56/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7a0a4a16-bd5e-410f-924a-6f788642ce56/Untitled.png)
+![image](https://user-images.githubusercontent.com/66259854/104466733-e492ac00-55f8-11eb-873e-e56a6bc92906.png)
 
 Encoder에는 2개의 Sub-layer가 있고, Decoder에는 3개의 Sub-layer가 있다.
 
@@ -125,7 +124,7 @@ Multi Head Attention에서 나온 Attention 정보를 정리하는 역할.
 
 ### Linear & Softmax
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/288fcc2b-e7d5-4c01-9908-9522b06c02bd/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/288fcc2b-e7d5-4c01-9908-9522b06c02bd/Untitled.png)
+![image](https://user-images.githubusercontent.com/66259854/104466753-eb212380-55f8-11eb-9f12-2e00a64433b1.png)
 
 1. Linear Layer.
 
@@ -202,7 +201,7 @@ Layer의 Multi Head Self Attention과 Scaled Dot Product Attention을 상세히 
 
 1. Create Head Vector
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8248a802-c6b5-49e7-8b9c-d4da4742d395/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8248a802-c6b5-49e7-8b9c-d4da4742d395/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/66259854/104466771-f07e6e00-55f8-11eb-9e0c-871e9fdeb7aa.png)
 
     3가지 Head Vector는 Input Vector와 3개의 학습 가능한 행렬을 각각 곱해서 만들어진다.
 
@@ -212,13 +211,13 @@ Layer의 Multi Head Self Attention과 Scaled Dot Product Attention을 상세히 
 
 2. Matmul
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c01e6181-2478-4066-b030-853d5908a5a7/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c01e6181-2478-4066-b030-853d5908a5a7/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/66259854/104466792-f411f500-55f8-11eb-98a7-c705415e851c.png)
 
     현재 단어의 Q Vector와 모든 단어의 K Vertor를 Matmul 한다.
 
 3. Scale & Softmax (Mask 과정을 거칠 수 있다.)
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c7ac4f29-51f0-4c09-a67c-6a1f619e1f57/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c7ac4f29-51f0-4c09-a67c-6a1f619e1f57/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/66259854/104466808-f83e1280-55f8-11eb-81b8-96cc4ab4b8b5.png)
 
     1. 점수들을 8로 나누는데, Key Vector의 크기 64의 제곱근이다.
 
@@ -230,7 +229,7 @@ Layer의 Multi Head Self Attention과 Scaled Dot Product Attention을 상세히 
 
 4. Matmul
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/94222b57-5782-408a-988e-7e5025260df2/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/94222b57-5782-408a-988e-7e5025260df2/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/66259854/104466823-fbd19980-55f8-11eb-8eff-73760822a595.png)
 
     점수에 V Vector를 곱한다.
 
@@ -247,7 +246,7 @@ Layer의 Multi Head Self Attention과 Scaled Dot Product Attention을 상세히 
 ### Matrix Calcualtion.
 1. Query, Key, Value Matrix
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce765417-fd72-453d-8d82-fcd5c372b3a7/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce765417-fd72-453d-8d82-fcd5c372b3a7/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/66259854/104466832-ff652080-55f8-11eb-9c85-7ed4d95ed7a1.png)
 
     Input Vector or Embedding Vector를 하나의 행렬 X로 쌓아 올리고, 학습할 Weight 행렬을 곱해 Q, K, V를 계산한다.
 
@@ -255,13 +254,13 @@ Layer의 Multi Head Self Attention과 Scaled Dot Product Attention을 상세히 
 
 2. One Equation
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6a49510b-b2ad-46a6-a392-f0d1f423b7f6/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6a49510b-b2ad-46a6-a392-f0d1f423b7f6/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/66259854/104466853-0429d480-55f9-11eb-83c7-73efc5047835.png)
 
     행렬을 사용하면 Vector Calculation 2~5를 하나의 식으로 압축할 수 있다.
 
 ### Multi Head.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/734055f5-c9a5-4bb3-a49b-a27fef0c1064/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/734055f5-c9a5-4bb3-a49b-a27fef0c1064/Untitled.png)
+![image](https://user-images.githubusercontent.com/66259854/104466868-07bd5b80-55f9-11eb-9245-14ad6a9c555c.png)
 
 H개의 Query, Key, Value Weight 행렬을 갖고 있다.
 
@@ -269,17 +268,17 @@ H개의 Query, Key, Value Weight 행렬을 갖고 있다.
 
 각 Attention Head에서 Query, Key, Value는 랜덤으로 초기화되어 학습된다.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cd8d9d69-6251-4383-a2f1-07965ee4f7e6/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cd8d9d69-6251-4383-a2f1-07965ee4f7e6/Untitled.png)
+![image](https://user-images.githubusercontent.com/66259854/104466881-0b50e280-55f9-11eb-93f3-48fd582581e0.png)
 
 Self Attention 과정을 거치면 8개(논문 기준)의 Z 행렬이 나온다.
 
 그러나 Feed Foward는 한 위치에 대해 한 개의 행렬만 받을 수 있으므로 문제가 발생한다.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/34eceff8-73da-4695-b83d-aa505c0c0099/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/34eceff8-73da-4695-b83d-aa505c0c0099/Untitled.png)
+![image](https://user-images.githubusercontent.com/66259854/104466916-1277f080-55f9-11eb-91f6-2f8ec0b1ab45.png)
 
 문제를 해결하기 위해 8개의 Z 행렬을 이어 붙여서 하나의 행렬을 만들고, 또 다른 Weight 행렬인 $W_O$을 곱한다.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/406ebb78-51a5-43bf-bf74-cdae586e24d3/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/406ebb78-51a5-43bf-bf74-cdae586e24d3/Untitled.png)
+![image](https://user-images.githubusercontent.com/66259854/104466933-173ca480-55f9-11eb-9b9b-c811931eefb9.png)
 
 모두 요약하면 다음과 같은 그림이 된다.
 
@@ -287,7 +286,7 @@ Multi Head는 Self Attention을 병렬적으로 사용한다는 의미이다.
 
 ### Difference of Attention.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6fd3c83b-0a4e-433e-baf9-04c3e4687fe4/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6fd3c83b-0a4e-433e-baf9-04c3e4687fe4/Untitled.png)
+![image](https://user-images.githubusercontent.com/66259854/104466947-1b68c200-55f9-11eb-9659-cf072d28d071.png)
 
 1. Encoder Self Attention은 Encoder에서 이루어진다.
 
@@ -330,7 +329,7 @@ def attention(query, key, value, mask=None, dropout=0.0):
 
 ### Look-ahead Mask.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/61bafa96-d97b-4da0-8d5f-7ff7d3f1fe61/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/61bafa96-d97b-4da0-8d5f-7ff7d3f1fe61/Untitled.png)
+![image](https://user-images.githubusercontent.com/66259854/104466965-202d7600-55f9-11eb-9ab9-195fbc75c5a5.png)
 
 seq2seq Decoder와 달리, Transfomer Decoder는 문장 행렬로 입력을 한 번에 받는다.
 
@@ -340,7 +339,7 @@ seq2seq Decoder와 달리, Transfomer Decoder는 문장 행렬로 입력을 한 
 
 ---
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3b6768d8-b52f-4a1a-92c4-f0da0140114d/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3b6768d8-b52f-4a1a-92c4-f0da0140114d/Untitled.png)
+![image](https://user-images.githubusercontent.com/66259854/104466981-24f22a00-55f9-11eb-97e4-4bef39ae6da9.png)
 
 ```python
     def subsequent_mask(size):
@@ -360,8 +359,8 @@ seq2seq Decoder와 달리, Transfomer Decoder는 문장 행렬로 입력을 한 
             return tgt_mask
 ```
 
-    1. Self-attention을 통해 Attention Score Matrix를 얻는다.
-    2. 다음 그림과 같이 Masking하여 미래 시점의 단어를 참고하지 못하도록 바꾼다.
+1. Self-attention을 통해 Attention Score Matrix를 얻는다.
+2. 다음 그림과 같이 Masking하여 미래 시점의 단어를 참고하지 못하도록 바꾼다.
 
 ## 🎸
 
