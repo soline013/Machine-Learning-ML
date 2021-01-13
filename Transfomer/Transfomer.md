@@ -68,7 +68,7 @@ RNN은 단어를 순차적으로 입력받기 때문에, 단어의 위치에 따
 
 ---
 
-$$PE_{(pos,2i)}=sin(pos/10000^{2i/d_{model}})\\PE_{(pos,2i+1)}=cos(pos/10000^{2i/d_{model}})$$
+$$PE_{(pos,2i)}=sin(pos/10000^{2i/d_{model}}) \\ PE_{(pos,2i+1)}=cos(pos/10000^{2i/d_{model}})$$
 
 $2i$ = 짝수 / $2i+1$ = 홀수
 
@@ -169,11 +169,11 @@ Padding을 적용하지 못하게 Padding Mask를 넣는다.
 `-`
 
 `- Encoder-Decoder Multi Head Attention
-{Input: Query, Key(**Encoder** Output), Value(**Encoder** Output)}`
+{Input: Query, Key(Encoder Output), Value(Encoder Output)}`
 
 `- Dropout2`
 
-`- LayerNorm with Residual Connection2 → **En**/Decoder Output`
+`- LayerNorm with Residual Connection2 → En/Decoder Output`
 
 `-`
 
@@ -207,7 +207,7 @@ Layer의 Multi Head Self Attention과 Scaled Dot Product Attention을 상세히 
 
     Input Vector의 크기가 $d_{model}=512$일 때, Head Vector의 크기는 64인데, Attention의 계산 복잡도를 일정하게 만들고자 하는 구조 때문이다.
 
-    (또한 64라는 값은 $num\_heads=8$로 결정되는데, $d_{model}$을 $num\_heads$로 나눈 값이다.)
+    (또한 64라는 값은 $num\_ heads=8$로 결정되는데, $d_{model}$을 $num\_ heads$로 나눈 값이다.)
 
 2. Matmul
 
