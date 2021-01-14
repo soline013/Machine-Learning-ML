@@ -64,7 +64,7 @@ RNN은 단어를 순차적으로 입력받기 때문에, 단어의 위치에 따
 
 이 특징으로 자연어 처리에서 RNN이 자주 사용되었다.
 
-그리고 Transfomer에서는 위치 정보를 위해 Positional Encoding을 사용한다.
+그리고 Transformer에서는 위치 정보를 위해 Positional Encoding을 사용한다.
 
 ---
 
@@ -334,7 +334,7 @@ def attention(query, key, value, mask=None, dropout=0.0):
 
 ![image](https://user-images.githubusercontent.com/66259854/104466965-202d7600-55f9-11eb-9ab9-195fbc75c5a5.png)
 
-seq2seq Decoder와 달리, Transfomer Decoder는 문장 행렬로 입력을 한 번에 받는다.
+seq2seq Decoder와 달리, Transformer Decoder는 문장 행렬로 입력을 한 번에 받는다.
 
 따라서 현재 단어를 예측할 때, 미래 시점의 단어도 참고하는 일이 발생할 수 있다.
 
@@ -387,7 +387,7 @@ class Batch:
             self.ntokens = (self.trg_ != pad).data.sum()
 ```
 
-1. Transfomer의 Decoder는 Generate 할 때 무조건 1개의 Token을 생성하도록 학습되어 있다. Sequence를 Generate 하려면 Sequence 길이만큼 Decoder를 반복해서 실행한다.
+1. Transformer의 Decoder는 Generate 할 때 무조건 1개의 Token을 생성하도록 학습되어 있다. Sequence를 Generate 하려면 Sequence 길이만큼 Decoder를 반복해서 실행한다.
 
 2. Inference 상황에서 학습을 생각해 보자. 학습 단계에서도 1개씩 생성하도록 학습해야 한다. Source - Target 두 문장은 Pair로 잘 가지고 있다. Decoder를 학습할 때는 Target에서 첫 번째 글자를 안다고 생각하고 두 번째 글자를 학습한다. 세 번째 글자는 앞의 두 글자를 사용하여 학습한다. 이렇게 한 글자씩 예측하고 Loss를 측정하는 방식을 Auto Regressive라고 한다.
 
