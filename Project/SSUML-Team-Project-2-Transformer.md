@@ -22,11 +22,11 @@ Harvard NLP와 차이점이 있는 Google Colab.
 
 Harvard NLP에 있는 Colab 링크로 가면 Google Drive와 연결된다.
 
-## What Is the Transfomer?
+## What Is the Transformer?
 
 [Transfomer](https://www.notion.so/asollie/Transfomer-d692df0aa2c64b9c9c24f6a1dcbfb0e3)
 
-Transfomer에 대한 정리는 링크 참조.
+Transformer에 대한 정리는 링크 참조.
 
 ## Error.
 ### 1.
@@ -77,4 +77,4 @@ Var.data[0]을 Var.data로 변경하면 해결된다.
 
 [Transformer (Attention Is All You Need) 구현하기 (1/3)](https://paul-hyun.github.io/transformer-01/)
 
-조금 더 직접 코드를 건드리기 좋을 것 같은 Transfomer 구현 게시글이 있었다. `구현 예정.`
+조금 더 직접 코드를 건드리기 좋을 것 같은 Transformer 구현 게시글이 있었다. `구현 예정.`
