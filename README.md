@@ -38,8 +38,8 @@ Stanford University CS231n, Spring 2017.
 | Assignment2 / \*.ipynb | Assignment2의 Jupyter Notebook 파일. |
 | Assignment2 / ... / \*.py | Assignment2의 Python 파일. |
 
-# Transfomer.
-Transfomer의 내용을 정리한 폴더.
+# Transformer.
+Transformer의 내용을 정리한 폴더.
 
 * * *
 
