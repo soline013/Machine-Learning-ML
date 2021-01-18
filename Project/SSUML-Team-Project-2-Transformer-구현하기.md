@@ -142,6 +142,11 @@ batch = batch.T.tolist()
 batch = batch.tolist()
 로 변경하면 문제가 해결됩니다.
 ```
+
+Project Comments.
+
+적용 시 `runtimeerror: shape '[29, -1, 8, 64]' is invalid for input of size 153600`이 발생하여 확인 중.
+
 ### 5.
 ```python
 ---------------------------------------------------------------------------
@@ -225,15 +230,85 @@ TypeError: '<' not supported between instances of 'Dropout' and 'float'
 
 ## Result.
 ### 1.
+![image](https://user-images.githubusercontent.com/66259854/104915727-69544000-59d4-11eb-9c7a-a38344f02706.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915741-6eb18a80-59d4-11eb-86f8-7220b2493bfb.png)
 
 ### 2.
+![image](https://user-images.githubusercontent.com/66259854/104915763-75d89880-59d4-11eb-8f35-c29533259ccb.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915790-7e30d380-59d4-11eb-8ada-e54f8771231e.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915797-812bc400-59d4-11eb-8959-294ed2755630.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915809-84bf4b00-59d4-11eb-8378-54f3feebf025.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915821-88eb6880-59d4-11eb-9c18-a4bdf8ad9d27.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915830-8c7eef80-59d4-11eb-8f25-15e89a165ec3.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915842-91dc3a00-59d4-11eb-9a65-7d349b806714.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915853-96085780-59d4-11eb-82f1-46587946a722.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915865-99034800-59d4-11eb-8857-3504443a6734.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915877-9d2f6580-59d4-11eb-92e2-61dc2b978476.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915892-a0c2ec80-59d4-11eb-9b09-1f5ba7a5f7c1.png)
 
 ### 3.
+![image](https://user-images.githubusercontent.com/66259854/104915904-a4567380-59d4-11eb-9890-ae8092d03b76.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915920-ab7d8180-59d4-11eb-8259-62f73611eb6b.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915926-af110880-59d4-11eb-8a32-03152e4150c2.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915938-b33d2600-59d4-11eb-80e4-74614a8c7f1d.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915944-b6381680-59d4-11eb-9174-69dd34989089.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915951-b9cb9d80-59d4-11eb-9339-97826f7564d1.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915959-bd5f2480-59d4-11eb-9c1b-a046708eac42.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915975-c0f2ab80-59d4-11eb-8f34-37cdb71e4019.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915984-c51ec900-59d4-11eb-91d4-9ee5e91b3e74.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104915992-c819b980-59d4-11eb-9461-011a9ccadb2f.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104916004-cbad4080-59d4-11eb-8115-0aba9e80f715.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104916013-cf40c780-59d4-11eb-8384-98cf1b9d5462.png)
+
 번역 결과는 조금 부실하였지만, Attention Visualization이 잘 나타났다.
 
 특히 이번 Attention Visualization 결과는 Harvard NLP와 비슷한 양상을 보인다.
 
 ### 4.
+![image](https://user-images.githubusercontent.com/66259854/104916025-d49e1200-59d4-11eb-9ca0-9ddbfe6f1aea.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104916039-d8ca2f80-59d4-11eb-8e2c-dfd99092ba51.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104916049-dcf64d00-59d4-11eb-9733-922ab5b6b60a.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104916053-dff13d80-59d4-11eb-8755-b95d55bc043e.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104916060-e41d5b00-59d4-11eb-9f6c-c93d72b2deb1.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104916065-e8497880-59d4-11eb-93de-162425c7f7bf.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104916080-ebdcff80-59d4-11eb-9045-de79ca709bad.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104916087-f0091d00-59d4-11eb-81fd-90586806b59b.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104916099-f3040d80-59d4-11eb-89e7-0d49838d74ea.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104916108-f7302b00-59d4-11eb-901a-157e6ca19590.png)
+
+![image](https://user-images.githubusercontent.com/66259854/104916116-fac3b200-59d4-11eb-8ada-a11d007ee728.png)
+
 마찬가지로 번역 결과는 조금 부실하였지만, Attention Visualization이 잘 나타난다.
 
 ## Project Notebook.
