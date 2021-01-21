@@ -29,6 +29,8 @@ Stanford University CS231n, Spring 2017.
 
 [![Generic badge](https://shields.io/badge/Web-Stanford_University_CS231n,_Spring_2017-blue.svg)](https://www.youtube.com/watch?v=vT1JzLTH4G4&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv)
 
+Assignment의 기타 파일들은 따로 폴더를 만들어 올려두었다.
+
 ***
 
 | File | Detail |
@@ -38,8 +40,6 @@ Stanford University CS231n, Spring 2017.
 | Assignment1 / ... / \*.py | Assignment1의 Python 파일. |
 | Assignment2 / \*.ipynb | Assignment2의 Jupyter Notebook 파일. |
 | Assignment2 / ... / \*.py | Assignment2의 Python 파일. |
-
-Assignment의 기타 파일들은 따로 폴더를 만들어 올려두었다.
 
 # Transformer.
 Transformer의 내용을 정리한 폴더.
@@ -56,14 +56,14 @@ Transformer의 내용을 정리한 폴더.
 # Project.
 SSUML Project, Personal Project에 대한 Markdown 파일이 있는 곳.
 
+***Archiving 방식을 고민 중에 있습니다.***
+
 ***
 
 | Project | Detail |
 |--|--|
 | Intel Image Classification | SSUML의 첫 번째 Team Project. Notebook은 Kaggle에 존재한다. |
 | Transformer 구현하기 | SSUML의 두 번째 Team Project. Notebook은 Tansformer 폴더에 존재한다. |
-
-분류 방식을 고민 중에 있습니다.
 
 # Fashion MNIST.
 Fashion MNIST를 다룬 프로젝트가 있는 곳.
