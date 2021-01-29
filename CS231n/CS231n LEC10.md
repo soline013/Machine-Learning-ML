@@ -203,29 +203,27 @@ e.g. 오늘 날씨는 어제 날씨에만 영향을 받는다.
 
 ## min-char-rnn, Andrej.
 
-![CS231n%20LEC10%20eb9e2b5eba9b421c8ec6ef272fd20e0e/cbbf2cf5-0515-420f-921d-20b653cee8db.pdf-0045.jpg](CS231n%20LEC10%20eb9e2b5eba9b421c8ec6ef272fd20e0e/cbbf2cf5-0515-420f-921d-20b653cee8db.pdf-0045.jpg)
+![cbbf2cf5-0515-420f-921d-20b653cee8db pdf-0045](https://user-images.githubusercontent.com/66259854/106297048-b0281c80-6295-11eb-972f-09d89b3de05e.jpg)
 
 Vocabulary를 만들고, Truncated Backpropagation을 수행하는 모델.
 
 ### Shakespeare RNN.
 
-![cbbf2cf5-0515-420f-921d-20b653cee8db pdf-0045](https://user-images.githubusercontent.com/66259854/106297048-b0281c80-6295-11eb-972f-09d89b3de05e.jpg)
-
 ![cbbf2cf5-0515-420f-921d-20b653cee8db pdf-0046](https://user-images.githubusercontent.com/66259854/106297053-b0c0b300-6295-11eb-8dcd-cc6bddb13c42.jpg)
 
 ![cbbf2cf5-0515-420f-921d-20b653cee8db pdf-0047](https://user-images.githubusercontent.com/66259854/106297057-b1594980-6295-11eb-894e-57564f495e98.jpg)
 
-### Algebraic Topology.
-
 ![cbbf2cf5-0515-420f-921d-20b653cee8db pdf-0048](https://user-images.githubusercontent.com/66259854/106297058-b1f1e000-6295-11eb-8429-94463cf55165.jpg)
+
+### Algebraic Topology.
 
 ![cbbf2cf5-0515-420f-921d-20b653cee8db pdf-0049](https://user-images.githubusercontent.com/66259854/106297059-b1f1e000-6295-11eb-9691-7f56fb2c3fd9.jpg)
 
 ![cbbf2cf5-0515-420f-921d-20b653cee8db pdf-0050](https://user-images.githubusercontent.com/66259854/106297061-b28a7680-6295-11eb-851e-e7d5bcb6711e.jpg)
 
-### Linux Kernel.
-
 ![cbbf2cf5-0515-420f-921d-20b653cee8db pdf-0051](https://user-images.githubusercontent.com/66259854/106297064-b3230d00-6295-11eb-82cc-a229c6c3d73c.jpg)
+
+### Linux Kernel.
 
 ![cbbf2cf5-0515-420f-921d-20b653cee8db pdf-0052](https://user-images.githubusercontent.com/66259854/106297068-b3bba380-6295-11eb-8ba3-3b6f7bb92737.jpg)
 
