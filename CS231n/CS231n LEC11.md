@@ -1,3 +1,5 @@
+# 이미지는 수정 예정.
+
 # CS231n LEC11.
 ## Stanford University CS231n, Spring 2017.
 **Detection and Segmentation.**
@@ -484,7 +486,7 @@ Loss와 Layer 하나만 더 추가하여 구현할 수 있다.
 
 ## 링크.
 
-[Lecture 10 | Recurrent Neural Networks |](https://www.youtube.com/watch?v=nDPWywWRIRo&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=11)
+[Lecture 11 | Recurrent Neural Networks |](https://www.youtube.com/watch?v=nDPWywWRIRo&list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&index=11)
 
 [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/2017/)
 
