@@ -492,6 +492,6 @@ Loss와 Layer 하나만 더 추가하여 구현할 수 있다.
 
 [CS231n 2017 Lecture11 PDF](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture11.pdf)
 
-[soline013/CS231N_17_KOR_SUB](https://github.com/visionNoob/CS231N_17_KOR_SUB/blob/master/kor/Lecture%2011%20%20%20Detection%20and%20Segmentation.ko.srt)
+[soline013/CS231N_17_KOR_SUB](https://github.com/soline013/CS231N_17_KOR_SUB/blob/master/kor/Lecture%2011%20%20%20Detection%20and%20Segmentation.ko.srt)
 
 [Visual Image Media_HJK : 네이버 블로그](https://blog.naver.com/dr_moms/221631504020)
