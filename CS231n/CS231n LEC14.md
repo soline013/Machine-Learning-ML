@@ -105,13 +105,13 @@ $Q^*$는 Bellman 방정식을 만족한다.
 
 Bellman 방정식으로 각 Step마다 $Q^*$를 조금씩 최적화하여 최선의 정책을 구할 수 있다.
 
-문제점
+1. 문제점
 
     Scalable하지 않으므로 모든 (s, a)마다 Q를 계산해야 한다.
 
     Atari 게임의 경우 스크린의 모든 Pixel이 상태가 되고, 상태 공간이 매우 커서 계산이 불가능하다.
 
-해결법
+2. 해결법
 
     함수 Q를 Neural Network 등의 방법으로 근사시킨다.
 
@@ -240,12 +240,12 @@ $log(p;\tau)$는 곱의 형태가 합의 형태로 바뀌고, $\theta$에 대해
 3. 경로가 좋으면 경로에 포함된 모든 행동들이 좋은 판정을 받지만, 기댓값에 의해 Averages Out 된다.
 4. Averages Out을 통해 Unbiased Extimator를 얻을 수 있다.
 
-장점.
+1. 장점.
 
     1. Gradient만 잘 계산하면 Loss Function이 작다.
     2. 정책 Parameter $\theta$에 대한 Local Optimum을 구할 수 있다.
 
-단점.
+2. 단점.
 
     1. Averages Out 되기 때문에 분산이 높다.
 
