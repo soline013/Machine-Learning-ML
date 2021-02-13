@@ -65,6 +65,9 @@ SSUML Project, Personal Project에 대한 Markdown 파일이 있는 곳.
 | Intel Image Classification | SSUML의 첫 번째 Team Project. Notebook은 Kaggle에 존재한다. |
 | Transformer 구현하기 | SSUML의 두 번째 Team Project. Notebook은 Tansformer 폴더에 존재한다. |
 
+# Paper.
+논문 리뷰를 정리한 폴더.
+
 # Fashion MNIST.
 Fashion MNIST를 다룬 프로젝트가 있는 곳.
 
