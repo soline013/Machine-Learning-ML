@@ -1,6 +1,6 @@
 # CS231n LEC06.
 ## Stanford University CS231n, Spring 2017.
-**Training Neural Networks.**
+**Training Neural Networks Ⅰ.**
 
 ## Recall from last time.
 ![image](https://user-images.githubusercontent.com/66259854/101941803-d8978100-3c2b-11eb-96f4-522edaeea7bb.png)
@@ -421,7 +421,7 @@ Weight Updates / Weight Magnitudes의 비율을 봤을 때 0.001 정도가 좋�
 
 ## 링크.
 
-[Lecture 6 | Training Neural Networks |](https://www.youtube.com/watch?v=wEoyxE0GP2M&t=2821s)
+[Lecture 6 | Training Neural Networks Ⅰ |](https://www.youtube.com/watch?v=wEoyxE0GP2M&t=2821s)
 
 [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/2017/)
 
