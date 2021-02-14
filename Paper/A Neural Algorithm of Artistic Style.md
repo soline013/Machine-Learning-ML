@@ -143,15 +143,13 @@ Image는 Filter를 통과하면 Encoding 된다.
 
     [Matrix norm](https://en.wikipedia.org/wiki/Matrix_norm#Frobenius_norm)
 
-    같은 논문을 리뷰한 글에서 찾을 수 있었다.
+- 번외. Mean Squared Error(MSE) & Mean Squared Deviation(Difference)(MSD).
 
-    그러나 논문의 언급과 수식으로 볼 때 MSD로 보는 것이 타당한 듯하다.
+    [블루래더 - 경제적 자유를 향한 푸른 사다리 : 네이버 블로그](https://blog.naver.com/resumet/221751314721)
 
-- 번외. Mean Squared Displacement(MSD).
+    [ADONIS EntertaINMent & Fairies : 네이버 블로그](https://blog.naver.com/sanghan1990/221156229802)
 
-    [Mean squared displacement](https://en.wikipedia.org/wiki/Mean_squared_displacement)
-
-    Content Loss는 MSD 형태이다.
+    [Mean squared error](https://en.wikipedia.org/wiki/Mean_squared_error)
 
 ---
 
