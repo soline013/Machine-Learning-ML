@@ -41,6 +41,11 @@ Assignment의 기타 파일들은 따로 폴더를 만들어 올려두었다.
 | Assignment2 / \*.ipynb | Assignment2의 Jupyter Notebook 파일. |
 | Assignment2 / ... / \*.py | Assignment2의 Python 파일. |
 
+# Style Transfer.
+Style Transfer의 내용을 정리한 폴더.
+
+***Archiving 방식을 고민 중에 있습니다.***
+
 # Transformer.
 Transformer의 내용을 정리한 폴더.
 
@@ -67,6 +72,8 @@ SSUML Project, Personal Project에 대한 Markdown 파일이 있는 곳.
 
 # Paper.
 논문 리뷰를 정리한 폴더.
+
+***Archiving 방식을 고민 중에 있습니다.***
 
 # Fashion MNIST.
 Fashion MNIST를 다룬 프로젝트가 있는 곳.
