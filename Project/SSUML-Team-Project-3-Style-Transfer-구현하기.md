@@ -22,6 +22,7 @@
 
 2016년 논문. 내용이 조금 더 많다.
 
+---
 
 ### 두 논문의 차이점.
 1. 2016년 논문은 Content Reconstructions에서 `conv'N'_2`를 사용한다.
@@ -39,49 +40,65 @@
 
     덕분에 이런 이미지를 얻을 수 있다.
 
-    ![SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Image_1614432527.png](SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Image_1614432527.png)
+    ![Image_1614432527](https://user-images.githubusercontent.com/66259854/109471569-45484c00-7ab4-11eb-9e02-c6ac1de4f2bd.png)
+
+
+## Result.
+
+Framework는 Tensorflow와 Pytorch를 모두 사용하였고, Result에서는 Tensorflow의 결과를 이용하였다.
+
+- 최적화 이전의 결과.
+
+    ![Neural_Style_Transfer_tf](https://user-images.githubusercontent.com/66259854/109472526-96a50b00-7ab5-11eb-867f-599a2b5c2dc0.png)
+
+- 최적화 이후의 결과.
+
+    ![Neural_Style_Transfer_tf_2](https://user-images.githubusercontent.com/66259854/109472521-9442b100-7ab5-11eb-86e6-13487db1a306.png)
+
 
 ## Different Weight Rate.
 
     Setting.
 
+    Framework = Pytorch
     Input Image = Content Image
     Content Weight = 1
     Epoch = 400
 
 - Style Weight = 100.
 
-    ![SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Neural_Style_Transfer_pytorch_Content_100.png](SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Neural_Style_Transfer_pytorch_Content_100.png)
+    ![Neural_Style_Transfer_pytorch_Content_100](https://user-images.githubusercontent.com/66259854/109471579-48433c80-7ab4-11eb-978e-f63fa67aa62e.png)
 
 - Style Weight = 10,000.
 
-    ![SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Neural_Style_Transfer_pytorch_Content_10000.png](SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Neural_Style_Transfer_pytorch_Content_10000.png)
+    ![Neural_Style_Transfer_pytorch_Content_10000](https://user-images.githubusercontent.com/66259854/109471581-49746980-7ab4-11eb-9c00-10d2f7df0946.png)
 
 - Style Weight = 1,000,000.
 
-    ![SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Neural_Style_Transfer_pytorch_Content.png](SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Neural_Style_Transfer_pytorch_Content.png)
+    ![Neural_Style_Transfer_pytorch_Content](https://user-images.githubusercontent.com/66259854/109471583-4a0d0000-7ab4-11eb-95ce-2a146ee7edf8.png)
 
 ## Different Input Image.
 
     Setting.
 
+    Framework = Pytorch
     Style Weight = 1,000,000
     Content Weight = 1
     Epoch = 400
 
 - Content Image.
 
-    ![SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Neural_Style_Transfer_pytorch_Content.png](SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Neural_Style_Transfer_pytorch_Content.png)
+    ![Neural_Style_Transfer_pytorch_Content](https://user-images.githubusercontent.com/66259854/109471583-4a0d0000-7ab4-11eb-95ce-2a146ee7edf8.png)
 
 - Style Image.
 
-    ![SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Neural_Style_Transfer_pytorch_Style.png](SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Neural_Style_Transfer_pytorch_Style.png)
+    ![Neural_Style_Transfer_pytorch_Style](https://user-images.githubusercontent.com/66259854/109471593-4b3e2d00-7ab4-11eb-980f-331ba956b96d.png)
 
 - Noise Image.
 
-    ![SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Neural_Style_Transfer_pytorch_Noise_2.png](SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Neural_Style_Transfer_pytorch_Noise_2.png)
+    ![Neural_Style_Transfer_pytorch_Noise_2](https://user-images.githubusercontent.com/66259854/109471585-4aa59680-7ab4-11eb-847c-59c133dc92b2.png)
 
-    ![SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Neural_Style_Transfer_pytorch_Noise.png](SSUML%20Team%20Project3%20-%20Style%20Transfer%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20275a598db35d488aa621125eea5c7441/Neural_Style_Transfer_pytorch_Noise.png)
+    ![Neural_Style_Transfer_pytorch_Noise](https://user-images.githubusercontent.com/66259854/109471591-4b3e2d00-7ab4-11eb-91bb-4ef6d75159dc.png)
 
 ### Project Notebook.
 
