@@ -4,7 +4,7 @@ DQN(Deep Q Learning).
 
 ## Return.
 
-$$R_{t_o} = \sum^\infin_{t=t_0}  \gamma^{t-t_o} r_t$$
+$$R_{t_o} = \sum^{\infin}_{t=t_0}  \gamma^{t-t_o} r_t$$
 
 $R_{t_0}$ = Return.
 
@@ -16,11 +16,11 @@ $\gamma^{t-t_0}$ = Discounted Constant. 0~1. Ensures the sum converges.
 
 ## Function Q.
 
-$$Q^*: State \times Action → \R$$
+$$Q^* : State \times Action → \R$$
 
 상태에서 행동이 있다면, 반환 R을 최대화하는 정책을 쉽게 구축할 수 있다.
 
-→ $\pi^*(s) = \underset{a}{argmax} Q^*(s,a)$
+→ $\pi^* (s) = \underset{a}{argmax} Q^* (s,a)$
 
 ---
 
