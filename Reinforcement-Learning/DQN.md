@@ -61,7 +61,7 @@ Huber Loss는 오류가 작으면 평균 제곱 오차(Mean Squared Error)와 �
 
 ## Total Data Flow.
 
-![DQN%206b1c77e4c2034e6bba1302543949f547/Untitled.png](DQN%206b1c77e4c2034e6bba1302543949f547/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/66259854/110951345-4e74cb00-8388-11eb-841e-f331e7c237fb.png)
 
 > 행동은 무작위 또는 정책에 따라 선택되어, gym 환경에서 다음 단계 샘플을 가져옵니다. 결과를 재현 메모리에 저장하고 모든 반복에서 최적화 단계를 실행합니다. 최적화는 재현 메모리에서 무작위 배치를 선택하여 새 정책을 학습합니다. “이전” target_net은 최적화에서 기대 Q 값을 계산하는 데에도 사용되고, 최신 상태를 유지하기 위해 가끔 업데이트됩니다.
 
