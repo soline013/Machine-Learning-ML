@@ -43,7 +43,9 @@ $$Q^{\pi}(s, a) = \mathbb{E} [r + \gamma Q^{\pi} (s', \pi(s'))]$$
 매개변수 $\theta$를 갖는 NN으로 $Q(s, a; \theta) \approx Q^*(s, a)$를 근사하여 추정한다.
 
 ## Temporal Difference Error.
-$$L_i(\theta_i) = \mathbb{E}_{s, a, r, s' \sim p(.)} [(y_i - Q(s, a; \theta_i))^2] \\ \text{where} \ y_i = r + \gamma \,  max_{a'} \, Q(s', a'; \theta_{i-1})$$
+$$L_i(\theta_i) = \mathbb{E}_{s, a, r, s' \sim p(.)} [(y_i - Q(s, a; \theta_i))^2]$$
+
+$$\text{where} \ y_i = r + \gamma \,  max_{a'} \, Q(s', a'; \theta_{i-1})$$
 
 $y_i$를 TD 대상이라고 하고, $y_i - Q$를 TD 오류라고 한다.
 
