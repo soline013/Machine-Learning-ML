@@ -1,6 +1,13 @@
-# DQN
+# Deep Q Learning.
+[DQNNaturePaper](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)
 
-DQN(Deep Q Learning).
+2015년 DeepMind에서 처음으로 나왔다.
+
+Q-learning과 Experience Replay를 사용하였다.
+
+## Our Goals.
+
+Discounted Cumulative Reward를 최대화하는 Policy $\pi (a_t|s_t)$를 학습하는 것이다.
 
 ## Return.
 
@@ -14,7 +21,7 @@ $\gamma^{t-t_0}$ = Discounted Constant. 0~1. Ensures the sum converges.
 
 [강화 학습(RL)_ MDP](https://brunch.co.kr/@minkh/3)
 
-## Function Q.
+## Q Function.
 
 $$Q^* : \text{State} \times \text{Action} → \mathbb{R}$$
 
@@ -24,21 +31,38 @@ $$Q^* : \text{State} \times \text{Action} → \mathbb{R}$$
 
 ---
 
-$$Q^{\pi}(s, a) = r + \gamma Q^{\pi} (s', \pi(s'))$$
+$$Q^{\pi}(s, a) = \mathbb{E} [r + \gamma Q^{\pi} (s', \pi(s'))]$$
 
 함수 Q는 Bellman 방정식을 준수한다.
 
 세상의 모든 것을 알지 못하기에 $Q^*$에는 도달할 수 없지만, 최대한 $Q^*$를 닮도록 한다.
 
-## Our Goals.
+## Deep Q Learning.
+[CS231n LEC14.](https://www.notion.so/CS231n-LEC14-e8df1ca4cbe943e1818c2288e08902a3)
 
-Discounted Cumulative Reward를 최대화하는 Policy를 학습하는 것이다.
+매개변수 $\theta$를 갖는 NN으로 $Q(s, a; \theta) \approx Q^*(s, a)$를 근사하여 추정한다.
 
 ## Temporal Difference Error.
+$$L_i(\theta_i) = \mathbb{E}_{s, a, r, s' \sim p(.)} [(y_i - Q(s, a; \theta_i))^2] \\ \text{where} \ y_i = r + \gamma \,  max_{a'} \, Q(s', a'; \theta_{i-1})$$
+
+$y_i$를 TD 대상이라고 하고, $y_i - Q$를 TD 오류라고 한다.
+
+p는 $s, a, r, s'$에 대한 분포이다.
+
+---
 
 $$\delta = Q(s, a) - (r + \gamma \ \underset{a}{max} Q(s', a))$$
 
 Equality의 두 측면 사이의 차이이다.
+
+## Experience Replay.
+
+CS231n LEC14 중.
+
+> 1. Replay Memory에는 (상태, 행동, 보상, 다음 상태)로 구성된 전이 테이블이 있다.
+2. 전이 테이블을 계속 Update하고, 임의의 Mini-batch를 사용하여 Q-network를 학습한다.
+3. 즉, 연속적인 샘플 대신 전이 테이블에서 임의로 Sampling 하여 사용한다.
+4. 각 전이가 가중치 Update에 여러 번 기여할 수 있다는 장점이 있다. → 하나의 샘플이 계속 뽑힐 수 있다. → 데이터 효율 증가.
 
 ## Huber Loss.
 
@@ -68,3 +92,5 @@ Huber Loss는 오류가 작으면 평균 제곱 오차(Mean Squared Error)와 �
 ## 링크.
 
 [강화 학습 (DQN) 튜토리얼 - PyTorch Tutorials 1.6.0 documentation](https://tutorials.pytorch.kr/intermediate/reinforcement_q_learning.html)
+
+[REINFORCE agent, TensorFlow Agents](https://www.tensorflow.org/agents/tutorials/6_reinforce_tutorial)
