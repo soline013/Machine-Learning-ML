@@ -1,8 +1,6 @@
 # Machine-Learning-ML.
 **Personal Machine Learning study.**
 
-***
-
 머신러닝 / 딥러닝 소모임 SSUML.
 
 잘못된 내용이 있다면 바로잡아주시기 바랍니다.
@@ -14,7 +12,6 @@
 
 [![Generic badge](https://shields.io/badge/Youtube-모두를_위한_딥러닝-blue.svg)](https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm)
 
-***
 
 | File | Detail |
 |--|--|
@@ -31,7 +28,6 @@ Stanford University CS231n, Spring 2017.
 
 Assignment의 기타 파일들은 따로 폴더를 만들어 올려두었다.
 
-***
 
 | File | Detail |
 |--|--|
@@ -55,7 +51,6 @@ Transformer의 내용을 정리한 폴더.
 
 `"SSUML Team Project 2 Transformer 구현하기"` 파일 참조.
 
-***
 
 | File | Detail |
 |--|--|
@@ -65,24 +60,12 @@ Transformer의 내용을 정리한 폴더.
 # Project.
 SSUML Project, Personal Project에 대한 Markdown 파일이 있는 곳.
 
-***
 
 | Project | Detail | Tag |
 |--|--|--|
-| Intel Image Classification | SSUML의 첫 번째 Team Project. Notebook은 Kaggle에 존재한다. | Image Classification |
-| Transformer 구현하기 | SSUML의 두 번째 Team Project. Notebook은 Tansformer 폴더에 존재한다. | Transformer |
-| Style Transfer 구현하기 | SSUML의 세 번째 Team Project. Notebook은 Style Transfer 폴더에 존재한다. | Style Transfer |
-
-# Paper.
-논문 리뷰를 정리한 폴더.
-
----
-
-| Paper | Detail | Tag |
-|--|--|--|
-| A Neural Algorithm of Artistic Style | 2015년 발표된 Style Transfer 논문. | Style Transfer |
-| Image Style Transfer Using Convolutional Neural Networks | 2016년 발표된 Style Transfer 논문. A Neural Algorithm of Artistic Style과 많은 내용이 겹친다. | Style Transfer |
-
+| Intel Image Classification | SSUML의 첫 번째 Team Project. Notebook은 Kaggle에 있다. | Image Classification |
+| Transformer 구현하기 | SSUML의 두 번째 Team Project. Notebook은 Tansformer 폴더에 있다. | Transformer |
+| Style Transfer 구현하기 | SSUML의 세 번째 Team Project. Notebook은 Style Transfer 폴더에 있다. | Style Transfer |
 
 # Fashion MNIST.
 Fashion MNIST를 다룬 프로젝트가 있는 곳.
@@ -90,3 +73,17 @@ Fashion MNIST를 다룬 프로젝트가 있는 곳.
 동아리 SSUML의 첫 프로젝트 과제.
 
 ***수정 예정.***
+
+# Reinforcement Learning.
+강화학습에 대한 내용을 정리한 폴더.
+
+현재 Deep Q Learning에 대한 내용과 Notebook이 있다.
+
+# Paper.
+논문 리뷰를 정리한 폴더.
+
+
+| Paper | Detail | Tag |
+|--|--|--|
+| A Neural Algorithm of Artistic Style | 2015년 발표된 Style Transfer 논문. | Style Transfer |
+| Image Style Transfer Using Convolutional Neural Networks | 2016년 발표된 Style Transfer 논문. A Neural Algorithm of Artistic Style과 많은 내용이 겹친다. | Style Transfer |
