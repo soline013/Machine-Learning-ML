@@ -2,13 +2,13 @@
 
 [YOLO9000: Better, Faster, Stronger](https://arxiv.org/pdf/1612.08242.pdf)
 
-![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/Computer_Vision_Timeline.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/Computer_Vision_Timeline.png)
+![Computer Vision Timeline](https://user-images.githubusercontent.com/66259854/114395354-35ee0f80-9bd7-11eb-8426-143bd4c4cc5c.png)
 
 ## Abstract.
 
 - 🖼️ Figure 1.
 
-    ![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_6.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_6.png)
+    <img width="427" alt="YOLO9000 1" src="https://user-images.githubusercontent.com/66259854/114395184-0b9c5200-9bd7-11eb-9a6b-82b75bd34a43.png">
 
 - Real-time Object Detection System.
 
@@ -78,9 +78,9 @@ Mutiple Object Detection 알고리즘에 대한 성능을 1개의 Scalar Value�
 
 ## Dimension Clusters.
 
-![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_2.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_2.png)
+<img width="561" alt="YOLO9000 2" src="https://user-images.githubusercontent.com/66259854/114395195-0d661580-9bd7-11eb-8f0b-1bfa83b334ac.png">
 
-![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_3.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_3.png)
+<img width="561" alt="YOLO9000 3" src="https://user-images.githubusercontent.com/66259854/114395197-0e974280-9bd7-11eb-8194-c719e3020d22.png">
 
 1. Anchor Box를 사용하면서 2가지 문제가 생겼는데, 하나는 Box Dimension이 Hand-pick 된다는 것이다.
 
@@ -98,15 +98,15 @@ Mutiple Object Detection 알고리즘에 대한 성능을 1개의 Scalar Value�
 
     ### 번외. IOU(Intersection Over Union).
 
-    ![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/IOU.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/IOU.png)
+    ![IOU](https://user-images.githubusercontent.com/66259854/114395178-0a6b2500-9bd7-11eb-8082-84a4cc498c4b.png)
 
-    ![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/IOU_2.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/IOU_2.png)
+    ![IOU 2](https://user-images.githubusercontent.com/66259854/114395177-0a6b2500-9bd7-11eb-97b7-36d6ef9d72e4.png)
 
     [IoU, Intersection over Union 개념을 이해하자](https://ballentain.tistory.com/12)
 
 ## Direct Location Prediction.
 
-![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_4.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_4.png)
+<img width="558" alt="YOLO9000 4" src="https://user-images.githubusercontent.com/66259854/114395201-0f2fd900-9bd7-11eb-95c0-403954b84c93.png">
 
 1. Anchor Box를 사용하면서 생긴 두 번째 문제는 모델이 불안정하다는 것이다.
 
@@ -132,7 +132,7 @@ Mutiple Object Detection 알고리즘에 대한 성능을 1개의 Scalar Value�
 
 ## Fine-Grained Features.
 
-![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_0.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_0.png)
+![YOLO9000 0](https://user-images.githubusercontent.com/66259854/114395181-0b03bb80-9bd7-11eb-95a1-5d40d9e4c8c3.png)
 
 1. 기존 YOLO는 13X13 Feature Map으로, 큰 이미지를 검출하기에는 충분하지만 작은 이미지에는 불충분하다.
 2. 이전 Layer에서 26X26 Feature Map을 가져와 26X26X512 크기를 13X13X2048로 Rescale 한다.
@@ -142,9 +142,9 @@ Mutiple Object Detection 알고리즘에 대한 성능을 1개의 Scalar Value�
 
 ## Multi-Scale Training.
 
-![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_5.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_5.png)
+<img width="539" alt="YOLO9000 5" src="https://user-images.githubusercontent.com/66259854/114395209-0fc86f80-9bd7-11eb-8354-6fd99a4ae34a.png">
 
-![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_6%201.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_6%201.png)
+<img width="570" alt="YOLO9000 6" src="https://user-images.githubusercontent.com/66259854/114395213-10610600-9bd7-11eb-9fdc-baf5d069261d.png">
 
 1. YOLOv2는 FC Layer를 제거하여 여러 Size의 이미지를 학습할 수 있고, 실행에 옮겼다.
 2. {320, 352, ..., 608}처럼 32 Pixel 간격으로 10 Batch마다 입력 이미지의 크기를 바꾼다.
@@ -153,13 +153,13 @@ Mutiple Object Detection 알고리즘에 대한 성능을 1개의 Scalar Value�
 
 ## Further Experiments.
 
-![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_8.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_8.png)
+<img width="1159" alt="YOLO9000 8" src="https://user-images.githubusercontent.com/66259854/114395217-10f99c80-9bd7-11eb-8e83-76649dfcdf41.png">
 
-![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_9.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_9.png)
+<img width="862" alt="YOLO9000 9" src="https://user-images.githubusercontent.com/66259854/114395219-11923300-9bd7-11eb-9705-5fb26555f2cf.png">
 
 ## A Summary of Results.
 
-![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_7.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_7.png)
+<img width="1160" alt="YOLO9000 7" src="https://user-images.githubusercontent.com/66259854/114395214-10f99c80-9bd7-11eb-9d39-f4598216b5b3.png">
 
 ## Faster.
 
@@ -170,7 +170,7 @@ Mutiple Object Detection 알고리즘에 대한 성능을 1개의 Scalar Value�
 
 ## Darknet-19.
 
-![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_10.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_10.png)
+<img width="409" alt="YOLO9000 10" src="https://user-images.githubusercontent.com/66259854/114395224-122ac980-9bd7-11eb-9317-0e9188b8a39c.png">
 
 YOLOv2는 Darknet이라는 새로운 Model을 사용한다.
 
@@ -213,7 +213,7 @@ YOLOv2는 Darknet이라는 새로운 Model을 사용한다.
 
 ## Hierarchical Classification.
 
-![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_11.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_11.png)
+<img width="555" alt="YOLO9000 11" src="https://user-images.githubusercontent.com/66259854/114395228-12c36000-9bd7-11eb-8bf0-6774ac3757bc.png">
 
 ImageNet의 Label은 WordNet Language Dataset으로부터 파생되었다.
 
@@ -223,7 +223,7 @@ YOLO9000은 WordTree를 만들었는데, Softmax를 없애지 않고 WordTree �
 
 ## Dataset Combination With WordTree.
 
-![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_12.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_12.png)
+<img width="559" alt="YOLO9000 12" src="https://user-images.githubusercontent.com/66259854/114395229-12c36000-9bd7-11eb-9d1a-36c565b234a3.png">
 
 YOLO9000의 WordTree는 COCO Dataset과 ImageNet Dataset을 모두 사용했다.
 
@@ -240,7 +240,7 @@ For classification purposes we assume that the the image contains an object: $Pr
 
 ## Joint Classification and Detection.
 
-![YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_13.png](YOLO9000%20Better,%20Faster,%20Stronger%20816596cb0d024569b2c301b25a4931b4/YOLO9000_13.png)
+<img width="557" alt="YOLO9000 13" src="https://user-images.githubusercontent.com/66259854/114395232-135bf680-9bd7-11eb-968d-436b180b71ac.png">
 
 1. Dataset.
 
