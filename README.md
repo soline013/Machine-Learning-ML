@@ -79,6 +79,9 @@ Fashion MNIST를 다룬 프로젝트가 있는 곳.
 
 현재 Deep Q Learning에 대한 내용과 Notebook이 있다.
 
+# Computer Vision.
+Computer Vision에 대한 내용을 정리한 폴더.
+
 # Paper.
 논문 리뷰를 정리한 폴더.
 
