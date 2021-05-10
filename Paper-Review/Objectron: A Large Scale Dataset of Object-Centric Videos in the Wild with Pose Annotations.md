@@ -1,16 +1,16 @@
-# Objectron: A Large Scale Dataset of Object-Centric Videos in the Wild with Pose Annotations
+# Objectron: A Large Scale Dataset of Object-Centric Videos in the Wild with Pose Annotations.
 
 [Objectron: A Large Scale Dataset of Object-Centric Videos in the Wild with Pose Annotations](https://arxiv.org/pdf/2012.09988v1.pdf)
 
 ## Abstract.
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.04.44.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.04.44.png)
+<img width="924" alt="Objectron1" src="https://user-images.githubusercontent.com/66259854/117652533-3f669980-b1ce-11eb-818d-3b90b2b3d5d0.png">
 
 2020 TensorFlow Developer Summit 에서 Google이 공개하였다.
 
 ## 1. Introduction.
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.04.56.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.04.56.png)
+<img width="1040" alt="Objectron2" src="https://user-images.githubusercontent.com/66259854/117652568-4e4d4c00-b1ce-11eb-9b1d-fc3f0b865c0d.png">
 
 - Object Detection에서 대부분의 연구는 2D에 중점을 두고 있다.
 - 3D Dataset은 2D Dataset에 비해 크지 않다.
@@ -25,7 +25,7 @@
 
 ### 번외. Point-cloud.
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/Point_cloud_torus.gif](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/Point_cloud_torus.gif)
+![Point-cloud](https://user-images.githubusercontent.com/66259854/117652653-61f8b280-b1ce-11eb-86d0-bd54bc833c29.gif)
 
 [점구름 - 위키백과, 우리 모두의 백과사전](https://ko.wikipedia.org/wiki/%EC%A0%90%EA%B5%AC%EB%A6%84)
 
@@ -49,7 +49,7 @@
 
 ## Data Collection.
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.05.09.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.05.09.png)
+<img width="499" alt="Objectron3" src="https://user-images.githubusercontent.com/66259854/117652574-4f7e7900-b1ce-11eb-9346-f72141369d15.png">
 
 1. 데이터 수집은 카메라가 물체 주위에서 움직이며 다른 각도로 녹화한다.
 2. 또한 AR Session(ARKit or ARCore)을 통해 Camera Poses, Sparse Point-clouds, Surface Planes을 포착한다.
@@ -58,7 +58,7 @@
 
 ## Data Annotation.
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.05.24.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.05.24.png)
+<img width="503" alt="Objectron4" src="https://user-images.githubusercontent.com/66259854/117652576-50170f80-b1ce-11eb-8f01-437ff7c29d49.png">
 
 1. 각 이미지에 3D Bounding Box를 다는 것은 시간이 오래 걸리고 비용이 크다.
 2. 대신 비디오 클립의 3D 객체에 Annotation을 달아 모든 프레임에 채우고, Annotation Process를 확장한다.
@@ -70,14 +70,14 @@
 
 Annotation의 정확성은 두 가지 요인에 달려 있다.
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.05.38.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.05.38.png)
+<img width="499" alt="Objectron5" src="https://user-images.githubusercontent.com/66259854/117652578-50afa600-b1ce-11eb-9bcd-6aa8e184c43b.png">
 
 비디오 전체에서 추정된 카메라 포즈의 Drift(이동) 양.
 
 1. 경험적으로 Videos Drift < 2% 임을 관찰했다.
 2. Drift를 줄이기 위해, 보통 10초 미만의 시퀀스를 캡처한다.
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.05.53.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.05.53.png)
+<img width="1039" alt="Objectron6" src="https://user-images.githubusercontent.com/66259854/117652580-50afa600-b1ce-11eb-9a00-bd217056ba5d.png">
 
 3D Bounding Box를 나타내는 Rater(평가자)의 정확도.
 
@@ -86,9 +86,9 @@ Annotation의 정확성은 두 가지 요인에 달려 있다.
 
 ## 4. Objectron Dataset.
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.06.26.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.06.26.png)
+<img width="1038" alt="Objectron7" src="https://user-images.githubusercontent.com/66259854/117652585-51483c80-b1ce-11eb-97cd-3d62b98a1f9f.png">
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.06.11.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.06.11.png)
+<img width="907" alt="Objectron8" src="https://user-images.githubusercontent.com/66259854/117652588-52796980-b1ce-11eb-822a-1c50bbeff49b.png">
 
 - Objectron Dataset의 카테고리는 자전거, 책, 병, 카메라, 시리얼 상자, 의자, 컵, 노트북, 신발이다.
 - 이 카테고리 중 일부는 Non-rigid하고 비디오 녹화 동안 정지된 상태를 유지한다.
@@ -104,7 +104,7 @@ Annotation의 정확성은 두 가지 요인에 달려 있다.
 
 ## 3D Intersection Over Union(IoU).
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.06.38.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.06.38.png)
+<img width="499" alt="Objectron9" src="https://user-images.githubusercontent.com/66259854/117652591-53120000-b1ce-11eb-99bb-3bd2f299293a.png">
 
 1. Sutherland-Hodgman Algorithm.
 
@@ -116,11 +116,11 @@ Annotation의 정확성은 두 가지 요인에 달려 있다.
 
     ### 번외. Sutherland-Hodgman Algorithm.
 
-        ![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/505px-Sutherland-Hodgman_clipping_sample.svg.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/505px-Sutherland-Hodgman_clipping_sample.svg.png)
+    ![Sutherland-Hodgman_clipping_sample](https://user-images.githubusercontent.com/66259854/117652657-6329df80-b1ce-11eb-910e-4d1380556864.png)
 
-        [Sutherland-Hodgman algorithm - Wikipedia](https://en.wikipedia.org/wiki/Sutherland%E2%80%93Hodgman_algorithm)
+    [Sutherland-Hodgman algorithm - Wikipedia](https://en.wikipedia.org/wiki/Sutherland%E2%80%93Hodgman_algorithm)
 
-        [[클리핑] Sutherland-Hodgman 다각형 클리핑](https://playground10.tistory.com/80)
+    [[클리핑] Sutherland-Hodgman 다각형 클리핑](https://playground10.tistory.com/80)
 
 2. Convex Hull Algorithm.
 
@@ -133,7 +133,7 @@ Annotation의 정확성은 두 가지 요인에 달려 있다.
 
     ### 번외. Convex Hull Algorithm.
 
-    ![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/Animation_depicting_the_quickhull_algorithm.gif](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/Animation_depicting_the_quickhull_algorithm.gif)
+    ![hull_algorithm](https://user-images.githubusercontent.com/66259854/117652633-5e652b80-b1ce-11eb-97ee-6cb275887014.gif)
 
     [컨벡스 헐 알고리즘(Convex Hull Algorithm)](https://www.crocus.co.kr/1288)
 
@@ -141,7 +141,7 @@ Annotation의 정확성은 두 가지 요인에 달려 있다.
 
 3. Figure 9.
 
-    ![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.06.53.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.06.53.png)
+    <img width="499" alt="Objectron10" src="https://user-images.githubusercontent.com/66259854/117652593-53aa9680-b1ce-11eb-93ea-e684ddd52159.png">
 
     병, 컵과 같은 대칭 객체의 경우 3D IoU가 제대로 정의되지 않는다.
 
@@ -151,9 +151,9 @@ Annotation의 정확성은 두 가지 요인에 달려 있다.
 
 ## MobliePose.
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/image5.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/image5.png)
+![objectron_MobilePose_architecture](https://user-images.githubusercontent.com/66259854/117652651-61f8b280-b1ce-11eb-9916-8633ad5d18b5.png)
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.07.16.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.07.16.png)
+<img width="915" alt="Objectron11" src="https://user-images.githubusercontent.com/66259854/117652594-54432d00-b1ce-11eb-855b-ae7ff32db640.png">
 
 1. 3D Bounding Box를 감지하기 위해 Dataset에 대해 SOTA Model을 훈련시켰다.
 
@@ -173,9 +173,9 @@ Annotation의 정확성은 두 가지 요인에 달려 있다.
 
 ## Two-stage.
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/objectron_2stage_network_architecture.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/objectron_2stage_network_architecture.png)
+![objectron_2stage_network_architecture](https://user-images.githubusercontent.com/66259854/117652647-61601c00-b1ce-11eb-82c8-5184f99056ce.png)
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.07.25.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.07.25.png)
+<img width="915" alt="Objectron12" src="https://user-images.githubusercontent.com/66259854/117652597-54432d00-b1ce-11eb-9cb4-e6dc74fc0111.png">
 
 1. 3D Object Detection을 위해 새로운 2단계 Architecture를 설계했다.
 
@@ -189,11 +189,11 @@ Annotation의 정확성은 두 가지 요인에 달려 있다.
 
     이 네트워크는 5.2MB이며 삼성 S20 모바일 GPU에서 83fps로 실행된다.
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.07.36.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.07.36.png)
+<img width="948" alt="Objectron13" src="https://user-images.githubusercontent.com/66259854/117652599-54dbc380-b1ce-11eb-8645-1263db12f8c1.png">
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.07.51.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.07.51.png)
+<img width="946" alt="Objectron14" src="https://user-images.githubusercontent.com/66259854/117652601-54dbc380-b1ce-11eb-8704-a2579193d332.png">
 
-![Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.08.09.png](Objectron%20A%20Large%20Scale%20Dataset%20of%20Object-Centric%20%205e440e90d34e49538e481b8ad4089739/_2021-05-08_23.08.09.png)
+<img width="728" alt="Objectron15" src="https://user-images.githubusercontent.com/66259854/117652602-55745a00-b1ce-11eb-9e09-e8a786ff88dc.png">
 
 Average Precision(평균 정밀도)를 위해 Detector가 상자의 중심을 사용하여 3D Bounding Box를 감지하고, 계속 다른 메트릭을 계산해야 한다.
 
