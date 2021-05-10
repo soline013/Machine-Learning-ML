@@ -189,6 +189,8 @@ Annotation의 정확성은 두 가지 요인에 달려 있다.
 
     이 네트워크는 5.2MB이며 삼성 S20 모바일 GPU에서 83fps로 실행된다.
 
+## Baselines for 3D object detection.
+
 <img width="948" alt="Objectron13" src="https://user-images.githubusercontent.com/66259854/117652599-54dbc380-b1ce-11eb-8645-1263db12f8c1.png">
 
 <img width="946" alt="Objectron14" src="https://user-images.githubusercontent.com/66259854/117652601-54dbc380-b1ce-11eb-8704-a2579193d332.png">
