@@ -39,7 +39,7 @@
 
 ## Object Categories.
 1. 목표는 의미 있는 객체 카테고리를 고르는 것이다.
-2. 또한, 이런 객체를 같은 환경에서 포착하는데, Store, Indoor, Outdoor이든 상대적인 맥락에서 포착한다.
+2. 또한, 이런 객체를 같은 환경에서 캡처하는데, Store, Indoor, Outdoor이든 상대적인 맥락에서 캡처한다.
 3. 객체의 크기는 컵, 의자, 자전거 등으로 다양하다.
 4. 객체 카테고리는 Rigid Objects와 Non-regid Objects를 포함한다. CAD Model을 사용하는 기술이 예상된다.
 5. 많은 3D Object Detection Models는 대칭 객체의 회전을 추정하는 것이 어렵다. 1도, 2도, 3도 정도의 회전도 애매하기 때문에, 테스트를 위해 컵이나 병 카테고리를 추가하였다.
@@ -52,7 +52,7 @@
 <img width="499" alt="Objectron3" src="https://user-images.githubusercontent.com/66259854/117652574-4f7e7900-b1ce-11eb-9346-f72141369d15.png">
 
 1. 데이터 수집은 카메라가 물체 주위에서 움직이며 다른 각도로 녹화한다.
-2. 또한 AR Session(ARKit or ARCore)을 통해 Camera Poses, Sparse Point-clouds, Surface Planes을 포착한다.
+2. 또한 AR Session(ARKit or ARCore)을 통해 Camera Poses, Sparse Point-clouds, Surface Planes을 캡처한다.
 3. 모든 비디오는 1440 X 1920 크기로 High-end 핸드폰의 뒤 카메라를 사용하여 30fps로 녹화한다.
 4. 데이터 수집에 핸드폰을 사용함으로써 10개 국가에서 데이터를 모을 수 있었다.
 
