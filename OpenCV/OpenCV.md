@@ -1,6 +1,6 @@
 # OpenCV.
 
-## Iamge Handling.
+## Image Handling.
 1. `cv2.imread(fileName, flag)`
     - Return
     
