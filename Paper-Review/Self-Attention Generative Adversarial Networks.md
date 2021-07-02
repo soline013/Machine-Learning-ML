@@ -27,7 +27,7 @@
 
 ### 번외. Local Receptive Field, Long Range Dependency(Long Term Dependency)
 
-    ![Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/SAGAN_0.png](Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/SAGAN_0.png)
+    ![SAGAN 0](https://user-images.githubusercontent.com/66259854/124282235-944ade80-db85-11eb-9606-cfd36bd1b78f.png)
 
     [Understanding the receptive field of deep convolutional networks | AI Summer](https://theaisummer.com/receptive-field/)
 
@@ -36,7 +36,7 @@
 
 ---
 
-![Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.44.30.png](Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.44.30.png)
+<img width="802" alt="SAGAN1" src="https://user-images.githubusercontent.com/66259854/124282242-9614a200-db85-11eb-9b99-5421ad44e521.png">
 
 Self-attention은 Long Range Dependency와 Compuational Cost 사이에서 Balance가 좋다.
 
@@ -57,7 +57,7 @@ Conv Layer는 Local Neighborhood에 대한 정보를 제공하므로, Long-range
 
 ---
 
-![Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.45.03.png](Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.45.03.png)
+<img width="802" alt="SAGAN4" src="https://user-images.githubusercontent.com/66259854/124282246-9745cf00-db85-11eb-8869-7f8364da9ed9.png">
 
 Image Feature $x \in \R^{C \times N}$은 Attention 계산을 위해 $f(x) = W_f x, \ g(x) = W_g x$ 로 변환된다.
 
@@ -132,7 +132,7 @@ Generator와 Discriminator는 Adversarial Loss의 Hinge Version을 최소화함�
 
     ### 번외. TTUR.
 
-        [](https://arxiv.org/pdf/1706.08500.pdf)
+        [TTUR Paper](https://arxiv.org/pdf/1706.08500.pdf)
 
 ## 5. Experiments.
 
@@ -162,21 +162,23 @@ TTUR을 평가하고, Self-attention에 대해 평가하고, SAGAN을 다른 SOT
 
 3. SN, TTUR
 
-    ![Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.45.15.png](Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.45.15.png)
+    <img width="802" alt="SAGAN2" src="https://user-images.githubusercontent.com/66259854/124282253-990f9280-db85-11eb-94bc-aebefcb4459d.png">
 
-    ![Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.45.42.png](Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.45.42.png)
+    <img width="802" alt="SAGAN3" src="https://user-images.githubusercontent.com/66259854/124282257-99a82900-db85-11eb-8a79-d0ad7f6eecf5.png">
+
 
 4. Self-attention
 
-    ![Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.45.58.png](Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.45.58.png)
+    <img width="802" alt="SAGAN5" src="https://user-images.githubusercontent.com/66259854/124282274-9d3bb000-db85-11eb-897e-d9c436601ecf.png">
 
-    ![Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.46.18.png](Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.46.18.png)
+    <img width="802" alt="SAGAN6" src="https://user-images.githubusercontent.com/66259854/124282276-9dd44680-db85-11eb-9ff5-992a881fa13b.png">
+
 
 5. SOTA
 
-    ![Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.46.39.png](Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.46.39.png)
+    <img width="802" alt="SAGAN7" src="https://user-images.githubusercontent.com/66259854/124282280-9e6cdd00-db85-11eb-946d-612baa116017.png">
 
-    ![Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.46.54.png](Self-Attention%20Generative%20Adversarial%20Networks%202ea68755ff3c4c39bd8d4ee8eb979ea6/_2021-06-25_21.46.54.png)
+    <img width="802" alt="SAGAN8" src="https://user-images.githubusercontent.com/66259854/124282283-9f057380-db85-11eb-9828-7c7e57395aab.png">
 
 ## 6. Conclusion.
 
