@@ -94,7 +94,9 @@
 
     ![Swin Transformer15](https://user-images.githubusercontent.com/66259854/126174662-bd89fb1b-f21b-41ac-a38b-84afda4a85fd.png)
 
-    $$\text{GELU}(x) = xP(X \le x) = x \Phi(x) = x \cdot \frac{1}{2} [1 + \text{erf}(x / \sqrt{2})] \\ \text{GELU}(x) = 0.5x(1 + \text{tanh}(\sqrt{2/\pi}(x + 0.044715 x^3)))$$
+    $$\text{GELU}(x) = xP(X \le x) = x \Phi(x) = x \cdot \frac{1}{2} [1 + \text{erf}(x / \sqrt{2})]$$
+
+    $$\text{GELU}(x) = 0.5x(1 + \text{tanh}(\sqrt{2/\pi}(x + 0.044715 x^3)))$$
 
     GELU는 비선형 활성화 함수 중 하나이다.
 
@@ -106,7 +108,9 @@
 
 1. Self-attention in non-overlapped windows.
 
-    $$\Omega(\text{MSA}) = 4hxC^2 + 2(hw)^2C, \qquad (1) \\ \Omega(\text{W-MSA}) = 4hwC^2 + 2M^2 hwC, \; (2)$$
+    $$\Omega(\text{MSA}) = 4hxC^2 + 2(hw)^2C, \qquad (1)$$
+
+    $$\Omega(\text{W-MSA}) = 4hwC^2 + 2M^2 hwC, \; (2)$$
 
     1. (1)의 경우, ViT에서 사용하는 일반적인 MSA로 이미지 크기의 제곱 연산, Quadratic한 연산이다.
     2. (2)의 경우, Swin Transformer에서 사용하는 W-MSA로 Window Size M의 제곱 연산, Linear한 연산이다.
@@ -130,7 +134,13 @@
 
 2. Shifted window partitioning in successive blocks.
 
-    $$\hat{z}^l = \text{W-MSA}(\text{LN}(z^{l-1})) + z^{l-1}, \\ z^l = \text{MLP}(\text{LN}(\hat{z}^l)) + \hat{z}^l, \\ \hat{z}^{l+1} = \text{SW-MSA}(\text{LN}(z^l)) + z^l, \\ z^{l+1} = \text{MLP}(\text{LN}(\hat{z}^{l+1})) + \hat{z}^{l+1},$$
+    $$\hat{z}^l = \text{W-MSA}(\text{LN}(z^{l-1})) + z^{l-1},$$
+
+    $$z^l = \text{MLP}(\text{LN}(\hat{z}^l)) + \hat{z}^l,$$
+
+    $$\hat{z}^{l+1} = \text{SW-MSA}(\text{LN}(z^l)) + z^l,$$
+    
+    $$z^{l+1} = \text{MLP}(\text{LN}(\hat{z}^{l+1})) + \hat{z}^{l+1},$$
 
     1. Window의 기반의 Self Attention은 독립적으로 수행되기 때문에 Window 사이의 연결이 필요하다.
     2. 따라서 Figure 2.처럼 Swin Transformer Block에서 Window Shift를 수행한다.
@@ -151,7 +161,9 @@
 
     <img width="595" alt="Swin Transformer16" src="https://user-images.githubusercontent.com/66259854/126174666-f85b5cbb-936a-47be-a7d8-a0e4b201c9ab.png">
 
-    $$\text{Attention}(Q, K, V)  = \text{Softmax}(QK^T / \sqrt{d} + B) V \\ B \in \R^{M^2 \times M^2}$$
+    $$\text{Attention}(Q, K, V)  = \text{Softmax}(QK^T / \sqrt{d} + B) V$$
+    
+    $$B \in \R^{M^2 \times M^2}$$
 
     Transformer와 ViT를 보면 Positional Encoding을 더하지만 Swin Transformer에는 이 Positional Encoding이 없다.
 
