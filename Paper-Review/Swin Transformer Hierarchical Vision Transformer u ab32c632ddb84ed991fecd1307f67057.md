@@ -110,7 +110,7 @@
 
     $$\Omega(\text{MSA}) = 4hxC^2 + 2(hw)^2C, \qquad (1)$$
 
-    $$\Omega(\text{W-MSA}) = 4hwC^2 + 2M^2 hwC, \; (2)$$
+    $$\Omega(\text{W-MSA}) = 4hwC^2 + 2M^2 hwC, \ (2)$$
 
     1. (1)의 경우, ViT에서 사용하는 일반적인 MSA로 이미지 크기의 제곱 연산, Quadratic한 연산이다.
     2. (2)의 경우, Swin Transformer에서 사용하는 W-MSA로 Window Size M의 제곱 연산, Linear한 연산이다.
@@ -139,7 +139,7 @@
     $$z^l = \text{MLP}(\text{LN}(\hat{z}^l)) + \hat{z}^l,$$
 
     $$\hat{z}^{l+1} = \text{SW-MSA}(\text{LN}(z^l)) + z^l,$$
-    
+
     $$z^{l+1} = \text{MLP}(\text{LN}(\hat{z}^{l+1})) + \hat{z}^{l+1},$$
 
     1. Window의 기반의 Self Attention은 독립적으로 수행되기 때문에 Window 사이의 연결이 필요하다.
@@ -163,7 +163,7 @@
 
     $$\text{Attention}(Q, K, V)  = \text{Softmax}(QK^T / \sqrt{d} + B) V$$
     
-    $$B \in \R^{M^2 \times M^2}$$
+    $$B \in \mathbb{R}^{M^2 \times M^2}$$
 
     Transformer와 ViT를 보면 Positional Encoding을 더하지만 Swin Transformer에는 이 Positional Encoding이 없다.
 
