@@ -93,3 +93,4 @@ Computer Vision에 대한 내용을 정리한 폴더.
 | Swin Transformer: Hierarchical Vision Transformer using Shifted Windows | 2021년 발표된 논문. ViT에 Shifted Window를 적용한 Vision Transformer이다. | Computer Vision, Transformer |
 | Self-Attention Generative Adversarial Networks | 2018년 발표된 논문. Gernerate Model에 Self-Attention을 적용하였다. | Computer Vision, Gernerate Model |
 | Objectron: A Large Scale Dataset of Object-Centric Videos in the Wild with Pose Annotations | 2020년 발표된 논문. Object Detection 그중에서도 3D Object Detection을 다룬다. | Computer Vision, Object Detection, 3D Object Detection |
+| YOLO9000: Better, Faster, Stronger | 2017년 발표된 논문. YOLO를 개선한 버전이다. | Computer Vision, Object Detection |
