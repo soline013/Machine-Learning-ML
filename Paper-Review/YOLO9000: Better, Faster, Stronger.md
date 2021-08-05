@@ -34,7 +34,7 @@
 
     1. Hierarchical View of Object Classification.
 
-        Combine distinct datasets together(Classification Dataset, Detcetion Dataset).
+        Classification Dataset과 Detcetion Dataset을 Combine하여 사용한다.
 
     2. Joint Training Algorithm.
 
@@ -57,9 +57,25 @@ Dropout을 제거하고 Batch Normalization을 추가하였고, mAP가 2% 증가
 
 ### 번외. mAP.
 
-Mutiple Object Detection 알고리즘에 대한 성능을 1개의 Scalar Value로 표현한 것이다.
+Precision-recall 곡선, Average Precision(AP)은 Object Detection 알고리즘에서 성능 평가를 위해 사용된다.
 
-[[Deep Learning] mAP (Mean Average Precision) 정리](https://eehoeskrap.tistory.com/m/237)
+1. Precision-recall 곡선은 Precision(정확도)와 Recall(재현율)을 곡선으로 나타낸다.
+
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4ca7a8ac-3bda-48f0-8df9-eaf8a129685e/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4ca7a8ac-3bda-48f0-8df9-eaf8a129685e/Untitled.png)
+    
+2. AP는 Precision-recall 그래프가 서로 다른 두 알고리즘의 성능을 정량적으로 평가하기 어렵다는 점에서 나온 개념이다.
+
+    AP는 알고리즘의 성능을 하나의 값으로 표현하는데, PR 그래프에서 선 아래 면적으로 계산된다.
+
+    보통 면적을 계산하기 전에, PR 곡선을 변경한다.
+
+    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f05538b1-3848-4d9c-a30a-d5725d08d41e/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f05538b1-3848-4d9c-a30a-d5725d08d41e/Untitled.png)
+
+mAP는 각 클래스의 AP를 구하고 클래스 개수로 나누어 1개의 Scalar Value로 표현한다.
+
+AP에서 multi가 붙어 mAP이고, 'Multiple' Object Detection 알고리즘에서 사용된다.
+
+[mAP (Mean Average Precision) 정리](https://ctkim.tistory.com/79)
 
 ## High Resolution Classifier.
 1. State-of-the-art Detection은 ImageNet 기반의 Classifier Pre-trained Network를 사용한다. 여기서 대부분의 입력은 256X256 보다 작다.
@@ -84,7 +100,7 @@ Mutiple Object Detection 알고리즘에 대한 성능을 1개의 Scalar Value�
 
 1. Anchor Box를 사용하면서 2가지 문제가 생겼는데, 하나는 Box Dimension이 Hand-pick 된다는 것이다.
 
-2. 따라서 YOLO9000은 K-mean을 사용하는데, Euclidian Distance 대신 아래의 식을 사용한다.
+2. 따라서 YOLO9000은 K-mean을 사용하여 Box Dimension을 결정하고, Euclidian Distance 대신 아래의 식을 사용한다.
 
     $$d(\text{box, centroid}) = 1 - \text{IOU(box, centroid)}$$
 
@@ -93,11 +109,19 @@ Mutiple Object Detection 알고리즘에 대한 성능을 1개의 Scalar Value�
 3. K-mean은 Parameter $K$의 값이 중요한데, 논문에서는 $K=5$로 설정하였다.
 
     성능과 연산속도는 Trade-off 관계에 있어 적당한 값이 중요하고, 성능 증가에도 한계가 있다.
+    
+    Figure 2를 보면, Cluster가 늘어남에 따른 성능 증가가 점점 약해진다.
 
 4. Cluster SSE(Error Sum of Squares, Euclidian Distance), Cluster IOU(Intersection Over Union), Anchor Boxes(Hand-pick)를 비교했을 때, $K=5$인 Cluster IOU를 선택하였다.
+    
+    $K=9$인 Cluster IOU는 선택하지 않았는데, 평균 IOU는 높지만 연산속도가 느리기 때문인 것 같다.
 
-    ### 번외. IOU(Intersection Over Union).
+    ### 번외. IoU(Intersection Over Union).
 
+    IoU는 두 박스의 교집합 / 두 박스의 합집합이다.
+
+    Threshold 값으로 0.5를 많이 사용한다.
+    
     ![IOU](https://user-images.githubusercontent.com/66259854/114395178-0a6b2500-9bd7-11eb-8082-84a4cc498c4b.png)
 
     ![IOU 2](https://user-images.githubusercontent.com/66259854/114395177-0a6b2500-9bd7-11eb-97b7-36d6ef9d72e4.png)
@@ -134,6 +158,8 @@ Mutiple Object Detection 알고리즘에 대한 성능을 1개의 Scalar Value�
 
 ![YOLO9000 0](https://user-images.githubusercontent.com/66259854/114395181-0b03bb80-9bd7-11eb-95a1-5d40d9e4c8c3.png)
 
+해당 이미지는 논문과 차이가 있으나, 설명에 도움이 되어 가져왔다.
+
 1. 기존 YOLO는 13X13 Feature Map으로, 큰 이미지를 검출하기에는 충분하지만 작은 이미지에는 불충분하다.
 2. 이전 Layer에서 26X26 Feature Map을 가져와 26X26X512 크기를 13X13X2048로 Rescale 한다.
 3. 기존 13X13 Feature Map과 Concat한 Passthrough Layer를 만든다.
@@ -146,7 +172,7 @@ Mutiple Object Detection 알고리즘에 대한 성능을 1개의 Scalar Value�
 
 <img width="570" alt="YOLO9000 6" src="https://user-images.githubusercontent.com/66259854/114395213-10610600-9bd7-11eb-9fdc-baf5d069261d.png">
 
-1. YOLOv2는 FC Layer를 제거하여 여러 Size의 이미지를 학습할 수 있고, 실행에 옮겼다.
+1. YOLOv2는 FC Layer를 제거하여 여러 Size의 이미지를 학습할 수 있다.
 2. {320, 352, ..., 608}처럼 32 Pixel 간격으로 10 Batch마다 입력 이미지의 크기를 바꾼다.
 3. 다양한 크기에 대해 강해지므로 Speed와 Accuracy 사이에서 쉽게 Trade-off를 전환할 수 있다.
 4. 288X288에서는 90 FPS로 Fast R-CNN 정도의 mAP를 갖고, 608X608에서는 VOC2007에서 78.6mAP를 갖는다.
@@ -164,8 +190,8 @@ Mutiple Object Detection 알고리즘에 대한 성능을 1개의 Scalar Value�
 ## Faster.
 
 ## 기존 YOLO.
-- 많은 Detection Frameworks는 VGG-16을 사용한다. 그러나 VGG-16은 224X244 크기의 경우 30.69 Billion의 Floating Point 계산이 필요하다.
-- YOLO는 GoogleNet 기반의 독자적인 Network를 만들어 더 빠르고 계산량을 8.52 Billion으로 줄였다.
+- 많은 Detection Frameworks는 VGG-16을 사용한다. 그러나 VGG-16은 224X244 크기에서 30.69 Billion의 Floating Point 계산이 필요하다.
+- YOLO는 GoogleNet 기반의 독자적인 Network를 만들어 계산량을 8.52 Billion으로 줄였다.
 - 같은 224X224 크기에서 Accuracy는 88%로 VGG-16의 90%와 비교하면 큰 차이가 없다.
 
 ## Darknet-19.
@@ -256,8 +282,8 @@ For classification purposes we assume that the the image contains an object: $Pr
 
     Back Prop 시 Image가 나온 Dataset에 따라 Loss 계산이 다르다.
 
-    - COCO Detection Dataset: Entire Loss Funtion.
-    - ImageNet Classificaion Dataset: Classification Loss Function.
+    1. COCO Detection Dataset: Entire Loss Funtion.
+    2. ImageNet Classificaion Dataset: Classification Loss Function.
         - 여러 Box 중 가장 높은 확률을 뽑아 Classification Loss를 계산한다.
         - Box와 Ground Truth의 IOU가 0.3 이상이면 Entire Loss를 계산한다.
 
