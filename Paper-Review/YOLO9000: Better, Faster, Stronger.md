@@ -61,15 +61,15 @@ Precision-recall 곡선, Average Precision(AP)은 Object Detection 알고리즘�
 
 1. Precision-recall 곡선은 Precision(정확도)와 Recall(재현율)을 곡선으로 나타낸다.
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4ca7a8ac-3bda-48f0-8df9-eaf8a129685e/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4ca7a8ac-3bda-48f0-8df9-eaf8a129685e/Untitled.png)
-    
+    ![image](https://user-images.githubusercontent.com/66259854/128360465-c2e474b0-2b99-4730-bfa2-88ba7b75b675.png)
+
 2. AP는 Precision-recall 그래프가 서로 다른 두 알고리즘의 성능을 정량적으로 평가하기 어렵다는 점에서 나온 개념이다.
 
     AP는 알고리즘의 성능을 하나의 값으로 표현하는데, PR 그래프에서 선 아래 면적으로 계산된다.
 
     보통 면적을 계산하기 전에, PR 곡선을 변경한다.
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f05538b1-3848-4d9c-a30a-d5725d08d41e/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f05538b1-3848-4d9c-a30a-d5725d08d41e/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/66259854/128360384-588a8e14-57e5-41cd-b886-4c07fef74532.png)    
 
 mAP는 각 클래스의 AP를 구하고 클래스 개수로 나누어 1개의 Scalar Value로 표현한다.
 
