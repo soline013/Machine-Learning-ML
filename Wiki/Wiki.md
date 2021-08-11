@@ -2,7 +2,7 @@
 
 Wiki는 간단한 이해와 복기를 돕습니다.
 
-Loss
+## Loss
 
 - Cross-Entropy Loss
 
@@ -28,7 +28,7 @@ Loss
 
     Binary-class Classification에 사용하는 Loss이다.
 
-Object Detection
+## Object Detection
 
 - Sliding Window
 
@@ -36,7 +36,7 @@ Object Detection
 
 - Window Shift
 
-Computer Vision
+## Computer Vision
 
 - MediaPipe
 
