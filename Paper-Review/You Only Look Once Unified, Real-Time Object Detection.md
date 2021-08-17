@@ -92,7 +92,7 @@ YOLO는 Real Time Detection이 가능하다.
 
     S=7, B=2, C=20이고, 최종 예측 텐서 Demension은 (7 X 7 X (2  * 5 + 20))이다. 
 
-- 2.1. Network Design.
+### 2.1. Network Design.
 
     ![스크린샷 2021-08-07 02.42.34.png](You%20Only%20Look%20Once%20Unified,%20Real-Time%20Object%20Detec%20b37cf4fb3c3f49e08cd2d3d9341ad0e4/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-08-07_02.42.34.png)
 
@@ -103,7 +103,7 @@ YOLO는 Real Time Detection이 가능하다.
     - GoogLeNet의 인셉션 구조 대신, 1 X 1 Convoluion 이후 3 X 3 Convoluion을 사용한다.
     - Fast YOLO는 9개의 Conv Layer를 사용한다.
 
-- 2.2. Training.
+### 2.2. Training.
     1. Pretrain.
         - 1,000개의 Class인 ImageNet Dataset으로 Conv 계층을 Pretrain 하였다.
         - 20개의 Conv Layer를 사용하고 뒤에 FC Layer를 연결했다.
@@ -135,7 +135,7 @@ YOLO는 Real Time Detection이 가능하다.
         - Dropout: 0.5
         - Data Augmentation: 20% Random Scaling, Random Translation
 
-- 2.3. Inference.
+### 2.3. Inference.
     - Test는 PASCAL VOC로 진행하고, 한 이미지에 98개의 Bounding Box가 나온다.
     - YOLO의 Grid Design은 한 객체가 여러 Cell에서 검출되는 다중 검출 문제가 발생할 수 있다.
 
@@ -152,7 +152,7 @@ YOLO는 Real Time Detection이 가능하다.
 
             [gaussian37 : 네이버 블로그](https://blog.naver.com/infoefficien/221229808532)
 
-- 2.4. Limitations of YOLO.
+### 2.4. Limitations of YOLO.
     - 한 Grid Cell은 한 객체만 검출하기 때문에, 한 Grid Cell에 2개 이상의 객체가 있다면 검출이 어려운 공간적 제약이 있다.
     - 학습하지 못한 종횡비(Aspect Ratio)에 약하다.
     - 큰 Bounding Box와 작은 Bounding Box에 같은 가중치를 두기 때문에 부정확한 Localization이 발생할 수 있다.
