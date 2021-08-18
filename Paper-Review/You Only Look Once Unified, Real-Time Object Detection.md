@@ -94,7 +94,7 @@ YOLO는 Real Time Detection이 가능하다.
 
 ### 2.1. Network Design.
 
-    ![스크린샷 2021-08-07 02.42.34.png](You%20Only%20Look%20Once%20Unified,%20Real-Time%20Object%20Detec%20b37cf4fb3c3f49e08cd2d3d9341ad0e4/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-08-07_02.42.34.png)
+![스크린샷 2021-08-07 02.42.34.png](You%20Only%20Look%20Once%20Unified,%20Real-Time%20Object%20Detec%20b37cf4fb3c3f49e08cd2d3d9341ad0e4/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-08-07_02.42.34.png)
 
     ![Untitled](You%20Only%20Look%20Once%20Unified,%20Real-Time%20Object%20Detec%20b37cf4fb3c3f49e08cd2d3d9341ad0e4/Untitled.png)
 
