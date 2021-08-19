@@ -90,9 +90,9 @@ YOLO는 Real Time Detection이 가능하다.
 
 5. Test에서 Confidence Score와 C를 곱하여 Class-specific Confidence Score를 구한다.
 
-    $$\text{Pr}(\text{Class}_i | \text{Object}) * \text{Pr}(\text{Object}) * \text{IOU}^{\text{truth}}_{\text{pred}}$$
+    $\text{Pr}(\text{Class}_i | \text{Object})$ $* \text{Pr}(\text{Object}) * \text{IOU}^{\text{truth}}_{\text{pred}}$
     
-    $$= \text{Pr}(\text{Class}_i) * \text{IOU}^{\text{truth}}_{\text{pred}}$$
+    $= \text{Pr}(\text{Class}_i)$ $* \text{IOU}^{\text{truth}}_{\text{pred}}$
 
 6. Dataset은 PASCAL VOC를 사용했다.
 
