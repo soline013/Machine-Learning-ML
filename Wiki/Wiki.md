@@ -6,6 +6,11 @@ Wiki는 간단한 이해와 복기를 돕습니다.
 
 [Object Detection](#objectdetection)
 
+[Computer Vision](#computervision)
+
+[Activation Function](#activationfunction)
+
+[Fundamental Concept](#fundamentalconcept)
 
 ## <div id="loss">Loss</div>
     
