@@ -2,7 +2,7 @@
 
 Wiki는 간단한 이해와 복기를 돕습니다.
 
-[Loss](##Loss)
+[Loss](## Loss)
 
 ## Loss
 
