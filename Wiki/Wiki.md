@@ -2,9 +2,9 @@
 
 Wiki는 간단한 이해와 복기를 돕습니다.
 
-[Loss](##loss)
+[Loss](#loss)
 
-[Object Detection](##ObjectDetection)
+[Object Detection](#objectdetection)
 
 
 ## <div id="loss">Loss</div>
@@ -33,7 +33,7 @@ Wiki는 간단한 이해와 복기를 돕습니다.
 
     Binary-class Classification에 사용하는 Loss이다.
 
-## Object Detection
+## <div id="objectdetection">Object Detection</div>
 
 - Sliding Window
 
