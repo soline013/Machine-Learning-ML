@@ -2,9 +2,9 @@
 
 Wiki는 간단한 이해와 복기를 돕습니다.
 
-[Loss](##loss)
+[Loss](##Loss)
 
-[Object Detection](ObjectDetection)
+[Object Detection](##ObjectDetection)
 
 
 ## loss
