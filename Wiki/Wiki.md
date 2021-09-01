@@ -2,12 +2,12 @@
 
 Wiki는 간단한 이해와 복기를 돕습니다.
 
-[Loss](##Loss)
+[Loss](##loss)
 
-[Object Detection](##ObjectDetection)
+[Object Detection](ObjectDetection)
 
 
-## Loss
+## loss
 
 - Cross-Entropy Loss
 
