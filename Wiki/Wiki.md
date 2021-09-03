@@ -22,6 +22,8 @@ Wiki는 간단한 이해와 복기를 돕습니다.
 
     [Cross-entropy 의 이해: 정보이론과의 관계](https://3months.tistory.com/436)
 
+</br>
+
 - Categorical Cross-Entropy Loss
 
     $$f(s)_i = \frac{e^{s_j}}{\sum^C_j e^{s_j}}, \quad \text{CE} = - \sum_i^C t_i log(f(s)_i)$$
@@ -29,6 +31,8 @@ Wiki는 간단한 이해와 복기를 돕습니다.
     Softmax Activation Function 뒤에서 주로 사용된다.
 
     Multi-class Classification에 사용하는 Loss이다.
+
+</br>
 
 - Binary Cross-Entropy Loss
 
@@ -49,7 +53,9 @@ Wiki는 간단한 이해와 복기를 돕습니다.
 - Bounding Box
 
     객체의 위치를 표시하기 위해 사용하는, 객체를 둘러싼 직사각형 박스를 의미한다.
-    
+
+</br>
+
 - Two Stage Method
 
     Two Stage Method는 Region Proposal 단계와 Detector 단계로 구분된다.
@@ -60,6 +66,8 @@ Wiki는 간단한 이해와 복기를 돕습니다.
     One Stage Method에 비해 정확도는 높지만 속도가 느리다.
 
     e.g. R-CNN 계열
+
+</br>
 
 - One Stage Method
 
@@ -78,6 +86,8 @@ Wiki는 간단한 이해와 복기를 돕습니다.
     Computer Vision 라이브러리이다.
 
     Cross-platform과 Live and Streaming Media ML Solution을 제공한다.
+
+</br>
 
 - OpenCV
 
