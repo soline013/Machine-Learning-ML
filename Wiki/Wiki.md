@@ -71,7 +71,7 @@ Wiki는 간단한 이해와 복기를 돕습니다.
 
     e.g. YOLO, SSD
 
-## Computer Vision
+## <div id="computervision">Computer Vision</div>
 
 - MediaPipe
 
@@ -83,7 +83,7 @@ Wiki는 간단한 이해와 복기를 돕습니다.
 
     Computer Vision에서 많이 사용되는 라이브러리이다.
 
-## Activation Function
+## <div id="activationfunction">Activation Function</div>
 
 - Softmax
 
@@ -93,7 +93,7 @@ Wiki는 간단한 이해와 복기를 돕습니다.
 
 - GELU
 
-## Fundamental Concept
+## <div id="fundamentalconcept">Fundamental Concept</div>
 
 - End-to-end
 
