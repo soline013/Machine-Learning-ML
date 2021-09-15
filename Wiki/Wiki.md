@@ -108,3 +108,11 @@ Wiki는 간단한 이해와 복기를 돕습니다.
 - End-to-end
 
     입력에서 출력까지의 모든 과정이 하나의 Network에서 진행되는 것을 의미한다.
+
+## Framework
+
+- Tensorflow
+
+- Pytorch
+
+- Sklearn
