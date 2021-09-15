@@ -1,0 +1,1 @@
+# SSUML Project 1. - Fashion MNIST.
