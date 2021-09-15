@@ -21,9 +21,17 @@
 
 ### 번외. Pose.
 
+방향을 설명하는 데 사용되기도 하지만, 위치와 방향의 조합을 포즈라고 한다.
+
+우리가 흔히 인식하는 포즈와 유사한 개념인 것 같다.
+
 [Pose (computer vision) - Wikipedia](https://en.wikipedia.org/wiki/Pose_(computer_vision))
 
 ### 번외. Point-cloud.
+
+Point-cloud, 점구름은 어떤 좌표계에 속한 점들의 집합으로, 보통 3차원 공간을 대상으로 한다.
+
+Lidar 센서나 RGB-D 센서 등에 의해 수집되는 데이터는 점구름으로 나타난다.
 
 ![Point-cloud](https://user-images.githubusercontent.com/66259854/117652653-61f8b280-b1ce-11eb-86d0-bd54bc833c29.gif)
 
@@ -39,12 +47,12 @@
 
 ## Object Categories.
 1. 목표는 의미 있는 객체 카테고리를 고르는 것이다.
-2. 또한, 이런 객체를 같은 환경에서 캡처하는데, Store, Indoor, Outdoor이든 상대적인 맥락에서 캡처한다.
+2. 또한, 객체를 공통된 환경, Store, Indoor, Outdoor에서 상대적으로 캡처한다.
 3. 객체의 크기는 컵, 의자, 자전거 등으로 다양하다.
-4. 객체 카테고리는 Rigid Objects와 Non-regid Objects를 포함한다. CAD Model을 사용하는 기술이 예상된다.
+4. 객체 카테고리는 Rigid Objects와 Non-regid Objects를 포함한다. CAD Model을 사용하는 기술이 예상된다. 자전거, 노트북 등은 쉽게 모양이 바뀌기 때문에 언급한 것으로 보인다.
 5. 많은 3D Object Detection Models는 대칭 객체의 회전을 추정하는 것이 어렵다. 1도, 2도, 3도 정도의 회전도 애매하기 때문에, 테스트를 위해 컵이나 병 카테고리를 추가하였다.
 6. Vision Model이 이미지 속의 텍스트에 유의하는 것으로 보인다. 따라서 책, 시리얼 박스와 같은 분명한 텍스트의 카테고리를 추가하였다.
-7. 데이터가 다양한 나라에서 수집되기 때문에, Baseline 실험이 정확한 추정에 어려움을 겪는다.
+7. 데이터가 다양한 나라에서 수집되어 조금씩 차이가 발생하기 때문에, Baseline 실험이 정확한 추정에 어려움을 겪는다.
 8. 실시간 인식을 위해 신발, 의자와 같은 카테고리를 추가하였다.
 
 ## Data Collection.
@@ -70,19 +78,19 @@
 
 Annotation의 정확성은 두 가지 요인에 달려 있다.
 
-<img width="499" alt="Objectron5" src="https://user-images.githubusercontent.com/66259854/117652578-50afa600-b1ce-11eb-9bcd-6aa8e184c43b.png">
+1. 비디오 전체에서 추정된 카메라 포즈의 Drift(이동) 양.
 
-비디오 전체에서 추정된 카메라 포즈의 Drift(이동) 양.
+    1. 경험적으로 Videos Drift < 2% 임을 관찰했다.
+    2. Drift를 줄이기 위해, 보통 10초 미만의 시퀀스를 캡처한다.
 
-1. 경험적으로 Videos Drift < 2% 임을 관찰했다.
-2. Drift를 줄이기 위해, 보통 10초 미만의 시퀀스를 캡처한다.
+    <img width="499" alt="Objectron5" src="https://user-images.githubusercontent.com/66259854/117652578-50afa600-b1ce-11eb-9bcd-6aa8e184c43b.png">
 
-<img width="1039" alt="Objectron6" src="https://user-images.githubusercontent.com/66259854/117652580-50afa600-b1ce-11eb-9a00-bd217056ba5d.png">
+2. 3D Bounding Box를 나타내는 Rater(평가자)의 정확도.
 
-3D Bounding Box를 나타내는 Rater(평가자)의 정확도.
+    1. Rater의 정확도를 평가하기 위해 8명의 Annotator에게 동일한 시퀀스를 다시 처리하게 했다.
+    2. 의자의 경우 의자 방향, 변형, 스케일의 표준 편차는 각각 4.6°, 1cm, 4cm이다.
 
-1. Rater의 정확도를 평가하기 위해 8명의 Annotator에게 동일한 시퀀스를 다시 처리하게 했다.
-2. 의자의 경우 의자 방향, 변형, 스케일의 표준 편차는 각각 4.6°, 1cm, 4cm이다.
+    <img width="1039" alt="Objectron6" src="https://user-images.githubusercontent.com/66259854/117652580-50afa600-b1ce-11eb-9a00-bd217056ba5d.png">
 
 ## 4. Objectron Dataset.
 
@@ -116,6 +124,10 @@ Annotation의 정확성은 두 가지 요인에 달려 있다.
 
     ### 번외. Sutherland-Hodgman Algorithm.
 
+    Polygon Clipping 중 하나로, 다각형의 선분을 확장하여 다각형 내부만 존재하도록 하는 알고리즘이다.
+
+    예시에서는 반시계 방향으로 수행한다.
+
     ![Sutherland-Hodgman_clipping_sample](https://user-images.githubusercontent.com/66259854/117652657-6329df80-b1ce-11eb-910e-4d1380556864.png)
 
     [Sutherland-Hodgman algorithm - Wikipedia](https://en.wikipedia.org/wiki/Sutherland%E2%80%93Hodgman_algorithm)
@@ -132,6 +144,10 @@ Annotation의 정확성은 두 가지 요인에 달려 있다.
     The volume of the intersection is computed by the convex hull of all the clipped polygons, as shown in Figure 8b. Finally, the IoU is computed from the volume of the intersection and volume of the union of two boxes. We are releasing the evaluation metrics source code along with the dataset.
 
     ### 번외. Convex Hull Algorithm.
+
+    2차원 평면에 있는 여러 점 중 일부를 사용하여 모든 점을 포함하는 하나의 다각형을 만드는 알고리즘이다.
+
+    이렇게 만들어진 것을 Convex Hull(볼록 껍질)이라고 한다.
 
     ![hull_algorithm](https://user-images.githubusercontent.com/66259854/117652633-5e652b80-b1ce-11eb-97ee-6cb275887014.gif)
 
