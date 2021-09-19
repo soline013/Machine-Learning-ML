@@ -124,7 +124,7 @@ YOLO는 Real Time Detection이 가능하다.
 
 3. Loss Function.
 
-    ![image](https://user-images.githubusercontent.com/66259854/133922093-d2e63207-5c9d-4f6a-a78c-d80fcfc4c7a9.png)
+    ![image](https://user-images.githubusercontent.com/66259854/133922191-1fb26f0d-bb32-4d9f-8579-2cb9b6357326.png)
 
     - Loss는 SSE(Sum-squared Error)를 사용한다.
     - SSE는 최적화가 쉬워 좋지만, Localization / Classification Loss의 가중치가 같은 단점이 있다.
