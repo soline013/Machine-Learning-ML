@@ -118,7 +118,9 @@ YOLO는 Real Time Detection이 가능하다.
     - Pretrain 된 모델을 Object Detection에 맞게 바꾼다.
     - 20개의 Conv Layer를 24개로 늘리고, FC Layer도 2개로 늘린다. 가중치는 임의로 초기화한다.
     - 224 X 224의 해상도를 448 X 448로 늘렸다.
-    - 마지막에는 Linear Activaion Function을 적용하고, 나머지는 Leaky ReLU를 사용한다. $\phi(x) = \begin{cases} x, \qquad  \ \text{if} \ x>0 \\ 0.1x, \quad\text{otherwise} \end{cases}$
+    - 마지막에는 Linear Activaion Function을 적용하고, 나머지는 Leaky ReLU를 사용한다.
+      
+      $$\phi(x) = \begin{cases} x, \qquad  \ \text{if} \ x>0 \\ 0.1x, \quad\text{otherwise} \end{cases}$$
 
 3. Loss Function.
 
