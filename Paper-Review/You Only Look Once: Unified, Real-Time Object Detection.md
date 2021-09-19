@@ -90,7 +90,7 @@ YOLO는 Real Time Detection이 가능하다.
 
 5. Test에서 Confidence Score와 C를 곱하여 Class-specific Confidence Score를 구한다.
 
-    $$\text{Pr}(\text{Class}_i | \text{Object}) * \text{Pr}(\text{Object}) * \text{IOU}^{\text{truth}}_{\text{pred}} = \text{Pr}(\text{Class}_i) * \text{IOU}^{\text{truth}}_{\text{pred}}$$
+    ![image](https://user-images.githubusercontent.com/66259854/133922906-e0a5f93c-5745-41ae-b069-d695bc004991.png)
 
 6. Dataset은 PASCAL VOC를 사용했다.
 
@@ -120,7 +120,9 @@ YOLO는 Real Time Detection이 가능하다.
     - 224 X 224의 해상도를 448 X 448로 늘렸다.
     - 마지막에는 Linear Activaion Function을 적용하고, 나머지는 Leaky ReLU를 사용한다.
       
-      $$\phi(x) = \begin{cases} x, \qquad  \ \text{if} \ x>0 \\ 0.1x, \quad\text{otherwise} \end{cases}$$
+      $\phi(x) = \begin{cases} x, \qquad  \ \text{if} \ x>0 \\ 0.1x, \quad\text{otherwise} \end{cases}$
+      
+      ![image](https://user-images.githubusercontent.com/66259854/133922813-7138e931-abe3-4b8a-86db-2a45a64a070a.png)
 
 3. Loss Function.
 
