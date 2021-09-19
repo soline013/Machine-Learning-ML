@@ -76,7 +76,7 @@ YOLO는 Real Time Detection이 가능하다.
 
 3. 각 Bounding Box는 5개 예측치로 구성된다.
 
-    (x, y(는 Bounding Box의 중심이 Cell 내에서 갖는 상대 좌표이다. (0, 0)에서 (1, 1)의 값을 갖는다.
+    (x, y)는 Bounding Box의 중심이 Cell 내에서 갖는 상대 좌표이다. (0, 0)에서 (1, 1)의 값을 갖는다.
 
     (w, h)는 이미지의 너비, 높이가 1일 때, 그에 대한 Bounding Box의 상대 너비, 상대 높이이다. (0, 0)에서 (1, 1)의 값을 갖는다.
 
@@ -119,9 +119,7 @@ YOLO는 Real Time Detection이 가능하다.
     - 20개의 Conv Layer를 24개로 늘리고, FC Layer도 2개로 늘린다. 가중치는 임의로 초기화한다.
     - 224 X 224의 해상도를 448 X 448로 늘렸다.
     - 마지막에는 Linear Activaion Function을 적용하고, 나머지는 Leaky ReLU를 사용한다.
-      
-      $\phi(x) = \begin{cases} x, \qquad  \ \text{if} \ x>0 \\ 0.1x, \quad\text{otherwise} \end{cases}$
-      
+          
       ![image](https://user-images.githubusercontent.com/66259854/133922813-7138e931-abe3-4b8a-86db-2a45a64a070a.png)
 
 3. Loss Function.
