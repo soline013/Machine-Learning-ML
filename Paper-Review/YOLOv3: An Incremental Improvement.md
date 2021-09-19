@@ -17,108 +17,116 @@
 
 ## 2. The Deal.
 
-- 2.1. Bounding Box Prediction.
+### 2.1. Bounding Box Prediction.
 
-    ![스크린샷 2021-09-11 23.39.45.png](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-09-11_23.39.45.png)
+![스크린샷 2021-09-11 23.39.45.png](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-09-11_23.39.45.png)
 
-    1. Bounding Box를 예측하는 방법은 YOLOv2와 같다.
+1. Bounding Box를 예측하는 방법은 YOLOv2와 같다.
 
-        $$b_x = \sigma(t_x) + c_x \\ b_y = \sigma(t_y) + c_y \\ b_w = p_we^{t_w} \\ b_h = p_he^{t_h} \\ Pr(\text{object}) * IOU(\text{b, object}) = \sigma(t_o)$$
+    $$b_x = \sigma(t_x) + c_x \\ b_y = \sigma(t_y) + c_y \\ b_w = p_we^{t_w} \\ b_h = p_he^{t_h} \\ Pr(\text{object}) * IOU(\text{b, object}) = \sigma(t_o)$$
 
-        - $t_x, \, t_y, \, t_w, \, t_h, \, t_o$ : Bounding Box의 요소.
-        - $(c_x, \, c_y)$ : Cell의 왼쪽 상단 Offset.
-        - $(p_w, \, p_h)$ : Anchor Box의 사전 Width, Height.
-        - Network는 각 Cell 마다 5개의 Bounding Box를 예측한다.
-        - Offset $t_x, \, t_y$의 범위를 [0, 1]로 제한하고, Logistic Activation(Sigmoid)을 사용한다.
-        - Loss는 SSE를 사용한다.
+    - $t_x, \, t_y, \, t_w, \, t_h, \, t_o$ : Bounding Box의 요소.
+    - $(c_x, \, c_y)$ : Cell의 왼쪽 상단 Offset.
+    - $(p_w, \, p_h)$ : Anchor Box의 사전 Width, Height.
+    - Network는 각 Cell 마다 5개의 Bounding Box를 예측한다.
+    - Offset $t_x, \, t_y$의 범위를 [0, 1]로 제한하고, Logistic Activation(Sigmoid)을 사용한다.
+    - Loss는 SSE를 사용한다.
 
-    1. 기존 YOLO는 Bounding Box를 예측하기 위해 Gird 기반을 사용했다. YOLOv2, v3는 모두 Anchor Box를 사용한다.
+2. 기존 YOLO는 Bounding Box를 예측하기 위해 Gird 기반을 사용했다. YOLOv2, v3는 모두 Anchor Box를 사용한다.
 
-    2. Localization Loss의 경우, 기존 YOLO는 SSE, YOLOv2도 아래 자료를 보아 SSE, YOLOv3까지 SSE를 사용하는 것 같다.
+3. Localization Loss의 경우, 기존 YOLO는 SSE, YOLOv2도 아래 자료를 보아 SSE, YOLOv3까지 SSE를 사용하는 것 같다.
 
-        ![Untitled](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/Untitled.png)
+    ![Untitled](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/Untitled.png)
 
-        [YOLOv2/YOLOv2.md at master · leetenki/YOLOv2](https://github.com/leetenki/YOLOv2/blob/master/YOLOv2.md)
+    [YOLOv2/YOLOv2.md at master · leetenki/YOLOv2](https://github.com/leetenki/YOLOv2/blob/master/YOLOv2.md)
 
-- 2.2. Class Prediction.
-    1. 기존의 YOLO는 Class Prediction에서 SSE Loss를 사용한다.
+### 2.2. Class Prediction.
+1. 기존의 YOLO는 Class Prediction에서 SSE Loss를 사용한다.
 
-        Activation Function은 마지막에는 Linear, 나머지는 Leaky ReLU를 사용한다.
+    Activation Function은 마지막에는 Linear, 나머지는 Leaky ReLU를 사용한다.
 
-    2. YOLOv2도 Class Prediction에서 SSE Loss를 사용한다.
+2. YOLOv2도 Class Prediction에서 SSE Loss를 사용한다.
 
-        Activation Function은 Softmax를 사용하는데 Loss는 Cross-entropy를 사용하지 않는 것 같다.
+    Activation Function은 Softmax를 사용하는데 Loss는 Cross-entropy를 사용하지 않는 것 같다.
 
-        ![Untitled](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/Untitled.png)
+    ![Untitled](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/Untitled.png)
 
-        [YOLOv2/YOLOv2.md at master · leetenki/YOLOv2](https://github.com/leetenki/YOLOv2/blob/master/YOLOv2.md)
+    [YOLOv2/YOLOv2.md at master · leetenki/YOLOv2](https://github.com/leetenki/YOLOv2/blob/master/YOLOv2.md)
 
-        [YOLO의 loss function에 대해](https://brunch.co.kr/@kmbmjn95/35)
+    [YOLO의 loss function에 대해](https://brunch.co.kr/@kmbmjn95/35)
 
-    1. YOLOv3는 위와 다르게 Binary Cross-entropy Loss를 사용한다.
+3. YOLOv3는 위와 다르게 Binary Cross-entropy Loss를 사용한다.
 
-        Binary인 만큼 Activation Function도 Softmax가 아닌 독립적인 Logistic Classifier를 사용하는데, Sigmoid로 보인다.
+    Binary인 만큼 Activation Function도 Softmax가 아닌 독립적인 Logistic Classifier를 사용하는데, Sigmoid로 보인다.
 
-        이 방법이 Open Image Dataset과 같은 복잡한 데이터셋으로 학습할 때 좋다고 한다. (e.g. Woman and Person)
+    이 방법이 Open Image Dataset과 같은 복잡한 데이터셋으로 학습할 때 좋다고 한다. (e.g. Woman and Person)
 
-- 2.3. Predictions Across Scales.
+### 2.3. Predictions Across Scales.
 
-    ![Untitled](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/Untitled%201.png)
+![Untitled](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/Untitled%201.png)
 
-    ![https://blog.kakaocdn.net/dn/CGmzY/btqXb2IcTRW/IYRns34VfxYlsblaqJszR1/img.jpg](https://blog.kakaocdn.net/dn/CGmzY/btqXb2IcTRW/IYRns34VfxYlsblaqJszR1/img.jpg)
+![https://blog.kakaocdn.net/dn/CGmzY/btqXb2IcTRW/IYRns34VfxYlsblaqJszR1/img.jpg](https://blog.kakaocdn.net/dn/CGmzY/btqXb2IcTRW/IYRns34VfxYlsblaqJszR1/img.jpg)
 
-    1. YOLOv3는 세 가지의 다른 Scale에서 Box를 예측한다.
-    2. Scale에서 FPN와 비슷하게 Feature를 추출한다.
+1. YOLOv3는 세 가지의 다른 Scale에서 Box를 예측한다.
+2. Scale에서 FPN와 비슷하게 Feature를 추출한다.
 
-    3. Base Feature Extractor로부터 Darknet-53에 몇 개의 Conv Layer를 추가한다.
-    4. 이 마지막에서 3-d Tensor의 형태로 Bounding Box, Objectness, Class Prediction을 예측한다. - `1st Scale`
-        - Tensor: $N \times N \times [3 * (4+1+80)]$
-        - Bounding Box: 3
-        - Bounding Box Offset: 4(x, y, w, h)
-        - Objectness: 1
-        - COCO Dataset Class: 80
-    5. 이전 2개 Layer의 Feature Map을 가져와서 2배씩 Upsampling 하고, 초기 Feature Map과 Concat 한다.
-        - 이 과정을 통해 Semantic Information(Upsampling)과 Finer-grained Information(Earlier Feature Map)을 얻을 수 있다.
+<br>
 
-    6. 다시 몇 개의 Conv Layer을 추가하고, 비슷하지만 크기가 2배인 Tensor를 예측하고, 5번을 수행한다. - `2nd Scale`
-    7. 6번의 과정(3-5번)을 한 번 더 반복하여 마지막 Scale에서 Tensor를 예측한다. - `3rd Scale`
+3. Base Feature Extractor로부터 Darknet-53에 몇 개의 Conv Layer를 추가한다.
+4. 이 마지막에서 3-d Tensor의 형태로 Bounding Box, Objectness, Class Prediction을 예측한다. - `1st Scale`
+    - Tensor: $N \times N \times [3 * (4+1+80)]$
+    - Bounding Box: 3
+    - Bounding Box Offset: 4(x, y, w, h)
+    - Objectness: 1
+    - COCO Dataset Class: 80
+5. 이전 2개 Layer의 Feature Map을 가져와서 2배씩 Upsampling 하고, 초기 Feature Map과 Concat 한다.
+    - 이 과정을 통해 Semantic Information(Upsampling)과 Finer-grained Information(Earlier Feature Map)을 얻을 수 있다.
 
-    1. YOLOv2에 이어 Anchor Box를 생성하기 위해 K-means Clustering을 사용한다.
+<br>
 
-        3개의 Scale에서 3개씩 Box를 생성하기 때문에, 9개의 Cluster가 필요하다.
+6. 다시 몇 개의 Conv Layer을 추가하고, 비슷하지만 크기가 2배인 Tensor를 예측하고, 5번을 수행한다. - `2nd Scale`
+7. 6번의 과정(3-5번)을 한 번 더 반복하여 마지막 Scale에서 Tensor를 예측한다. - `3rd Scale`
 
-        (10×13), (16×30), (33×23), (30×61), (62×45), (59×119), (116 × 90), (156 × 198), (373 × 326).
+<br>
 
-    More Detail
+8. YOLOv2에 이어 Anchor Box를 생성하기 위해 K-means Clustering을 사용한다.
 
-    - 416 X 416 이미지를 입력으로 52X52, 26X26, 13X13에서 Feature Map을 추출한다.
-    - FCN의 Output Channel이 512가 될 때, 추출하여 Upsampling 한다.
-    - 각 Scale의 Feature Map의 Output Channel이 255가 되도록 1X1의 Channel을 조정한다.
+    3개의 Scale에서 3개씩 Box를 생성하기 때문에, 9개의 Cluster가 필요하다.
 
-    - 번외. Fine-grained Information.
-        1. Coarse-grained는 결이 거칠다. Information이라면 상세하지 않은 정보이고, Classification이라면 큰 범주의 분류를 생각하면 될 것 같다.
-        2. Fine-grained는 결이 곱다. Information이라면 상세한 정보이고, Classification이라면 개의 품종을 분류하는 등의 상세한 분류를 생각하면 될 것 같다.
+    (10×13), (16×30), (33×23), (30×61), (62×45), (59×119), (116 × 90), (156 × 198), (373 × 326).
 
-        [딥러닝 용어 정리, Coarse-grained classification과 Fine-grained classification의 차이와 이해](https://light-tree.tistory.com/215)
+```
+More Detail
 
-- 2.4. Feature Extractor.
+- 416 X 416 이미지를 입력으로 52X52, 26X26, 13X13에서 Feature Map을 추출한다.
+- FCN의 Output Channel이 512가 될 때, 추출하여 Upsampling 한다.
+- 각 Scale의 Feature Map의 Output Channel이 255가 되도록 1X1의 Channel을 조정한다.
+```
 
-    ![스크린샷 2021-09-11 23.40.10.png](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-09-11_23.40.10.png)
+#### 번외. Fine-grained Information.
+1. Coarse-grained는 결이 거칠다. Information이라면 상세하지 않은 정보이고, Classification이라면 큰 범주의 분류를 생각하면 될 것 같다.
+2. Fine-grained는 결이 곱다. Information이라면 상세한 정보이고, Classification이라면 개의 품종을 분류하는 등의 상세한 분류를 생각하면 될 것 같다.
 
-    Backbone으로 Darknet-53을 사용한다.
+[딥러닝 용어 정리, Coarse-grained classification과 Fine-grained classification의 차이와 이해](https://light-tree.tistory.com/215)
 
-    Darknet-53은 53개의 Conv Layer로, ResNet에 사용했던 Shortcut Connections을 추가했다.
+### 2.4. Feature Extractor.
 
-    테스트에 사용한 이미지는 256 X 256에 Single Crop Accuracy이다.
+![스크린샷 2021-09-11 23.40.10.png](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-09-11_23.40.10.png)
 
-    ![스크린샷 2021-09-11 23.40.31.png](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-09-11_23.40.31.png)
+Backbone으로 Darknet-53을 사용한다.
 
-    ImageNet의 결과로 봤을 때, Top-5에서 ResNet-152와 같은 정확도를 보였으며, Darknet-19만큼은 아니지만 여전히 빠르다.
+Darknet-53은 53개의 Conv Layer로, ResNet에 사용했던 Shortcut Connections을 추가했다.
 
-- 2.5. Training.
-    - Full Image를 사용한다.
-    - Multi-scale Training, Data Augmentation, Batch Normalization, Standard Stuff를 사용한다.
-    - Darknet Neural Network Framework를 사용한다.
+테스트에 사용한 이미지는 256 X 256에 Single Crop Accuracy이다.
+
+![스크린샷 2021-09-11 23.40.31.png](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-09-11_23.40.31.png)
+
+ImageNet의 결과로 봤을 때, Top-5에서 ResNet-152와 같은 정확도를 보였으며, Darknet-19만큼은 아니지만 여전히 빠르다.
+
+### 2.5. Training.
+- Full Image를 사용한다.
+- Multi-scale Training, Data Augmentation, Batch Normalization, Standard Stuff를 사용한다.
+- Darknet Neural Network Framework를 사용한다.
 
 ## 3. How We Do.
 
