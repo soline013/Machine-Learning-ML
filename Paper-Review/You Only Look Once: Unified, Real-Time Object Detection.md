@@ -124,7 +124,7 @@ YOLO는 Real Time Detection이 가능하다.
 
 3. Loss Function.
 
-    $$\lambda_{coord} \sum^{S^2}_{i=0} \sum^{B}_{j=0} 1^{obj}_{ij} [(x_i - \hat{x}_i)^2 + (y_i - \hat{y}_i)^2] \\ + \lambda_{coord} \sum^{S^2}_{i=0} \sum^{B}_{j=0} 1^{obj}_{ij} [(\sqrt{w_i} - \sqrt{\hat{w}_i})^2 + (\sqrt{h_i} - \sqrt{\hat{h}_i})^2] \\ + \sum^{S^2}_{i=0} \sum^{B}_{j=0} 1^{obj}_{ij} (C_i - \hat{C}_i)^2 \\ + \lambda_{noobj} \sum^{S^2}_{i=0} \sum^{B}_{j=0} 1^{noobj}_{ij} (C_i - \hat{C}_i)^2 \\ + \sum^{S^2}_{i=0} 1^{obj}_{i} \sum_{c \, \in \, classes} (p_i(c) - \hat{p}_i(c))^2$$
+    ![image](https://user-images.githubusercontent.com/66259854/133922093-d2e63207-5c9d-4f6a-a78c-d80fcfc4c7a9.png)
 
     - Loss는 SSE(Sum-squared Error)를 사용한다.
     - SSE는 최적화가 쉬워 좋지만, Localization / Classification Loss의 가중치가 같은 단점이 있다.
