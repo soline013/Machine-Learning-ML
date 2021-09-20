@@ -27,12 +27,12 @@
 
 ### 번외. Local Receptive Field, Long Range Dependency(Long Term Dependency)
 
-    ![SAGAN 0](https://user-images.githubusercontent.com/66259854/124282235-944ade80-db85-11eb-9606-cfd36bd1b78f.png)
+![SAGAN 0](https://user-images.githubusercontent.com/66259854/124282235-944ade80-db85-11eb-9606-cfd36bd1b78f.png)
 
-    [Understanding the receptive field of deep convolutional networks | AI Summer](https://theaisummer.com/receptive-field/)
+[Understanding the receptive field of deep convolutional networks | AI Summer](https://theaisummer.com/receptive-field/)
 
-    1. Local Receptive Field는 국부 수용영역으로, "the size of the region in the input that produces the feature"이다. 즉, Layer 1에서 3X3, 5X5의 영역 등을 의미한다.
-    2. 그렇다면 Long Range Dependency는 하나의 Layer가 아닌, Layer 1 ~ Layer 3에 걸쳐 일어날 것이다. 초록색 영역과 노란색 영역이 Layer 3에서 처리될 것이다.
+1. Local Receptive Field는 국부 수용영역으로, "the size of the region in the input that produces the feature"이다. 즉, Layer 1에서 3X3, 5X5의 영역 등을 의미한다.
+2. 그렇다면 Long Range Dependency는 하나의 Layer가 아닌, Layer 1 ~ Layer 3에 걸쳐 일어날 것이다. 초록색 영역과 노란색 영역이 Layer 3에서 처리될 것이다.
 
 ---
 
@@ -59,7 +59,7 @@ Conv Layer는 Local Neighborhood에 대한 정보를 제공하므로, Long-range
 
 <img width="802" alt="SAGAN4" src="https://user-images.githubusercontent.com/66259854/124282246-9745cf00-db85-11eb-8869-7f8364da9ed9.png">
 
-Image Feature $x \in \R^{C \times N}$은 Attention 계산을 위해 $f(x) = W_f x, \ g(x) = W_g x$ 로 변환된다.
+Image Feature $x \in \mathbb{R}^{C \times N}$은 Attention 계산을 위해 $f(x) = W_f x, \ g(x) = W_g x$ 로 변환된다.
 
 1. C: 채널의 수
 2. N: 이전 Hidden Layer에서 Feature Locations의 수
@@ -76,13 +76,13 @@ $f(x_i)$는 Transpose 되고, 두 Feature Space는 행렬곱 이후 Softmax를 �
 
 $$o_j = v(\sum^N_{i=1} \beta_{j, i} h(x_i)), \ h(x_i) = W_hx_i, \ v(x_i) = W_v x_i.$$
 
-$o = (o_1, \, o_2, \, ..., \, o_j, \, ..., \, o_N) \in \R^{C \times N}$: Output of Attention Layer
+$o = (o_1, \, o_2, \, ..., \, o_j, \, ..., \, o_N) \in \mathbb{R}^{C \times N}$: Output of Attention Layer
 
 $h(x_i)$와 $\beta_{j, i}$가 행렬곱되고, $v(x_i)$를 통해 Output $o_j$가 도출된다.
 
 ---
 
-- $W_g \in \R^{\bar{C} \times C}, \ W_f \in \R^{\bar{C} \times C}, \ W_h \in \R^{\bar{C} \times C}, \ W_v \in \R^{\bar{C} \times C}$는 모두 학습된 Weight 행렬로, 1X1 Convolution Layer이다.
+- $W_g \in \mathbb{R}^{\bar{C} \times C}, \ W_f \in \mathbb{R}^{\bar{C} \times C}, \ W_h \in \mathbb{R}^{\bar{C} \times C}, \ W_v \in \mathbb{R}^{\bar{C} \times C}$는 모두 학습된 Weight 행렬로, 1X1 Convolution Layer이다.
 - ImageNet에서 채널의 수 $\bar{C}$를 $C/k, \ (k = 1,2,4,8)$로 줄여도 큰 성능 저하가 없었기 때문에, 메모리 효율화를 위해 $k=8$로 정하였다.
 - 최종 Output은 $y_i = \gamma o_i + x_i$로, $o_i$에 Scale Parameter $\gamma$를 곱하고, Input Feature Map $x_i$를 더하였다.
 - $\gamma$는 학습 가능한 값으로 0으로 초기화된다.
@@ -98,15 +98,15 @@ Generator와 Discriminator는 Adversarial Loss의 Hinge Version을 최소화함�
 
 ### 번외. Adversarial Loss.
 
-    $$min_G \, max_D \, V(D, G) = \mathbb{E}_{x \sim P_{data(x)}} [\text{log} D(x)] + \mathbb{E}_{z \sim p_z(z)} [\text{log}(1 - D(G(z)))]$$
+$$min_G \, max_D \, V(D, G) = \mathbb{E}_{x \sim P_{data(x)}} [\text{log} D(x)] + \mathbb{E}_{z \sim p_z(z)} [\text{log}(1 - D(G(z)))]$$
 
-    $x \sim P_{data(x)}$: 실제 데이터의 분포
+$x \sim P_{data(x)}$: 실제 데이터의 분포
 
-    $z \sim p_z(z)$: 분포가정(e.g. 정규분포)에서 Latent Code의 분포
+$z \sim p_z(z)$: 분포가정(e.g. 정규분포)에서 Latent Code의 분포
 
-    GAN의 판별자 D는 Real or Fake를 판단하기 때문에, Binary Cross Entropy를 사용한다. Real일 때 y=1, Fake일 때 y=0이다.
+GAN의 판별자 D는 Real or Fake를 판단하기 때문에, Binary Cross Entropy를 사용한다. Real일 때 y=1, Fake일 때 y=0이다.
 
-    $BCE = - \frac{1}{n} \sum^n_{i=1} (y_i \, \text{log}(p_i) +(1-y_i) \text{log}(1-p_i))$를 사용한 Loss이다.
+$BCE = - \frac{1}{n} \sum^n_{i=1} (y_i \, \text{log}(p_i) +(1-y_i) \text{log}(1-p_i))$를 사용한 Loss이다.
 
 ## 4. Techniques to Stabilize the Training of GANs.
 
@@ -120,7 +120,7 @@ Generator와 Discriminator는 Adversarial Loss의 Hinge Version을 최소화함�
 
     ### 번외. Spectral Norm, Lipschitz Constant.
 
-        [Spectral Normalization for Generative Adversarial Networks(SN-GAN) - (2)](https://hichoe95.tistory.com/61)
+    [Spectral Normalization for Generative Adversarial Networks(SN-GAN) - (2)](https://hichoe95.tistory.com/61)
 
 2. Imbalanced Learning Rate For Generator and Discriminator Updates
 
@@ -132,7 +132,7 @@ Generator와 Discriminator는 Adversarial Loss의 Hinge Version을 최소화함�
 
     ### 번외. TTUR.
 
-        [TTUR Paper](https://arxiv.org/pdf/1706.08500.pdf)
+    [TTUR Paper](https://arxiv.org/pdf/1706.08500.pdf)
 
 ## 5. Experiments.
 
