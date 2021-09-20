@@ -90,7 +90,7 @@ $h(x_i)$와 $\beta_{j, i}$가 행렬곱되고, $v(x_i)$를 통해 Output $o_j$�
 
 ---
 
-$$L_D = - \mathbb{E}_{(x,y) \sim P_{data}} [\text{min}(0, -1 + D(x, y))] \\ \qquad \qquad \quad -\mathbb{E}_{z \sim p_z, \, y \sim  P_{data}} [\text{min}(0, -1 - D(G(z),y))], \\ L_G = - \mathbb{E}_{z \sim p_z, \, y \sim P_{data}}D(G(z), y),$$
+![image](https://user-images.githubusercontent.com/66259854/133993840-b6e88334-7ecc-4e0f-b2e8-8dfa5cc3276b.png)
 
 SAGAN은 Attention이 Generator와 Discriminator 모두에 적용된다.
 
