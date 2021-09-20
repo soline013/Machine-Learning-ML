@@ -4,7 +4,8 @@
 
 ## Abstract.
 
-![스크린샷 2021-09-11 23.39.24.png](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-09-11_23.39.24.png)
+![YOLOv3 0](https://user-images.githubusercontent.com/66259854/133923123-6f1c1479-36fc-4689-b33e-433bb2ec9af6.png)
+
 
 - Figure 1은 Focal Loss를 적용한 결과이다.
 - YOLOv3는 v1, v2에 비해 정확도가 향상되었고, 여전히 빠르다.
@@ -19,7 +20,7 @@
 
 ### 2.1. Bounding Box Prediction.
 
-![스크린샷 2021-09-11 23.39.45.png](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-09-11_23.39.45.png)
+![YOLOv3 1](https://user-images.githubusercontent.com/66259854/133923127-79e41089-020d-4039-96db-df2e317f0895.png)
 
 1. Bounding Box를 예측하는 방법은 YOLOv2와 같다.
 
@@ -36,7 +37,7 @@
 
 3. Localization Loss의 경우, 기존 YOLO는 SSE, YOLOv2도 아래 자료를 보아 SSE, YOLOv3까지 SSE를 사용하는 것 같다.
 
-    ![Untitled](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/Untitled.png)
+    ![YOLOv3 8](https://user-images.githubusercontent.com/66259854/133923164-c887ac48-40d8-4947-93d1-b425c11b5581.png)
 
     [YOLOv2/YOLOv2.md at master · leetenki/YOLOv2](https://github.com/leetenki/YOLOv2/blob/master/YOLOv2.md)
 
@@ -49,7 +50,7 @@
 
     Activation Function은 Softmax를 사용하는데 Loss는 Cross-entropy를 사용하지 않는 것 같다.
 
-    ![Untitled](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/Untitled.png)
+    ![YOLOv3 8](https://user-images.githubusercontent.com/66259854/133923164-c887ac48-40d8-4947-93d1-b425c11b5581.png)
 
     [YOLOv2/YOLOv2.md at master · leetenki/YOLOv2](https://github.com/leetenki/YOLOv2/blob/master/YOLOv2.md)
 
@@ -63,9 +64,9 @@
 
 ### 2.3. Predictions Across Scales.
 
-![Untitled](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/Untitled%201.png)
+![YOLOv3 9](https://user-images.githubusercontent.com/66259854/133923165-ee122f15-b33d-4f37-9a44-973cdac9966c.png)
 
-![https://blog.kakaocdn.net/dn/CGmzY/btqXb2IcTRW/IYRns34VfxYlsblaqJszR1/img.jpg](https://blog.kakaocdn.net/dn/CGmzY/btqXb2IcTRW/IYRns34VfxYlsblaqJszR1/img.jpg)
+![YOLOv3 10](https://user-images.githubusercontent.com/66259854/133923166-e00c6ae4-a1ca-43ff-8100-bca56f44af0e.jpg)
 
 1. YOLOv3는 세 가지의 다른 Scale에서 Box를 예측한다.
 2. Scale에서 FPN와 비슷하게 Feature를 추출한다.
@@ -111,7 +112,7 @@ More Detail
 
 ### 2.4. Feature Extractor.
 
-![스크린샷 2021-09-11 23.40.10.png](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-09-11_23.40.10.png)
+![YOLOv3 2](https://user-images.githubusercontent.com/66259854/133923128-dd0060a5-1f8c-43f5-a1a5-6a6b32823fdd.png)
 
 Backbone으로 Darknet-53을 사용한다.
 
@@ -119,7 +120,7 @@ Darknet-53은 53개의 Conv Layer로, ResNet에 사용했던 Shortcut Connection
 
 테스트에 사용한 이미지는 256 X 256에 Single Crop Accuracy이다.
 
-![스크린샷 2021-09-11 23.40.31.png](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-09-11_23.40.31.png)
+![YOLOv3 3](https://user-images.githubusercontent.com/66259854/133923129-f5007eae-a001-4099-a4ef-e7807e0e2a1b.png)
 
 ImageNet의 결과로 봤을 때, Top-5에서 ResNet-152와 같은 정확도를 보였으며, Darknet-19만큼은 아니지만 여전히 빠르다.
 
@@ -130,7 +131,7 @@ ImageNet의 결과로 봤을 때, Top-5에서 ResNet-152와 같은 정확도를 
 
 ## 3. How We Do.
 
-![스크린샷 2021-09-11 23.40.49.png](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-09-11_23.40.49.png)
+![YOLOv3 4](https://user-images.githubusercontent.com/66259854/133923134-90db798a-9aba-412f-b855-b6f7a00ce3b9.png)
 
 - YOLOv3 608 X 608은 RetinaNet 보다 약 3.8배 빠르다.
 - $AP_{50}$에서 정확도가 높고, 빠르기 때문에 좋은 성능이 나온다.
@@ -138,7 +139,7 @@ ImageNet의 결과로 봤을 때, Top-5에서 ResNet-152와 같은 정확도를 
 
 ---
 
-![스크린샷 2021-09-11 23.41.11.png](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-09-11_23.41.11.png)
+![YOLOv3 5](https://user-images.githubusercontent.com/66259854/133923154-8e82b3d1-ff1d-4607-bca5-232d77f362ab.png)
 
 - 0.5 IoU에서 성능을 비교한 것이다.
 - inference time 그래프를 벗어난 높은 정확도의 YOLOv3의 모습이 인상적이다.
@@ -213,13 +214,13 @@ igate it. We owe the world that much.
 
 1. Reviewer #2.
 
-    ![스크린샷 2021-09-12 00.08.24.png](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-09-12_00.08.24.png)
+    <img width="928" alt="YOLOv3 6" src="https://user-images.githubusercontent.com/66259854/133923155-e40f07a7-d69e-4e92-8404-3f0bd243963d.png">
 
 2. Reviewer #4.
 
     COCO Metrics.
 
-    ![스크린샷 2021-09-12 00.08.42.png](YOLOv3%20An%20Incremental%20Improvement%203bb1c3de345b40da975c49751d0d0f51/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2021-09-12_00.08.42.png)
+    <img width="452" alt="YOLOv3 7" src="https://user-images.githubusercontent.com/66259854/133923156-02bbedfd-2005-4af8-908d-e4b386ea47b3.png">
 
 ## Link.
 
