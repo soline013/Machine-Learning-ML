@@ -98,7 +98,7 @@ Generator와 Discriminator는 Adversarial Loss의 Hinge Version을 최소화함�
 
 ### 번외. Adversarial Loss.
 
-$$min_G \, max_D \, V(D, G) = \mathbb{E}_{x \sim P_{data(x)}} [\text{log} D(x)] + \mathbb{E}_{z \sim p_z(z)} [\text{log}(1 - D(G(z)))]$$
+![image](https://user-images.githubusercontent.com/66259854/134179050-48f898db-a283-4653-b767-4fbb6f4d4010.png)
 
 $x \sim P_{data(x)}$: 실제 데이터의 분포
 
