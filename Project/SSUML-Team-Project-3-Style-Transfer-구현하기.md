@@ -56,7 +56,7 @@ Framework는 Tensorflow와 Pytorch를 모두 사용하였고, Result에서는 Te
     ![Neural_Style_Transfer_tf_2](https://user-images.githubusercontent.com/66259854/109472521-9442b100-7ab5-11eb-86e6-13487db1a306.png)
 
 
-## Different Weight Rate.
+## Experiment - Different Weight Rate.
 
     Setting.
 
@@ -77,7 +77,7 @@ Framework는 Tensorflow와 Pytorch를 모두 사용하였고, Result에서는 Te
 
     ![Neural_Style_Transfer_pytorch_Content](https://user-images.githubusercontent.com/66259854/109471583-4a0d0000-7ab4-11eb-95ce-2a146ee7edf8.png)
 
-## Different Input Image.
+## Experiment - Different Input Image.
 
     Setting.
 
