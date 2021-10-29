@@ -15,15 +15,11 @@
 
 Harvard NLP와 Google Colab.
 
-Github에 있는 .ipynb 파일은 Harvard NLP와 똑같다.
-
 ---
 
 [Google Colaboratory - Google Drive](https://colab.research.google.com/drive/1_5Ho9ldrTZFay2Z8Qfdb3QXUkx6zNRVT#scrollTo=wamR3SPdUgRo)
 
 Harvard NLP와 차이점이 있는 Google Colab.
-
-Harvard NLP에 있는 Colab 링크로 가면 Google Drive와 연결된다.
 
 ## What Is the Transformer?
 
