@@ -1,5 +1,4 @@
 # Machine-Learning-ML.
-**Personal Machine Learning study.**
 
 [Project](#project)
 
@@ -12,6 +11,8 @@
 [Lecture](#lecture)
 
 [Wiki](#wiki)
+
+**Personal Machine Learning study.**
 
 잘못된 내용이 있다면 바로잡아주시기 바랍니다.
 
