@@ -11,6 +11,8 @@
 
 [Lecture](#lecture)
 
+[Wiki](#wiki)
+
 잘못된 내용이 있다면 바로잡아주시기 바랍니다.
 
 모든 내용은 최신 상태가 아닐 수 있고, Notion 원본과 다를 수 있습니다.
@@ -106,3 +108,7 @@ Assignment의 기타 파일들은 따로 폴더를 만들어 올려두었다.
 | Assignment2 / \*.ipynb | Assignment2의 Jupyter Notebook 파일. |
 | Assignment2 / ... / \*.py | Assignment2의 Python 파일. |
 -->
+
+# Wiki.
+
+Wiki는 간단한 이해와 복기를 돕습니다.
