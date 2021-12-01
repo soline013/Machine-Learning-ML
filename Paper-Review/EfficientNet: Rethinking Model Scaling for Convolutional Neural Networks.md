@@ -75,7 +75,9 @@
         
         - $w, d, r$: Scaling을 위한 계수.
         - $H_i, W_i, C_i, L_i, F_i$: Baseline Network에서 미리 정의한 파라미터들.
-        
+
+<br>
+
 - 3.2. Scaling Dimensions.
     1. Difficulty of Optimization Problem
         1. $w, d, r$의 최적 값이 서로 의존적이고, 리소스 제약 조건 아래에서 값이 변화한다.
@@ -104,7 +106,9 @@
         
         > Scaling up any dimension of network width, depth, or resolution improves accuracy, but the accuracy gain diminishes for bigger models.
         > 
-    
+
+<br>
+
 - 3.3. Compound Scaling.
     1. Figure 4.
         
