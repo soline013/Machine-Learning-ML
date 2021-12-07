@@ -59,14 +59,15 @@ Fashion MNIST를 다룬 프로젝트가 있는 곳.
 
 | Paper | Detail | Tag |
 |--|--|--|
-| A Neural Algorithm of Artistic Style | Style Transfer 논문. | Computer Vision, Style Transfer |
-| Image Style Transfer Using Convolutional Neural Networks | Style Transfer 논문. A Neural Algorithm of Artistic Style과 많은 내용이 겹친다. | Computer Vision, Style Transfer |
-| Swin Transformer: Hierarchical Vision Transformer using Shifted Windows | ViT에 Shifted Window를 적용한 Vision Transformer이다. | Computer Vision, Transformer |
-| Self-Attention Generative Adversarial Networks | Gernerate Model에 Self-Attention을 적용하였다. | Computer Vision, Gernerate Model |
-| Objectron: A Large Scale Dataset of Object-Centric Videos in the Wild with Pose Annotations | Object Detection 그중에서도 3D Object Detection을 다룬다. | Computer Vision, Object Detection, 3D Object Detection |
-| You Only Look Once: Unified, Real-Time Object Detection | Real Time Object Detection을 다룬다. | Computer Vision, Object Detection |
-| YOLO9000: Better, Faster, Stronger | YOLO를 개선한 버전이다. | Computer Vision, Object Detection |
-| YOLOv3: An Incremental Improvement | YOLO의 세 번째 버전이다. YOLOv3까지는 저자가 같다. | Computer Vision, Object Detection |
+| A Neural Algorithm of Artistic Style | 2015년 발표된 Style Transfer 논문. | Computer Vision, Style Transfer |
+| Image Style Transfer Using Convolutional Neural Networks | 2016년 Style Transfer 논문. A Neural Algorithm of Artistic Style에 내용이 추가되었다. | Computer Vision, Style Transfer |
+| Swin Transformer: Hierarchical Vision Transformer using Shifted Windows | 2021년 발표된 논문. ViT에 Shifted Window를 적용한 Vision Transformer이다. | Computer Vision, Transformer |
+| Self-Attention Generative Adversarial Networks | 2019년 발표된 논문. Gernerate Model에 Self-Attention을 적용하였다. | Computer Vision, Gernerate Model |
+| Objectron: A Large Scale Dataset of Object-Centric Videos in the Wild with Pose Annotations | 2020년 발표된 논문. Object Detection, 그중에서도 3D Object Detection을 다룬다. | Computer Vision, Object Detection, 3D Object Detection |
+| You Only Look Once: Unified, Real-Time Object Detection | 2016년 발표된 논문. Real Time Object Detection을 다룬다. | Computer Vision, Object Detection |
+| YOLO9000: Better, Faster, Stronger | 2017년 발표된 논문. YOLO를 개선한 버전이다. | Computer Vision, Object Detection |
+| YOLOv3: An Incremental Improvement | 2018년 발표된 YOLO의 세 번째 버전이다. YOLOv3까지는 저자가 같다. | Computer Vision, Object Detection |
+| EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks | 2019년 발표된 논문. CNN의 성능을 높이기 위한 Compound Scaling과 새로운 Baseline인 EfficientNet을 제안한다. | Computer Vision |
 
 # <div id="field">Field.</div>
 
