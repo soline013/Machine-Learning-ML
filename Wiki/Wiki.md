@@ -13,7 +13,7 @@ Wiki는 간단한 이해와 복기를 돕습니다.
 [Fundamental Concept](#fundamentalconcept)
 
 ## <div id="loss">Loss</div>
-    
+
 - Cross-Entropy Loss
 
     $$\text{CE} = - \sum_i^C t_i log(s_i)$$
