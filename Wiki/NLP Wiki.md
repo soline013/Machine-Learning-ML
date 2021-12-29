@@ -11,3 +11,4 @@
 - BPE
 - SPM
 - Token
+- fairseq
