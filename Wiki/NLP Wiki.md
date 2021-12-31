@@ -2,14 +2,14 @@
 
 ## Models.
 - Transformer
-- LSTM
-- RNN
 - BERT
 - GPT
+- LSTM
+- RNN
 
 ## Temp.
 - BPE
 - SPM
 - Token
 - fairseq
-- mose
+- moses
