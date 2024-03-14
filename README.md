@@ -1,4 +1,4 @@
-# Machine-Learning-ML.
+# Machine-Learning-ML
 
 [Project](#project)
 
@@ -12,13 +12,13 @@
 
 [Wiki](#wiki)
 
-**Personal Machine Learning study.**
+**Personal Machine Learning study**
 
 잘못된 내용이 있다면 바로잡아주시기 바랍니다.
 
 모든 내용은 최신 상태가 아닐 수 있고, Notion 원본과 다를 수 있습니다.
 
-# <div id="project">Project.</div>
+# <div id="project">Project</div>
 Team Project, Toy Project에 대한 Markdown 파일이 있는 곳.
 
 | Project | Detail | Tag |
@@ -27,17 +27,17 @@ Team Project, Toy Project에 대한 Markdown 파일이 있는 곳.
 | Transformer 구현하기 | SSUML의 두 번째 Team Project. Notebook은 Tansformer 폴더에 있다. | Transformer |
 | Style Transfer 구현하기 | SSUML의 세 번째 Team Project. Notebook은 Style Transfer 폴더에 있다. | Style Transfer |
 
-***수정 예정.***
+***수정 예정***
 
-# <div id="implementation">Implementation.</div>
+# <div id="implementation">Implementation</div>
 프로젝트, 논문 구현, 기타 구현을 포함합니다.
 
-## Style Transfer.
+## Style Transfer
 Style Transfer의 내용을 정리한 폴더.
 
 Project의 `"SSUML Team Project 3 Style Transfer 구현하기"` 파일 참조.
 
-## Transformer.
+## Transformer
 Transformer의 내용을 정리한 폴더.
 
 Project의 `"SSUML Team Project 2 Transformer 구현하기"` 파일 참조.
@@ -49,12 +49,12 @@ Project의 `"SSUML Team Project 2 Transformer 구현하기"` 파일 참조.
 | \*.ipynb | Colab에서 작성한 Jupyter notebook 파일로 코드, 설명 등이 정리된 파일. |
 -->
 
-## Fashion MNIST.
+## Fashion MNIST
 Fashion MNIST를 다룬 프로젝트가 있는 곳.
 
 동아리 SSUML의 첫 프로젝트 과제.
 
-# <div id="paper">Paper.</div>
+# <div id="paper">Paper</div>
 논문 리뷰를 정리한 폴더.
 
 | Paper | Detail | Tag |
@@ -69,19 +69,19 @@ Fashion MNIST를 다룬 프로젝트가 있는 곳.
 | YOLOv3: An Incremental Improvement | 2018년 발표된 YOLO의 세 번째 버전이다. YOLOv3까지는 저자가 같다. | Computer Vision, Object Detection |
 | EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks | 2019년 발표된 논문. CNN의 성능을 높이기 위한 Compound Scaling과 새로운 Baseline인 EfficientNet을 제안한다. | Computer Vision |
 
-# <div id="field">Field.</div>
+# <div id="field">Field</div>
 
-## Reinforcement Learning.
+## Reinforcement Learning
 강화학습에 대한 내용을 정리한 폴더.
 
 현재 Deep Q Learning에 대한 내용과 Notebook이 있다.
 
-## Computer Vision.
+## Computer Vision
 Computer Vision에 대한 내용을 정리한 폴더.
 
 OpenCV를 포함한다.
 
-# <div id="lecture">Lecture.</div>
+# <div id="lecture">Lecture</div>
 
 ## 모두를 위한 딥러닝. [![Generic badge](https://shields.io/badge/Youtube-모두를_위한_딥러닝-blue.svg)](https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm)
 유튜브 강의: 모두를 위한 딥러닝의 내용을 정리한 폴더.
@@ -111,6 +111,6 @@ Assignment의 기타 파일들은 따로 폴더를 만들어 올려두었다.
 | Assignment2 / ... / \*.py | Assignment2의 Python 파일. |
 -->
 
-# Wiki.
+# Wiki
 
 Wiki는 간단한 이해와 복기를 돕습니다.
